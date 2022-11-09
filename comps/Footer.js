@@ -1,8 +1,8 @@
 const Footer = () => {
     return ( 
-        <div>
+        <footer>
             Copyright Adithya S K
-        </div>
+        </footer>
     );
 }
  
