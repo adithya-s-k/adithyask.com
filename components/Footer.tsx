@@ -7,10 +7,10 @@ const Footer = (props: Props) => {
     <>
       <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
         <div className="grid grid-flow-col gap-4">
-          <a className="link link-hover">About us</a>
+          <a className="link link-hover">Projects</a>
+          <a className="link link-hover">Blog</a>
           <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
+          <a className="link link-hover">Hire Me</a>
         </div>
         <div>
           <div className="grid grid-flow-col gap-4">
@@ -50,7 +50,7 @@ const Footer = (props: Props) => {
           </div>
         </div>
         <div>
-          <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+          <p>Copyright © 2023 - All right reserved by Adithya S K</p>
         </div>
       </footer>
     </>
