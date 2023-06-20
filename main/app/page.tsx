@@ -36,24 +36,19 @@ export default function Home() {
       <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
       <div className="my-16 text-center animate-fade-in">
         <h2 className="text-sm text-zinc-500 ">
-          Hi, my name is Adithya, I'm founder / CEO of
+          I'm Adithya, the visionary Founder of
           <Link
             target="_blank"
-            href="https://upstash.com"
+            href="https://www.cognitivelab.tech/"
             className="underline duration-500 hover:text-zinc-300"
           >
             CognitiveLab
           </Link>
           <br />
-          and working on{' '}
-          <Link
-            target="_blank"
-            href="https://planetfall.io"
-            className="underline duration-500 hover:text-zinc-300"
-          >
-            AI | ML | Web Development | Cloud
-          </Link>{' '}
-          at night.
+          an AI startup dedicated to pushing the boundaries of technology. With
+          a strong background in full stack development and expertise in cloud
+          platforms like Azure and GCP, I'm on a mission to shape the future of
+          Artificial Intelligence at CognitiveLab.{' '}
         </h2>
       </div>
     </div>
