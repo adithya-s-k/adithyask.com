@@ -45,10 +45,13 @@ export default function Home() {
             CognitiveLab
           </Link>
           <br />
-          an AI startup dedicated to pushing the boundaries of technology. With
-          a strong background in full stack development and expertise in cloud
-          platforms like Azure and GCP, I'm on a mission to shape the future of
-          Artificial Intelligence at CognitiveLab.{' '}
+          an AI startup dedicated to pushing the boundaries of technology.
+          <br />
+          With a strong background in full stack development and expertise in
+          cloud platforms like Azure and GCP,
+          <br />
+          I'm on a mission to shape the future of Artificial Intelligence at
+          CognitiveLab.{' '}
         </h2>
       </div>
     </div>
