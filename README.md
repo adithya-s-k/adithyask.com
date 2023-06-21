@@ -1,1 +1,1 @@
-# [adithyask.com](adithyask.com)
+# [adithyask.com](https://adithyask.com/)
