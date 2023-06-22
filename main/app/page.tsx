@@ -4,7 +4,7 @@ import Particles from './components/particles';
 
 const navigation = [
   { name: 'Projects', href: '/projects' },
-  { name: 'Blog', href: '/blog' },
+  { name: 'Blog', href: 'https://blogs.adithyask.com/' },
   { name: 'Contact', href: '/contact' },
 ];
 
@@ -18,6 +18,7 @@ export default function Home() {
               key={item.href}
               href={item.href}
               className="text-sm duration-500 text-zinc-500 hover:text-zinc-300"
+              target={item.href.startsWith('https') ? '_blank' : undefined}
             >
               {item.name}
             </Link>
