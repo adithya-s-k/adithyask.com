@@ -43,7 +43,7 @@ export default function Home() {
             className="underline duration-500 hover:text-zinc-300"
           >
             {' '}
-            CognitiveLab
+            CognitiveLab{' '}
           </Link>
           an AI startup dedicated to pushing the boundaries of technology.
           <br />
