@@ -46,10 +46,20 @@ export default function Home() {
             {' '}
             CognitiveLab{' '}
           </Link>
-          an AI startup dedicated to pushing the boundaries of technology.
+          I specialize in building intelligent applications with Language Models
+          (LLMs) and Diffusion Models.
           <br />
-          With a strong background in full stack development and expertise in
-          cloud platforms like Azure and GCP,
+          With experience in full-stack web development, DevOps, and Cloud
+          deployments, I create robust and scalable solutions.
+          <br />I also contribute to open-source projects and continuously adapt
+          to the latest technology. Take a look at my{' '}
+          {/* <Link
+            href="/projects"
+            className="underline duration-500 hover:text-zinc-300"
+          >
+            {' '}
+            projects{' '}
+          </Link> */}
         </h2>
       </div>
     </div>
