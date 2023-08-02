@@ -53,13 +53,13 @@ export default function Home() {
           deployments, I create robust and scalable solutions.
           <br />I also contribute to open-source projects and continuously adapt
           to the latest technology. Take a look at my{' '}
-          {/* <Link
+          <Link
             href="/projects"
             className="underline duration-500 hover:text-zinc-300"
           >
             {' '}
             projects{' '}
-          </Link> */}
+          </Link>
         </h2>
       </div>
     </div>
