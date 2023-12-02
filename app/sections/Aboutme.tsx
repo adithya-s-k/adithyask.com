@@ -54,7 +54,7 @@ const experiences = [
 ];
 
 export default function Aboutme({}: Props) {
-  const initialVisibleItems = 2;
+  const initialVisibleItems = 3;
   const [visibleItems, setVisibleItems] = useState(initialVisibleItems);
 
   const showMoreItems = () => setVisibleItems(Infinity);
@@ -159,13 +159,12 @@ export default function Aboutme({}: Props) {
                   My Skills
                 </h2>
                 <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
-                  I constantly learn new and exciting concepts in computer
-                  science and web development. I try applying these concepts to
-                  solve real-world problems. A few technologies I enjoy working
-                  with:
+                  I'm always on the lookout for new and exciting ideas in
+                  computer science and web development, and I love applying
+                  these concepts to tackle real-world challenges. I find joy in
+                  exploring and mastering various technologies along the way.
                 </p>
-
-                <div className="flex w-full justify-center">
+                <div className="flex w-full justify-center mt-2 md:mt-0">
                   <Skills />
                 </div>
               </article>

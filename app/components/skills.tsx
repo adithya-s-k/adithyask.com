@@ -116,7 +116,7 @@ const Skills: React.FC<SkillsProps> = () => {
         ))}
       </div>
       <div className="mt-4">
-        <div className="flex flex-row  justify-center gap-4 items-center flex-wrap w-full h-fit text-xl font-semibold text-zinc-300 md:gap-10">
+        <div className="flex flex-row  justify-center gap-4 items-center flex-wrap w-full h-fit md:text-xl font-semibold text-zinc-300 md:gap-10">
           <AnimatePresence mode="wait">
             {contentMap[selectedCategory].map((item) => (
               <motion.div
