@@ -65,7 +65,7 @@ export default function Aboutme({}: Props) {
         id="AboutMe"
         className=" min-h-screen w-full bg-gradient-to-tl from-zinc-400/10 via-zinc-400/10 to-zinc-400/10 "
       >
-        <div className="w-full p-10">
+        <div className="w-full p-10 md:px-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 h-fit lg:h-full sm:h-full">
             <Card>
               <article className="relative w-full h-full p-4 md:p-8">
@@ -154,17 +154,18 @@ export default function Aboutme({}: Props) {
               <article className="relative w-full h-full p-4 md:p-8">
                 <h2
                   id="featured-post"
-                  className="mt-4 text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-4xl font-display"
+                  className="mt-4 text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-4xl font-display w-full text-center"
                 >
                   My Skills
                 </h2>
-                <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
+                <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300 w-full text-center">
                   I'm always on the lookout for new and exciting ideas in
-                  computer science and web development, and I love applying
-                  these concepts to tackle real-world challenges. I find joy in
-                  exploring and mastering various technologies along the way.
+                  computer science and web development, and
+                  <br />I love applying these concepts to tackle real-world
+                  challenges. I find joy in exploring and mastering various
+                  technologies along the way.
                 </p>
-                <div className="flex w-full justify-center mt-2 md:mt-0">
+                <div className="flex w-full justify-center mt-2 md:mt-4">
                   <Skills />
                 </div>
               </article>
