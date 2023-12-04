@@ -63,6 +63,9 @@ const Hero = (props: Props) => {
             Building Generative AI solutions at scale.
           </h2>
         </div>
+        <div className="box">
+          <p>Conic gradient</p>
+        </div>
         {/* <div className="animate-fade-in">
           <ConnectButton />
         </div> */}
