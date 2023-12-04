@@ -105,8 +105,8 @@ const Skills: React.FC<SkillsProps> = () => {
             key={category}
             className={`cursor-pointer ${
               selectedCategory === category
-                ? 'sm:block md:block text-zinc-300 border-white border-b-2 font-semibold'
-                : 'hidden md:block text-zinc-800 font-bold'
+                ? 'sm:block lg:block text-zinc-300 border-white border-b-2 font-semibold'
+                : 'hidden lg:block text-zinc-800 font-bold'
             }`}
             onClick={() => setSelectedCategory(category)}
             whileHover={{ scale: 1.1 }}
@@ -116,7 +116,7 @@ const Skills: React.FC<SkillsProps> = () => {
         ))}
       </div>
       <div className="mt-4">
-        <div className="flex flex-row  justify-center gap-4 items-center flex-wrap w-full h-fit md:text-xl font-semibold text-zinc-300 md:gap-10">
+        <div className="flex flex-row  justify-center gap-4 items-center flex-wrap w-full h-fit lg:text-xl font-semibold text-zinc-300 lg:gap-10">
           <AnimatePresence mode="wait">
             {contentMap[selectedCategory].map((item) => (
               <motion.div
