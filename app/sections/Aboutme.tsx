@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 
 import { Card } from '../components/card';
+import { GreenColor } from '../components/neongreencolor';
 import ExperienceItem from '../components/experienceItem';
 import Skills from '../components/skills';
 
