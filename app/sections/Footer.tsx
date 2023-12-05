@@ -17,7 +17,7 @@ const Footer = (props: Props) => {
         <div className="w-full rounded-tl-3xl rounded-tr-3xl">
           <SkyColor>
             <div className="w-full h-fit flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-4 p-10">
-              <div className=" hidden lg:block hover:text-purple-300 hover:scale-110">
+              <div className=" hidden lg:block hover:text-cyan-300 hover:scale-110">
                 <a
                   href="http://adithyask.com"
                   target="_blank"
@@ -27,23 +27,23 @@ const Footer = (props: Props) => {
                 </a>
               </div>
               <div className="h-fit flex flex-row justify-center items-center gap-3 flex-wrap">
-                <div className="hover:text-purple-300 hover:scale-110">
+                <div className="hover:text-cyan-300 hover:scale-110">
                   <Link href="/projects" target="_blank">
                     Projects
                   </Link>
                 </div>
                 <Link href="/" target="_blank">
-                  <div className="hover:text-purple-300 hover:scale-110">
+                  <div className="hover:text-cyan-300 hover:scale-110">
                     Resume
                   </div>
                 </Link>
                 <Link href="https://adithyask.medium.com/">
-                  <div className="hover:text-purple-300 hover:scale-110">
+                  <div className="hover:text-cyan-300 hover:scale-110">
                     Blog
                   </div>
                 </Link>
                 <Link href="/contact" target="_blank">
-                  <div className="hover:text-purple-300 hover:scale-110">
+                  <div className="hover:text-cyan-300 hover:scale-110">
                     Contact
                   </div>
                 </Link>
@@ -51,7 +51,7 @@ const Footer = (props: Props) => {
               <div className="w-fit">
                 <div>
                   <div className="flex flex-row justify-center items-center gap-3">
-                    <div className="  hover:text-purple-300 hover:scale-110">
+                    <div className="  hover:text-cyan-300 hover:scale-110">
                       <Link
                         href="https://github.com/adithya-s-k"
                         target="_blank"
@@ -73,7 +73,7 @@ const Footer = (props: Props) => {
                         </svg>
                       </Link>
                     </div>
-                    <div className="  hover:text-purple-300 hover:scale-110">
+                    <div className="  hover:text-cyan-300 hover:scale-110">
                       <Link
                         href="https://www.linkedin.com/in/adithya-s-kolavi/"
                         target="_blank"
@@ -96,7 +96,7 @@ const Footer = (props: Props) => {
                         </svg>
                       </Link>
                     </div>
-                    <div className="  hover:text-purple-300 hover:scale-110">
+                    <div className="  hover:text-cyan-300 hover:scale-110">
                       <Link
                         href="https://twitter.com/adithya_s_k"
                         target="_blank"
@@ -117,7 +117,7 @@ const Footer = (props: Props) => {
                         </svg>
                       </Link>
                     </div>
-                    <div className="  hover:text-purple-300 hover:scale-110">
+                    <div className="  hover:text-cyan-300 hover:scale-110">
                       <Link
                         href="https://adithyask.medium.com/"
                         target="_blank"

@@ -3,6 +3,7 @@ import { Github, Mail, Twitter } from 'lucide-react';
 import Link from 'next/link';
 import { Navigation } from '../components/nav';
 import { Card } from '../components/card';
+import Footer from '../sections/Footer';
 
 const socials = [
   {
@@ -57,6 +58,9 @@ export default function Example() {
             </Card>
           ))}
         </div>
+      </div>
+      <div className="h-fit w-full">
+        <Footer />
       </div>
     </div>
   );

@@ -64,9 +64,9 @@ export default function Aboutme({}: Props) {
     <>
       <div
         id="AboutMe"
-        className=" min-h-screen w-full bg-gradient-to-tl from-zinc-400/10 via-zinc-400/10 to-zinc-400/10 "
+        className=" min-h-screen w-full bg-gradient-to-tl from-zinc-400/10 via-zinc-400/10 to-zinc-400/10 text-sm"
       >
-        <div className="w-full p-10 md:px-32">
+        <div className="w-full p-10 md:px-18 lg:p-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 h-fit lg:h-full sm:h-full">
             <Card>
               <article className="relative w-full h-full p-4 md:p-8">

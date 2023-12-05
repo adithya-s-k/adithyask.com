@@ -47,3 +47,8 @@ body {
     top: 60px;
   }
 }
+
+/* Add this to your CSS */
+.animate-title.visible {
+  animation: yourAnimationName 1s ease-out; /* Replace with your animation details */
+}

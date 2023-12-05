@@ -43,7 +43,7 @@ const Hero = (props: Props) => {
           className="absolute inset-0 -z-10 animate-fade-in"
           quantity={100}
         />
-        <h1 className="z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
+        <h1 className="z-10 text-4xl text-transparent duration-1000 bg-white cursor-default text-edge-outline animate-title font-display sm:text-6xl lg:text-9xl whitespace-nowrap bg-clip-text ">
           Adithya S Kolavi
         </h1>
 
@@ -62,9 +62,6 @@ const Hero = (props: Props) => {
             <br />
             Building Generative AI solutions at scale.
           </h2>
-        </div>
-        <div className="box">
-          <p>Conic gradient</p>
         </div>
         {/* <div className="animate-fade-in">
           <ConnectButton />

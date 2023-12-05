@@ -4,17 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 interface SkillsProps {}
 
 const Skills: React.FC<SkillsProps> = () => {
-  const categories: string[] = [
-    'Languages',
-    'Frameworks',
-    'ML | AI | DL',
-    'Python Libs',
-    'Databases',
-    'Cloud',
-    'IoT',
-    'Design',
-  ];
-
   const contentMap: Record<string, string[]> = {
     Languages: [
       'HTML',
@@ -72,35 +61,47 @@ const Skills: React.FC<SkillsProps> = () => {
       'Cloudflare',
       'Heroku',
     ],
-    IoT: ['Arduino', 'ESP32', 'ESP8266', 'Raspberry Pi', 'Embedded C', 'Blynk'],
-    Design: [
+    IoT: [
+      'Arduino',
+      'ESP32',
+      'ESP8266',
+      'Raspberry Pi',
+      'Embedded C',
+      'Blynk',
+      'Pixhawk',
+      ' Ardupilot',
+    ],
+    'Design Tools': [
       'Figma',
       'Adobe XD',
       'Adoble Illustrator',
       'Photoshop',
       'Canva',
       'Blender',
+      'Inkscape',
+      'GIMP',
     ],
   };
 
   const [selectedCategory, setSelectedCategory] = useState<string>(
-    categories[0]
+    Object.keys(contentMap)[0]
   );
 
   useEffect(() => {
     const intervalId = setInterval(() => {
+      const categories = Object.keys(contentMap);
       const currentIndex = categories.indexOf(selectedCategory);
       const nextIndex = (currentIndex + 1) % categories.length;
       setSelectedCategory(categories[nextIndex]);
     }, 2500);
 
     return () => clearInterval(intervalId);
-  }, [selectedCategory, categories]);
+  }, [selectedCategory, contentMap]);
 
   return (
     <div className="flex flex-col gap-2">
       <div className="flex flex-row gap-4 w-full justify-center">
-        {categories.map((category) => (
+        {Object.keys(contentMap).map((category) => (
           <motion.div
             key={category}
             className={`cursor-pointer ${
@@ -116,7 +117,7 @@ const Skills: React.FC<SkillsProps> = () => {
         ))}
       </div>
       <div className="mt-4">
-        <div className="flex flex-row  justify-center gap-4 items-center flex-wrap w-full h-fit lg:text-xl font-semibold text-zinc-300 lg:gap-10">
+        <div className="flex flex-row justify-center gap-4 items-center flex-wrap w-full h-fit lg:text-xl font-semibold text-zinc-300 lg:gap-10">
           <AnimatePresence mode="wait">
             {contentMap[selectedCategory].map((item) => (
               <motion.div
