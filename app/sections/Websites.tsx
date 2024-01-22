@@ -25,7 +25,7 @@ function Websites({}: Props) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 h-fit mt-10">
           <Card>
             <div className="lg:opacity-20 hover:opacity-75 duration-500">
-              <img src="./enable.webp" alt="" />
+              <img src="./enable.webm" alt="" />
             </div>
             <div className="text-2xl font-medium relative w-full p-4 md:p-8 text-zinc-400">
               Enableupcycling.com

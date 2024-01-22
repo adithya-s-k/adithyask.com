@@ -14,9 +14,9 @@ export default function Home() {
         <div className="min-h-screen h-fit w-full">
           <Aboutme />
         </div>
-        <div className="min-h-screen h-fit w-full">
+        {/* <div className="min-h-screen h-fit w-full">
           <Websites />
-        </div>
+        </div> */}
         <div className="h-fit w-full">
           <Footer />
         </div>
