@@ -77,7 +77,7 @@ export default function Aboutme({}: Props) {
                   About Me
                 </h2>
                 <p className="mt-4 leading-8  duration-150 text-zinc-500 group-hover:text-zinc-300">
-                  Hi There 👋🏼, I'm Adithya S Kolavi, a 19-year-old whole loves
+                  Hi There 👋🏼, I'm Adithya S Kolavi, a 19-year-old who loves
                   to bring ideas to life through code.
                   <br />
                   I specialize in building AI driven applications with Language
