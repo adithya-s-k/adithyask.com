@@ -3,7 +3,7 @@
 Welcome to my personal portfolio website, where you can explore my work, read my blogs, and even play an interactive resume game!
 
 - **Portfolio**: [adithyask.com](https://adithyask.com)
-- **CV**: [adithyask.com](https://cv.adithyask.com)
+- **CV**: [cv.adithyask.com](https://cv.adithyask.com)
 - **Blogs**: [blogs.adithyask.com](https://blogs.adithyask.com)
 - **Interactive Resume Game**: [game.adithyask.com](https://game.adithyask.com)
 
