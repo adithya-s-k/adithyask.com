@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: "AI Researcher, Building Generative AI solutions as scale",
     images: [
       {
-        url: "https://raw.githubusercontent.com/adithya-s-k/adithyask.com/main/cv/src/app/og-image.png", // Replace with your OG image URL
+        url: "https://cv.adithyask.com/adithyask.jpeg", // Replace with your OG image URL
         width: 1200,
         height: 630,
         alt: "Adithya S Kolavi",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     description: "AI Researcher, Building Generative AI solutions as scale",
     images: [
       {
-        url: "https://raw.githubusercontent.com/adithya-s-k/adithyask.com/main/cv/src/app/og-image.png", // Replace with your Twitter image URL
+        url: "https://cv.adithyask.com/adithyask.jpeg", // Replace with your Twitter image URL
         alt: "Adithya S Kolavi",
       },
     ],
