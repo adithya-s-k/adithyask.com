@@ -102,7 +102,7 @@ export const RESUME_DATA = {
       title: "Indic Eval/Leaderboard",
       techStack: ["spaCy", "NLTK", "Transformers", "SkyPilot", "Azure"],
       description:
-        "Developed an evaluation framework for Indic Large Language Models, integrating TGI to speed up evaluation by 45%.",
+        "Developed an evaluation framework for Indic Large Language Models, accommodating multiple translated benchmarks and a leaderboard around it for comparison.",
 
       link: {
         label: "github.com",
@@ -110,10 +110,30 @@ export const RESUME_DATA = {
       },
     },
     {
-      title: "Vision-Augmented Retrieval and Generation",
+      title: "Ambari-7b",
+      techStack: ["Pytroch", "Transformers", "PEFT ", "Deepspeed", "Azure ML"],
+      description:
+        "India's first Kannada bilingual LLM utilizing the LLama2/3 base model, fine-tuned across multiple stages with 1 billion Kannada tokens and tokenization efficiency by 85%",
+      link: {
+        label: "huggingface.co",
+        href: "https://huggingface.co/collections/Cognitive-Lab/ambari-65a2678d1051c2b0db3e01fe",
+      },
+    },
+    {
+      title: "YoloGemma",
+      techStack: ["LLaVa", "PaliGemma", "FastGPT", "Transformers"],
+      description:
+        "Testing and evaluating the capabilities of Vision-Language models (PaliGemma) in performing computer vision tasks such as object detection and segmentation.",
+      link: {
+        label: "github.com",
+        href: "https://github.com/adithya-s-k/YoloGemma",
+      },
+    },
+    {
+      title: "VARAG",
       techStack: ["LLaVa", "Visual RAG", "LLama-index", "Qdrant"],
       description:
-        "An innovative system integrating textual and visual information, enhancing RAG by 35% and improving contextual precision by 60%.",
+        "Vision-Augmented Retrieval and Generation : a system integrating textual and visual information, enhancing RAG by 35% and improving contextual precision by 60%.",
     },
     {
       title: "Mixture of Lora Experts",
@@ -121,8 +141,40 @@ export const RESUME_DATA = {
       description:
         "A novel architecture facilitating the dynamic serving of multiple finetuned LLMs by swapping Lora Adapters during inference.",
     },
+    {
+      title: "MarkerVLM",
+      techStack: ["PyTorch", "LLaVA", "PEFT", "Distributed Training", "HPC"],
+      description:
+        "A state-of-the-art Vision-Language model specialized in converting complex PDFs into markdown with high speed and efficiency.",
+    },
   ],
   projects: [
+    {
+      title: "Cognitune",
+      techStack: ["Python", "FastAPI", "Transformers", "Containerization"],
+      description:
+        "All-in-one platform for LLMops, featuring distributed data processing, multi-GPU fine-tuning, dynamic evaluation, and one-click high-throughput API deployment.",
+    },
+    {
+      title: "Storyblocks",
+      techStack: ["Fast API", "NextJS", "Diffusers", "MoviePy", "Wisper"],
+      description:
+        "Generate Story Video from a Prompt : Transformed text prompts into dynamic story videos with script generation, synchronized audio, and consistent visual style.",
+      link: {
+        label: "github.com",
+        href: "https://github.com/adithya-s-k/Storyblocks",
+      },
+    },
+    {
+      title: "Marker API",
+      techStack: ["Pytorch", "Fast API", "HPC", "Docker", "Transformer"],
+      description:
+        "A production-ready server with 400 github ⭐, easily deployable to convert PDFs, Word documents, etc., into markdown to aid RAG pipelines.",
+      link: {
+        label: "github.com",
+        href: "https://github.com/adithya-s-k/marker-api",
+      },
+    },
     {
       title: "PyRaft - Python Implementation of RAFT",
       techStack: ["Python", "FastAPI", "RAFT Consensus"],
@@ -131,30 +183,23 @@ export const RESUME_DATA = {
         href: "https://github.com/adithya-s-k/PyRaft",
       },
       description:
-        "Implemented RAFT Consensus algorithm from scratch using FastAPI and achieving a throughput of 50~250 transactions per second and improved system stability by 60%.",
+        "Implemented RAFT Consensus algorithm from scratch using FastAPI and achieving a throughput of 50~250 transactions per second",
     },
     {
-      title: "Cognitune - End-to-End LLMops Platform",
-      techStack: [
-        "Python",
-        "FastAPI",
-        "Huggingface",
-        "Transformers",
-        "LLMs",
-        "Containerization",
-      ],
+      title: "Tokenizer Arena",
+      techStack: ["Transformer JS", "React", "Tailwind CSS"],
       description:
-        "All-in-one platform for LLMops, featuring distributed data processing, multi-GPU fine-tuning, dynamic evaluation, and one-click high-throughput API deployment.",
-    },
-    {
-      title: "Storyblocks - Generate Story Video from a Prompt",
-      techStack: ["Fast API", "NextJS", "Diffusers", "MoviePy", "Wisper"],
-      description:
-        "Transformed text prompts into dynamic story videos with script generation, synchronized audio, and consistent visual style.",
+        "A friendly arena to easily compare different tokenizers of various LLMs simultaneously, running completely in the browser.",
       link: {
-        label: "github.com",
-        href: "https://github.com/adithya-s-k/Storyblocks",
+        label: "huggingface.co",
+        href: "https://huggingface.co/spaces/Cognitive-Lab/Tokenizer_Arena",
       },
+    },
+    {
+      title: "Topic2Dataset",
+      techStack: ["FastAPI", "NextJS", "Langchain", "GraphScraper", "Docker"],
+      description:
+        "Create high-quality instruction fine-tuning datasets for LLMs by providing a topic or website, allowing massive synthetic data generation.",
     },
   ],
   extraCurricular: [
