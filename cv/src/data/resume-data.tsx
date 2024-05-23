@@ -176,14 +176,14 @@ export const RESUME_DATA = {
       },
     },
     {
-      title: "PyRaft - Python Implementation of RAFT",
+      title: "PyRaft",
       techStack: ["Python", "FastAPI", "RAFT Consensus"],
       link: {
         label: "github.com",
         href: "https://github.com/adithya-s-k/PyRaft",
       },
       description:
-        "Implemented RAFT Consensus algorithm from scratch using FastAPI and achieving a throughput of 50~250 transactions per second",
+        "Python implementation of the RAFT consensus algorithm from scratch using FastAPI, achieving a throughput of 50-250 transactions per second",
     },
     {
       title: "Tokenizer Arena",
