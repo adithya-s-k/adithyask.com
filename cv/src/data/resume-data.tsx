@@ -56,6 +56,17 @@ export const RESUME_DATA = {
         "Pioneered one of India's first Kannada bilingual Large Language Model - Ambari-7b. Developed Cognitune, an enterprise-grade LLMops platform, reducing time to production by 60%.",
     },
     {
+      company: "TurboML",
+      link: "https://turboml.com/",
+      badges: ["Remote"],
+      title: "AI Developer",
+      start: "June 2023",
+      end: "present",
+      description:
+        "Contributed to the development of LLMOps platform, focusing on AI system observability and evaluation. Implemented advanced tracing, monitoring, and analytics solutions to gain insights into large-scale AI systems, which enhanced model transparency and performance.",
+    },
+
+    {
       company: "Indian Institute of Science (IISC)",
       link: "https://iisc.ac.in/",
       badges: ["On Site"],
@@ -142,7 +153,7 @@ export const RESUME_DATA = {
         "A novel architecture facilitating the dynamic serving of multiple finetuned LLMs by swapping Lora Adapters during inference.",
     },
     {
-      title: "MarkerVLM",
+      title: "ViViD",
       techStack: ["PyTorch", "LLaVA", "PEFT", "Distributed Training", "HPC"],
       description:
         "A state-of-the-art Vision-Language model specialized in converting complex PDFs into markdown with high speed and efficiency.",
