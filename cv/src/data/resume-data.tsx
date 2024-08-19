@@ -65,7 +65,16 @@ export const RESUME_DATA = {
       description:
         "Contributed to the development of LLMOps platform, focusing on AI system observability and evaluation. Implemented advanced tracing, monitoring, and analytics solutions to gain insights into large-scale AI systems, which enhanced model transparency and performance.",
     },
-
+    {
+      company: "NeoHumans",
+      link: "https://neohumans.ai/",
+      badges: ["Remote"],
+      title: "AI Researcher",
+      start: "June 2023",
+      end: "present",
+      description:
+        "Spearheaded the fine-tuning of a Large Language Model (LLM) using a custom synthetic data generation pipeline for multilingual tasks. Successfully deployed the model in a scalable architecture, enabling robust performance across multiple languages and tasks.",
+    },
     {
       company: "Indian Institute of Science (IISC)",
       link: "https://iisc.ac.in/",
