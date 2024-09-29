@@ -8,13 +8,29 @@ import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
+import { OpenSourceSection } from "@/components/opensource-card";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
   description: RESUME_DATA.summary,
 };
+async function fetchRepoData(repoUrl: string) {
+  const apiUrl = repoUrl.replace(
+    "https://github.com",
+    "https://api.github.com/repos",
+  );
+  const response = await fetch(apiUrl);
+  if (!response.ok) {
+    console.error(`Failed to fetch repo data for ${repoUrl}`);
+    return null;
+  }
+  return response.json();
+}
 
-export default function Page() {
+export default async function Page() {
+  const repoData = await Promise.all(
+    RESUME_DATA.open_source.map(fetchRepoData),
+  );
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
@@ -92,6 +108,7 @@ export default function Page() {
             {/* <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback> */}
           </Avatar>
         </div>
+
         <Section>
           <h2 className="text-xl font-bold">About</h2>
           <p className="text-pretty font-mono text-sm text-muted-foreground">
@@ -147,6 +164,7 @@ export default function Page() {
             })}
           </div>
         </Section>
+        <OpenSourceSection repositories={repoData.filter(Boolean)} />
 
         <Section className="print-force-new-page scroll-mb-16">
           <h2 className="text-xl font-bold">Research Projects</h2>
@@ -190,9 +208,9 @@ export default function Page() {
                     <h3 className="font-semibold leading-none">
                       {education.school}
                     </h3>
-                    <div className="text-sm tabular-nums text-gray-500">
+                    {/* <div className="text-sm tabular-nums text-gray-500">
                       {education.start} - {education.end}
-                    </div>
+                    </div> */}
                   </div>
                 </CardHeader>
                 <CardContent className="mt-2">{education.degree}</CardContent>

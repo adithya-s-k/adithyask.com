@@ -6,7 +6,7 @@ export const RESUME_DATA = {
   location: "Bengaluru, India",
   about: "AI Researcher, Building Generative AI solutions at Scale",
   summary:
-    "AI Researcher with experience in building generative AI solutions. Skilled in taking products from concept to completion and leading teams effectively. Experienced in AI, ML, and DL technologies, web development, and cloud computing.",
+    "AI Researcher with experience in building generative AI solutions. Skilled in taking products from concept to completion and leading teams effectively. Experienced in AI, ML, and DL technologies, web development, and cloud computing. I specialize in developing scalable AI solutions, from fine-tuning models to full deployment pipelines. My current focus is on Vision-Language Models (VLMs) for Vision-Based Retrieval systems. I'm also passionate about open-source, regularly contributing to various projects to advance AI innovation.",
   // avatarUrl: "https://adithyask.com/adithyask.jpg",
   avatarUrl: "./adithyask.jpeg",
   personalWebsiteUrl: "https://adithyask.com",
@@ -29,11 +29,6 @@ export const RESUME_DATA = {
         url: "https://twitter.com/adithya_s_k",
         icon: XIcon,
       },
-      // {
-      //   name: "Blog",
-      //   url: "https://medium.com/@adithyask",
-      //   icon: XIcon,
-      // },
     ],
   },
   education: [
@@ -167,6 +162,14 @@ export const RESUME_DATA = {
       description:
         "A state-of-the-art Vision-Language model specialized in converting complex PDFs into markdown with high speed and efficiency.",
     },
+  ],
+  open_source: [
+    "https://github.com/adithya-s-k/omniparse",
+    "https://github.com/adithya-s-k/RAG-SaaS",
+    "https://github.com/adithya-s-k/VARAG",
+    "https://github.com/adithya-s-k/AI-Engineering.academy",
+    "https://github.com/adithya-s-k/indic_eval",
+    "https://github.com/adithya-s-k/Indic-llm",
   ],
   projects: [
     {
