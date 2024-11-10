@@ -6,7 +6,7 @@ export const RESUME_DATA = {
   location: "Bengaluru, India",
   about: "AI Researcher, Building Generative AI solutions at Scale",
   summary:
-    "AI Researcher with experience in building generative AI solutions. Skilled in taking products from concept to completion and leading teams effectively. Experienced in AI, ML, and DL technologies, web development, and cloud computing. I specialize in developing scalable AI solutions, from fine-tuning models to full deployment pipelines. My current focus is on Vision-Language Models (VLMs) for Vision-Based Retrieval systems. I'm also passionate about open-source, regularly contributing to various projects to advance AI innovation.",
+    "Building AI that actually works! Currently deep into Vision-Language Models and Agentic Systems, with hands-on experience taking AI projects from wild ideas to real products. Love tinkering with model fine-tuning and cloud deployments. Big open-source enthusiast - you'll find me contributing to projects that make AI more accessible to everyone.",
   // avatarUrl: "https://adithyask.com/adithyask.jpg",
   avatarUrl: "./adithyask.jpeg",
   personalWebsiteUrl: "https://adithyask.com",
