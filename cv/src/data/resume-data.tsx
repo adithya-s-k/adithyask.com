@@ -41,6 +41,15 @@ export const RESUME_DATA = {
   ],
   work: [
     {
+      company: "Apple",
+      link: "https://www.apple.com/",
+      badges: ["On Site"],
+      title: "ML Intern",
+      start: "January 2025",
+      end: "present",
+      description: "",
+    },
+    {
       company: "CognitiveLab",
       link: "https://www.cognitivelab.in",
       badges: ["On Site"],
