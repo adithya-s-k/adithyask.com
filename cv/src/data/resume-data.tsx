@@ -47,7 +47,8 @@ export const RESUME_DATA = {
       title: "ML Intern",
       start: "January 2025",
       end: "present",
-      description: "",
+      description:
+        "Part of the Unified Intelligence team, working on Knowledge Graphs and AI systems.",
     },
     {
       company: "CognitiveLab",
@@ -64,8 +65,8 @@ export const RESUME_DATA = {
       link: "https://turboml.com/",
       badges: ["Remote"],
       title: "AI Developer",
-      start: "June 2023",
-      end: "present",
+      start: "June 2024",
+      end: "November 2024",
       description:
         "Contributed to the development of LLMOps platform, focusing on AI system observability and evaluation. Implemented advanced tracing, monitoring, and analytics solutions to gain insights into large-scale AI systems, which enhanced model transparency and performance.",
     },
@@ -74,8 +75,8 @@ export const RESUME_DATA = {
       link: "https://neohumans.ai/",
       badges: ["Remote"],
       title: "AI Researcher",
-      start: "June 2023",
-      end: "present",
+      start: "June 2024",
+      end: "August 2024",
       description:
         "Spearheaded the fine-tuning of a Large Language Model (LLM) using a custom synthetic data generation pipeline for multilingual tasks. Successfully deployed the model in a scalable architecture, enabling robust performance across multiple languages and tasks.",
     },
@@ -85,7 +86,7 @@ export const RESUME_DATA = {
       badges: ["On Site"],
       title: "Research Intern",
       start: "September 2023",
-      end: "present",
+      end: "May 2024",
       description:
         "Conducting research on Multi-Modal adaptation of LLMs. Training Vision Language model for various use cases such as Video Understanding, Object Detection/Segmentation and Image QnA.",
     },
