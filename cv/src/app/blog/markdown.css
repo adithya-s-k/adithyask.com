@@ -1,0 +1,106 @@
+/* Basic styles for markdown content in light theme */
+.markdown-content {
+  line-height: 1.7;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4 {
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: hsl(var(--foreground));
+}
+
+.markdown-content a {
+  color: hsl(var(--primary));
+  text-decoration: none;
+}
+
+.markdown-content a:hover {
+  text-decoration: underline;
+}
+
+.markdown-content pre {
+  overflow-x: auto;
+  background: transparent;
+}
+
+.markdown-content blockquote {
+  color: hsl(var(--muted-foreground));
+  font-style: italic;
+  border-left-width: 2px;
+  border-left-color: hsl(var(--muted));
+  padding-left: 1rem;
+  margin: 1rem 0;
+}
+
+.markdown-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid hsl(var(--muted));
+}
+
+.markdown-content hr {
+  border: 0;
+  height: 1px;
+  background-color: hsl(var(--muted));
+  margin: 2rem 0;
+}
+
+.markdown-content table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.markdown-content table th,
+.markdown-content table td {
+  padding: 0.5rem 1rem;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.6;
+  border: 1px solid hsl(var(--muted));
+}
+
+.markdown-content table th {
+  font-weight: 500;
+  background-color: hsl(var(--muted));
+}
+
+/* Adjust font size for code elements to match project cards */
+.markdown-content code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 10px;
+}
+
+/* Adjust spacing for lists */
+.markdown-content ul,
+.markdown-content ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.markdown-content li > ul,
+.markdown-content li > ol {
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Add specific styling for badges that matches project cards */
+.markdown-content .badge {
+  display: inline-block;
+  font-size: 10px;
+  padding: 0 0.25rem;
+  border-radius: 0.25rem;
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+}
+
+/* Adjust paragraph styling to match the project card descriptions */
+.markdown-content p {
+  color: hsl(var(--muted-foreground));
+  font-size: 0.875rem;
+}

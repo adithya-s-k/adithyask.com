@@ -14,9 +14,14 @@ interface Repository {
   id: number;
   name: string;
   html_url: string;
-  description: string;
+  description: string | null;
   stargazers_count: number;
-  topics: string[];
+  topics: readonly string[] | string[];
+  language?: string | null;
+  owner?: {
+    login: string;
+    avatar_url: string;
+  };
 }
 
 interface OpenSourceCardProps {
@@ -69,19 +74,28 @@ export const OpenSourceCard: React.FC<OpenSourceCardProps> = ({ repo }) => {
 };
 
 interface OpenSourceSectionProps {
-  repositories: Repository[];
+  repositories: readonly Repository[] | Repository[];
 }
 
 export const OpenSourceSection: React.FC<OpenSourceSectionProps> = ({
   repositories,
 }) => {
+  // Filter out any repositories that might be null or undefined
+  const validRepos = repositories.filter(Boolean);
+  
   return (
     <Section className="mb-8">
       <h2 className="mb-2 text-2xl font-bold">Open Source</h2>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-        {repositories.map((repo) => (
-          <OpenSourceCard key={repo.id} repo={repo} />
-        ))}
+        {validRepos.length > 0 ? (
+          validRepos.map((repo) => (
+            <OpenSourceCard key={repo.id} repo={repo} />
+          ))
+        ) : (
+          <p className="text-sm text-muted-foreground col-span-2">
+            No repository data available. GitHub API rate limit may have been reached.
+          </p>
+        )}
       </div>
     </Section>
   );
