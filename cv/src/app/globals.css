@@ -64,6 +64,9 @@
     --input: 215 27.9% 16.9%;
     --ring: 216 12.2% 83.9%;
   }
+  .theme {
+    --animate-shine: shine var(--duration) infinite linear;
+  }
 }
 
 @layer base {
@@ -155,3 +158,39 @@
 }
 
 /* Removed animate-text-shadow and borderAnimation */
+
+@theme inline {
+  @keyframes shine {
+  0% {
+    background-position: 0% 0%;
+    }
+  50% {
+    background-position: 100% 100%;
+    }
+  to {
+    background-position: 0% 0%;
+    }
+  }
+  @keyframes shine {
+  0% {
+    background-position: 0% 0%;
+    }
+  50% {
+    background-position: 100% 100%;
+    }
+  to {
+    background-position: 0% 0%;
+    }
+  }
+  @keyframes shine {
+  0% {
+    background-position: 0% 0%;
+    }
+  50% {
+    background-position: 100% 100%;
+    }
+  to {
+    background-position: 0% 0%;
+    }
+  }
+}

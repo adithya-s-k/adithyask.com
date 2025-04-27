@@ -1,7 +1,19 @@
 import React, { useState } from "react";
-import { Card, CardHeader, CardContent, CardDescription, CardTitle } from "./ui/card";
+import {
+  Card,
+  CardHeader,
+  CardContent,
+  CardDescription,
+  CardTitle,
+} from "./ui/card";
 import { Badge } from "./ui/badge";
-import { StarIcon, GitForkIcon, ArrowUpRight, ChevronDownIcon, ChevronUpIcon } from "lucide-react";
+import {
+  StarIcon,
+  GitForkIcon,
+  ArrowUpRight,
+  ChevronDownIcon,
+  ChevronUpIcon,
+} from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
@@ -64,9 +76,12 @@ export const FeaturedRepo: React.FC<FeaturedRepoProps> = ({ repo, index }) => {
           <CardContent className="p-0">
             <div className="mt-2 flex flex-wrap gap-1">
               {repo.language && (
-                <Badge 
-                  className={cn("px-1.5 py-0.5 text-[10px]", 
-                    repo.featured && "bg-primary/20 text-primary hover:bg-primary/30")}
+                <Badge
+                  className={cn(
+                    "px-1.5 py-0.5 text-[10px]",
+                    repo.featured &&
+                      "bg-primary/20 text-primary hover:bg-primary/30",
+                  )}
                 >
                   {repo.language}
                 </Badge>
@@ -93,35 +108,63 @@ interface FeaturedReposProps {
   title?: string;
 }
 
-export const FeaturedRepos: React.FC<FeaturedReposProps> = ({ 
-  repositories, 
-  title = "Featured Repositories" 
+export const FeaturedRepos: React.FC<FeaturedReposProps> = ({
+  repositories,
+  title = "Featured Repositories",
 }) => {
   const [showAll, setShowAll] = useState(false);
-  const sortedRepos = [...repositories].sort((a, b) => b.stargazers_count - a.stargazers_count);
-  
+  const sortedRepos = [...repositories].sort(
+    (a, b) => b.stargazers_count - a.stargazers_count,
+  );
+
   // Only show 2 repositories by default
   const visibleRepos = showAll ? sortedRepos : sortedRepos.slice(0, 2);
   const hasMoreRepos = sortedRepos.length > 2;
 
+  // Calculate total stars
+  const totalStars = sortedRepos.reduce(
+    (total, repo) => total + (repo.stargazers_count || 0),
+    0,
+  );
+
+  // Format star count (e.g., 1200 -> 1.2k)
+  const formatStarCount = (count: number): string => {
+    if (count >= 1000) {
+      return `${(count / 1000).toFixed(1)}k`;
+    }
+    return count.toString();
+  };
+
   return (
     <section className="mb-8">
-      <h2 className="mb-4 text-xl font-bold">{title}</h2>
+      <div className="mb-4 flex items-center justify-between">
+        <h2 className="text-xl font-bold">{title}</h2>
+        <div className="flex items-center gap-1 rounded-full bg-secondary/80 px-3 py-1 text-sm">
+          <StarIcon className="h-4 w-4 fill-yellow-500 text-yellow-500" />
+          <span className="font-mono">
+            {formatStarCount(totalStars)} total stars
+          </span>
+        </div>
+      </div>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <AnimatePresence>
           {visibleRepos.map((repo, index) => (
-            <FeaturedRepo key={repo.id} repo={{...repo, featured: true}} index={index} />
+            <FeaturedRepo
+              key={repo.id}
+              repo={{ ...repo, featured: true }}
+              index={index}
+            />
           ))}
         </AnimatePresence>
       </div>
-      
+
       {/* Show more/less button */}
       {hasMoreRepos && (
-        <div className="flex justify-center mt-4">
+        <div className="mt-4 flex justify-center">
           <Button
             variant="ghost"
             size="sm"
-            className="text-muted-foreground hover:text-foreground flex items-center gap-1 text-xs font-medium"
+            className="flex items-center gap-1 text-xs font-medium text-muted-foreground hover:text-foreground"
             onClick={() => setShowAll(!showAll)}
           >
             {showAll ? (

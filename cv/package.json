@@ -16,6 +16,7 @@
     "@radix-ui/react-slot": "^1.0.2",
     "@radix-ui/react-tooltip": "^1.2.4",
     "@vercel/analytics": "^1.1.2",
+    "cheerio": "^1.0.0",
     "class-validator": "^0.14.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
