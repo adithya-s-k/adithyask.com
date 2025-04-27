@@ -32,6 +32,7 @@ import { HyperText } from "@/components/magicui/hyper-text";
 import { AboutMeMorph } from "@/components/about-me-morph";
 // import { AboutMeDrawer } from "@/components/about-me-drawer";
 import { GitHubStars } from "@/components/github-stars";
+import { Metadata } from "next";
 
 // Name animation overlay component
 const NameAnimation = () => {

@@ -1,7 +1,14 @@
 "use client";
 
 import React from "react";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
 import { Badge } from "./ui/badge";
 import { CalendarIcon, Clock, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
@@ -17,6 +24,7 @@ export interface BlogPost {
   tags: ReadonlyArray<string> | string[];
   readingTime: string;
   published: boolean;
+  ogImage?: string; // Add optional ogImage property
 }
 
 interface BlogCardProps {
@@ -26,12 +34,17 @@ interface BlogCardProps {
 
 export const BlogCard = ({ post, variant = "default" }: BlogCardProps) => {
   const isFeatured = variant === "featured";
-  
+
   // Determine if the post should link externally or internally
   const LinkWrapper = ({ children }: { children: React.ReactNode }) => {
     if (post.externalUrl) {
       return (
-        <a href={post.externalUrl} target="_blank" rel="noopener noreferrer" className="block h-full">
+        <a
+          href={post.externalUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block h-full"
+        >
           {children}
         </a>
       );
@@ -42,17 +55,17 @@ export const BlogCard = ({ post, variant = "default" }: BlogCardProps) => {
       </Link>
     );
   };
-  
+
   return (
     <LinkWrapper>
-      <Card 
+      <Card
         className={cn(
-          "h-full flex flex-col overflow-hidden border border-muted transition-all duration-300 hover:shadow-md hover:border-primary/30 group",
-          isFeatured && "md:col-span-2 lg:col-span-2"
+          "group flex h-full flex-col overflow-hidden border border-muted transition-all duration-300 hover:border-primary/30 hover:shadow-md",
+          isFeatured && "md:col-span-2 lg:col-span-2",
         )}
       >
         <CardHeader className="p-5">
-          <div className="flex items-center gap-2 text-muted-foreground mb-2">
+          <div className="mb-2 flex items-center gap-2 text-muted-foreground">
             <CalendarIcon className="h-3.5 w-3.5" />
             <span className="text-xs">{post.date}</span>
             <span className="text-xs">•</span>
@@ -61,26 +74,32 @@ export const BlogCard = ({ post, variant = "default" }: BlogCardProps) => {
             {post.externalUrl && (
               <>
                 <span className="text-xs">•</span>
-                <Badge variant="outline" className="text-xs font-normal">External</Badge>
+                <Badge variant="outline" className="text-xs font-normal">
+                  External
+                </Badge>
               </>
             )}
           </div>
-          
-          <h3 className="font-semibold text-lg leading-tight group-hover:text-primary transition-colors duration-200">
+
+          <h3 className="text-lg font-semibold leading-tight transition-colors duration-200 group-hover:text-primary">
             {post.title}
-            <ArrowUpRight className="h-3.5 w-3.5 inline ml-1 opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200" />
+            <ArrowUpRight className="ml-1 inline h-3.5 w-3.5 -translate-y-1 opacity-0 transition-all duration-200 group-hover:translate-y-0 group-hover:opacity-100" />
           </h3>
         </CardHeader>
-        
-        <CardContent className="p-5 pt-0 flex-grow">
-          <p className="text-sm text-muted-foreground line-clamp-3">
+
+        <CardContent className="flex-grow p-5 pt-0">
+          <p className="line-clamp-3 text-sm text-muted-foreground">
             {post.excerpt}
           </p>
         </CardContent>
-        
-        <CardFooter className="p-5 pt-3 flex flex-wrap gap-2">
+
+        <CardFooter className="flex flex-wrap gap-2 p-5 pt-3">
           {post.tags.map((tag) => (
-            <Badge key={tag} variant="secondary" className="text-xs font-medium">
+            <Badge
+              key={tag}
+              variant="secondary"
+              className="text-xs font-medium"
+            >
               {tag}
             </Badge>
           ))}
@@ -96,16 +115,16 @@ interface BlogGridProps {
 }
 
 export const BlogGrid = ({ posts, featuredCount = 1 }: BlogGridProps) => {
-  const publishedPosts = posts.filter(post => post.published);
+  const publishedPosts = posts.filter((post) => post.published);
   const sortedPosts = [...publishedPosts].sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
-  
+
   const featuredPosts = sortedPosts.slice(0, featuredCount);
   const regularPosts = sortedPosts.slice(featuredCount);
-  
+
   return (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
       {featuredPosts.map((post) => (
         <BlogCard key={post.slug} post={post} variant="featured" />
       ))}

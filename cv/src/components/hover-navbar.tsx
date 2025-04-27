@@ -4,7 +4,15 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 import Link from "next/link";
-import { HomeIcon, BookOpenIcon, BriefcaseIcon, GraduationCapIcon, CodeIcon, FileTextIcon, CommandIcon } from "lucide-react";
+import {
+  HomeIcon,
+  BookOpenIcon,
+  BriefcaseIcon,
+  GraduationCapIcon,
+  CodeIcon,
+  FileTextIcon,
+  CommandIcon,
+} from "lucide-react";
 import { scrollToSection } from "@/lib/utils";
 import {
   CommandDialog,
@@ -38,17 +46,36 @@ export function HoverNavbar({ links = [] }: NavbarProps) {
 
   const navItems = [
     { name: "Home", icon: <HomeIcon className="h-5 w-5" />, href: "#top" },
-    { name: "About", icon: <FileTextIcon className="h-5 w-5" />, href: "#about" },
+    {
+      name: "About",
+      icon: <FileTextIcon className="h-5 w-5" />,
+      href: "#about",
+    },
+    {
+      name: "Work",
+      icon: <BriefcaseIcon className="h-5 w-5" />,
+      href: "#work",
+    },
     { name: "Blog", icon: <BookOpenIcon className="h-5 w-5" />, href: "#blog" },
-    { name: "Work", icon: <BriefcaseIcon className="h-5 w-5" />, href: "#work" },
-    { name: "Projects", icon: <CodeIcon className="h-5 w-5" />, href: "#projects" },
-    { name: "Education", icon: <GraduationCapIcon className="h-5 w-5" />, href: "#education" },
+    {
+      name: "Projects",
+      icon: <CodeIcon className="h-5 w-5" />,
+      href: "#projects",
+    },
+    {
+      name: "Education",
+      icon: <GraduationCapIcon className="h-5 w-5" />,
+      href: "#education",
+    },
   ];
 
   // Handle navigation and smooth scrolling
-  const handleNavigation = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavigation = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
     e.preventDefault();
-    if (href.startsWith('#')) {
+    if (href.startsWith("#")) {
       scrollToSection(href.substring(1));
     } else {
       window.location.href = href;
@@ -57,41 +84,44 @@ export function HoverNavbar({ links = [] }: NavbarProps) {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 flex justify-center px-4 pb-2 md:pb-4">
-      <motion.div 
+      <motion.div
         initial={{ y: 100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.3 }}
-        className="backdrop-blur-md bg-white/70 dark:bg-slate-900/80 rounded-full shadow-lg border border-gray-200 dark:border-gray-800"
+        className="rounded-full border border-gray-200 bg-white/70 shadow-lg backdrop-blur-md dark:border-gray-800 dark:bg-slate-900/80"
       >
-        <nav className="flex px-4 py-2 md:py-2.5 space-x-1 md:space-x-2 items-center">
+        <nav className="flex items-center space-x-1 px-4 py-2 md:space-x-2 md:py-2.5">
           {navItems.map((item) => (
             <Button
               key={item.name}
-              variant="ghost" 
+              variant="ghost"
               size="sm"
-              className="flex flex-col md:flex-row items-center gap-1 md:gap-2 rounded-full text-xs md:text-sm font-medium transition-all hover:bg-gray-100 dark:hover:bg-slate-800 px-2 md:px-3 py-1.5 md:py-2"
+              className="flex flex-col items-center gap-1 rounded-full px-2 py-1.5 text-xs font-medium transition-all hover:bg-gray-100 dark:hover:bg-slate-800 md:flex-row md:gap-2 md:px-3 md:py-2 md:text-sm"
               asChild
             >
-              <a href={item.href} onClick={(e) => handleNavigation(e, item.href)}>
+              <a
+                href={item.href}
+                onClick={(e) => handleNavigation(e, item.href)}
+              >
                 {item.icon}
                 <span className="hidden xs:inline md:inline">{item.name}</span>
               </a>
             </Button>
           ))}
-          
+
           {/* Command menu button */}
           <Button
             onClick={() => setOpen(true)}
             variant="ghost"
             size="sm"
-            className="flex flex-col md:flex-row items-center gap-1 md:gap-2 rounded-full text-xs md:text-sm font-medium transition-all hover:bg-gray-100 dark:hover:bg-slate-800 px-2 md:px-3 py-1.5 md:py-2"
+            className="flex flex-col items-center gap-1 rounded-full px-2 py-1.5 text-xs font-medium transition-all hover:bg-gray-100 dark:hover:bg-slate-800 md:flex-row md:gap-2 md:px-3 md:py-2 md:text-sm"
           >
             <CommandIcon className="h-5 w-5" />
             <span className="hidden xs:inline md:inline">Menu</span>
           </Button>
         </nav>
       </motion.div>
-      
+
       {/* Command Dialog */}
       <CommandDialog open={open} onOpenChange={setOpen}>
         <CommandInput placeholder="Type a command or search..." />
@@ -131,7 +161,7 @@ export function HoverNavbar({ links = [] }: NavbarProps) {
                 key={item.name}
                 onSelect={() => {
                   setOpen(false);
-                  if (item.href.startsWith('#')) {
+                  if (item.href.startsWith("#")) {
                     scrollToSection(item.href.substring(1));
                   } else {
                     window.location.href = item.href;

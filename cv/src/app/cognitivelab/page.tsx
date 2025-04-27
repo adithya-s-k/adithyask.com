@@ -40,14 +40,7 @@ import { BookmarkCard } from "@/components/bookmark-card"; // Import the new com
 import { Skeleton } from "@/components/ui/skeleton"; // Import Skeleton if not already
 import { BlogNavbar } from "@/components/blog-navbar"; // Import BlogNavbar
 import { Section } from "@/components/ui/section";
-// Removed metadata import
-// import { Metadata } from "next";
-
-// Removed metadata export
-// export const metadata: Metadata = {
-//   title: "CognitiveLab | Adithya S Kolavi",
-//   description: "Links related to the Cognitive Computing Lab at IISc.",
-// };
+import { RESUME_DATA } from "@/data/resume-data"; // Import resume data for base URL
 
 // Define project type for better type safety
 interface Project {
