@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://adithyask.com
+
+# Sitemaps
+Sitemap: https://adithyask.com/sitemap.xml
