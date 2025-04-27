@@ -2,10 +2,11 @@
 
 Welcome to my personal portfolio website, where you can explore my work, read my blogs, and even play an interactive resume game!
 
+<div align="center">
+    <img src="./cv/public/website_ss.png" alt="adithyask.com" width="600">
+</div>
+
 - **Portfolio**: [adithyask.com](https://adithyask.com)
-- **CV**: [adithyask.com](https://cv.adithyask.com)
-- **Blogs**: [blogs.adithyask.com](https://blogs.adithyask.com)
-- **Interactive Resume Game**: [game.adithyask.com](https://game.adithyask.com)
 
 ## Introduction
 
@@ -20,7 +21,6 @@ Welcome to my personal portfolio! This website serves as a central hub where you
 ## Usage
 
 - **Portfolio**: Visit [adithyask.com](https://adithyask.com) and navigate through the different sections to explore my projects and skills.
-- **Blogs**: Head over to [blogs.adithyask.com](https://blogs.adithyask.com) to read my tech blogs and stay updated with the latest trends.
 - **Interactive Resume Game**: For a unique experience, try out the [interactive resume game](https://game.adithyask.com) to learn more about me in a fun and interactive way.
 
 ## License
