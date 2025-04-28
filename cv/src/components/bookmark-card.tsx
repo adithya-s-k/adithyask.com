@@ -114,6 +114,13 @@ export function BookmarkCard({ link }: BookmarkCardProps) {
     setIsDescriptionVisible(false);
   };
 
+  // Handle link click
+  const handleLinkClick = (e: React.MouseEvent) => {
+    // Don't prevent default behavior - allow the link to be followed
+    // Just stop propagation to prevent double handling
+    e.stopPropagation();
+  };
+
   return (
     <div className="relative">
       {" "}
@@ -138,6 +145,7 @@ export function BookmarkCard({ link }: BookmarkCardProps) {
           rel="noopener noreferrer"
           // Make the link non-focusable if the parent div handles interaction
           tabIndex={significanceDescription ? -1 : 0}
+          onClick={handleLinkClick}
           className={`group flex h-full flex-col overflow-hidden rounded-lg border border-border bg-card transition-all duration-300 ease-in-out hover:border-primary/30 hover:shadow-lg ${significanceDescription ? "cursor-pointer" : ""}`}
         >
           {/* Image Section */}
@@ -227,7 +235,18 @@ export function BookmarkCard({ link }: BookmarkCardProps) {
             onMouseLeave={handleMouseLeave}
             aria-hidden={!isDescriptionVisible}
           >
-            {significanceDescription}
+            <div className="flex flex-col gap-2">
+              <p>{significanceDescription}</p>
+              <a 
+                href={link.url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary hover:underline text-xs flex items-center gap-1.5"
+              >
+                <LinkIcon size={12} />
+                Open link
+              </a>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
