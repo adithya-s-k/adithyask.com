@@ -41,6 +41,7 @@ export interface Publication {
   resourceUrl?: string; // Added resource URL for PDF, poster, etc.
   citation?: string; // Citation text in a standard format
   status?: string;
+  showLinks?: boolean; // Controls whether publication links are displayed
   tags: readonly string[] | string[];
 }
 
@@ -156,54 +157,63 @@ const PublishedWorkCard: React.FC<PublishedWorkCardProps> = ({
                   </TooltipContent>
                 </Tooltip>
 
-                {/* Conference website link */}
-                {publication.websiteUrl && (
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <Button
-                        variant="ghost"
-                        size="icon"
-                        className="h-6 w-6 rounded-full"
-                        asChild
-                      >
-                        <a
-                          href={publication.websiteUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Globe className="h-5 w-5" />
-                        </a>
-                      </Button>
-                    </TooltipTrigger>
-                    <TooltipContent side="top">
-                      <p>Conference website</p>
-                    </TooltipContent>
-                  </Tooltip>
-                )}
+                {/* Show links or Coming Soon based on showLinks property */}
+                {publication.showLinks !== false ? (
+                  <>
+                    {/* Conference website link */}
+                    {publication.websiteUrl && (
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="h-6 w-6 rounded-full"
+                            asChild
+                          >
+                            <a
+                              href={publication.websiteUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <Globe className="h-5 w-5" />
+                            </a>
+                          </Button>
+                        </TooltipTrigger>
+                        <TooltipContent side="top">
+                          <p>Conference website</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    )}
 
-                {/* Resource link (PDF/Poster) */}
-                {publication.resourceUrl && (
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <Button
-                        variant="ghost"
-                        size="icon"
-                        className="h-6 w-6 rounded-full"
-                        asChild
-                      >
-                        <a
-                          href={publication.resourceUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <FileText className="h-5 w-5" />
-                        </a>
-                      </Button>
-                    </TooltipTrigger>
-                    <TooltipContent side="top">
-                      <p>View paper/poster</p>
-                    </TooltipContent>
-                  </Tooltip>
+                    {/* Resource link (PDF/Poster) */}
+                    {publication.resourceUrl && (
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <Button
+                            variant="ghost"
+                            size="icon"
+                            className="h-6 w-6 rounded-full"
+                            asChild
+                          >
+                            <a
+                              href={publication.resourceUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <FileText className="h-5 w-5" />
+                            </a>
+                          </Button>
+                        </TooltipTrigger>
+                        <TooltipContent side="top">
+                          <p>View paper/poster</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    )}
+                  </>
+                ) : (
+                  <Badge variant="outline" className="px-2 py-0.5 text-xs">
+                    Coming Soon
+                  </Badge>
                 )}
               </TooltipProvider>
             </div>

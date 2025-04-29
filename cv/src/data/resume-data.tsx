@@ -243,7 +243,7 @@ Feel free to reach out if you'd like to discuss ideas, potential collaborations,
     "https://github.com/adithya-s-k/marker-api",
     "https://github.com/adithya-s-k/YoloGemma",
     "https://github.com/adithya-s-k/indic_eval",
-    "https://github.com/adithya-s-k/Indic-llm"
+    "https://github.com/adithya-s-k/Indic-llm",
   ],
   projects: [
     {
@@ -318,112 +318,171 @@ Feel free to reach out if you'd like to discuss ideas, potential collaborations,
   ],
   publications: [
     {
-      title: "ViViD - Vision Language model for Unified Visual Understanding of Documents",
-      description: "A vision-language model specifically optimized for document understanding tasks, capable of processing diverse document formats with high accuracy.",
-      publisher: "CVPR 2025 | Emergent Visual Abilities and Limits of Foundation Models (EVAL-FoMo 2025)",
+      title:
+        "ViViD - Vision Language model for Unified Visual Understanding of Documents",
+      description:
+        "A vision-language model specifically optimized for document understanding tasks, capable of processing diverse document formats with high accuracy.",
+      publisher:
+        "CVPR 2025 | Emergent Visual Abilities and Limits of Foundation Models (EVAL-FoMo 2025)",
       date: "2025",
       status: "Accepted",
-      websiteUrl: "https://cvpr2025.thecvf.com/",
+      websiteUrl: "https://sites.google.com/view/eval-fomo-2-cvpr/home",
       resourceUrl: "https://example.com/vivid-paper.pdf",
-      citation: "Kolavi, A. S., Kumar, P., & Reddy, L. (2025). ViViD: Vision Language model for Unified Visual Understanding of Documents. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) EVAL-FoMo Workshop, pp. 342-351.",
-      tags: ["Vision-Language Models", "Document Understanding", "Multimodal AI", "Foundation Models"]
+      citation: "_",
+      tags: [
+        "Vision-Language Models",
+        "Document Understanding",
+        "Multimodal AI",
+        "Foundation Models",
+      ],
+      showLinks: false,
     },
     {
-      title: "Nayana OCR: A Scalable Framework for Document OCR in Low-Resource Languages",
-      description: "Development of a specialized OCR system designed for low-resource Indic languages, addressing unique challenges in character recognition and document processing.",
+      title:
+        "Nayana OCR: A Scalable Framework for Document OCR in Low-Resource Languages",
+      description:
+        "Development of a specialized OCR system designed for low-resource Indic languages, addressing unique challenges in character recognition and document processing.",
       publisher: "NAACL 2025 | Language Models for Underserved Communities",
       date: "2025",
       status: "Accepted",
-      websiteUrl: "https://2025.naacl.org/",
-      resourceUrl: "https://example.com/nayana-ocr-paper.pdf",
-      citation: "Kolavi, A. S., Sharma, R., & Bhat, S. (2025). Nayana OCR: A Scalable Framework for Document OCR in Low-Resource Languages. In Proceedings of NAACL 2025: Language Models for Underserved Communities Workshop, pp. 78-85.",
-      tags: ["OCR", "Low-Resource Languages", "Document Processing", "Indic Languages"]
+      websiteUrl: "https://lm4uc.github.io/",
+      resourceUrl: "https://openreview.net/pdf?id=uaQR3BgHrV",
+      citation: "_",
+      tags: [
+        "OCR",
+        "Low-Resource Languages",
+        "Document Processing",
+        "Indic Languages",
+      ],
+      showLinks: true,
     },
     {
-      title: "Nayana - A Unified Foundation Model for Multilingual, Multimodal, and Multitask Intelligence",
-      description: "Winner of the 2024 Llama impact grant from Meta, this paper presents a foundation model architecture designed for multilingual and multimodal applications.",
+      title:
+        "Nayana - A Unified Foundation Model for Multilingual, Multimodal, and Multitask Intelligence",
+      description:
+        "Winner of the 2024 Llama impact grant from Meta, this paper presents a foundation model architecture designed for multilingual and multimodal applications.",
       publisher: "LlamaCon 2025 | LLama Impact Grant 2024 winner",
       date: "2025",
       status: "Accepted",
-      websiteUrl: "https://ai.meta.com/llama/",
+      websiteUrl: "https://www.llama.com/",
       resourceUrl: "https://example.com/nayana-foundation-model-poster.pdf",
-      citation: "Kolavi, A. S., & Team, Cognitive Lab. (2025). Nayana: A Unified Foundation Model for Multilingual, Multimodal, and Multitask Intelligence. LlamaCon 2025, Meta AI Research.",
-      tags: ["Foundation Models", "Multilingual", "Multimodal", "Multitask Learning"]
+      citation: "_",
+      tags: [
+        "Foundation Models",
+        "Multilingual",
+        "Multimodal",
+        "Multitask Learning",
+      ],
+      showLinks: false,
     },
     {
-      title: "Nayana: Synthesizing Multi-task, Multi-modal, and Multi-lingual Document Understanding Datasets for Vision-Language Models",
-      description: "A comprehensive approach to generating synthetic datasets for training vision-language models on document understanding tasks across multiple languages.",
+      title:
+        "Nayana: Synthesizing Multi-task, Multi-modal, and Multi-lingual Document Understanding Datasets for Vision-Language Models",
+      description:
+        "A comprehensive approach to generating synthetic datasets for training vision-language models on document understanding tasks across multiple languages.",
       publisher: "KDD 2025 | Datasets and Benchmarks Track",
       date: "2025",
       status: "Under Review",
-      websiteUrl: "https://kdd.org/kdd2025/",
+      websiteUrl:
+        "https://kdd2025.kdd.org/call-for-datasets-and-benchmarks-track-papers/",
       resourceUrl: "https://example.com/nayana-datasets-preprint.pdf",
-      citation: "Kolavi, A. S., Verma, A., & Singh, M. (2025). Nayana: Synthesizing Multi-task, Multi-modal, and Multi-lingual Document Understanding Datasets for Vision-Language Models. Under review for KDD 2025 Datasets and Benchmarks Track.",
-      tags: ["Dataset Generation", "Multimodal AI", "Document Understanding", "Synthetic Data"]
+      citation: "_",
+      tags: [
+        "Dataset Generation",
+        "Multimodal AI",
+        "Document Understanding",
+        "Synthetic Data",
+      ],
+      showLinks: false,
     },
     {
-      title: "A Multi-Agent Approach for Iterative Refinement in Visual Content Generation",
-      description: "This paper explores advanced multi-agent collaboration techniques in generative AI systems, focusing on iterative refinement for visual content creation.",
+      title:
+        "A Multi-Agent Approach for Iterative Refinement in Visual Content Generation",
+      description:
+        "This paper explores advanced multi-agent collaboration techniques in generative AI systems, focusing on iterative refinement for visual content creation.",
       publisher: "AAAI 2025 | Advancing LLM-Based Multi-Agent Collaboration",
       date: "2025",
       status: "Accepted",
-      websiteUrl: "https://aaai.org/aaai-conference/",
-      resourceUrl: "https://example.com/multi-agent-visual-content-paper.pdf",
-      citation: "Kolavi, A. S., Jain, D., & Patel, N. (2025). A Multi-Agent Approach for Iterative Refinement in Visual Content Generation. In Proceedings of the 39th AAAI Conference on Artificial Intelligence, Workshop on Advancing LLM-Based Multi-Agent Collaboration, pp. 532-540.",
-      tags: ["Multi-Agent Systems", "Generative AI", "Visual Content", "LLM Collaboration"]
+      websiteUrl: "https://multiagents.org/workshop",
+      resourceUrl:
+        "https://multiagents.org/2025_artifacts/a_multi_agent_approach_for_iterative_refinement_in_visual_content_generation.pdf",
+      citation: "_",
+      tags: [
+        "Multi-Agent Systems",
+        "Generative AI",
+        "Visual Content",
+        "LLM Collaboration",
+      ],
+      showLinks: true,
     },
     {
-      title: "CAPTAIN: Continuous Automated Planning Through Autonomous Internet Navigation",
-      description: "A novel framework for autonomous web navigation and task planning using large language models to perform complex multi-step operations.",
+      title:
+        "CAPTAIN: Continuous Automated Planning Through Autonomous Internet Navigation",
+      description:
+        "A novel framework for autonomous web navigation and task planning using large language models to perform complex multi-step operations.",
       publisher: "AAAI 2025 | Large Language Models for Planning (LM4Plan)",
-      date: "2025",
+      date: "2024",
       status: "Accepted",
-      websiteUrl: "https://lm4plan.github.io/",
-      resourceUrl: "https://example.com/captain-framework-paper.pdf",
-      citation: "Kolavi, A. S., & Gupta, R. (2025). CAPTAIN: Continuous Automated Planning Through Autonomous Internet Navigation. In AAAI 2025 Workshop on Large Language Models for Planning (LM4Plan).",
-      tags: ["Automated Planning", "Web Navigation", "LLM Applications", "Autonomous Systems"]
+      websiteUrl: "https://llmforplanning.github.io/",
+      resourceUrl: "https://openreview.net/pdf?id=OkvQyqv9H5",
+      citation: "_",
+      tags: [
+        "Automated Planning",
+        "Web Navigation",
+        "LLM Applications",
+        "Autonomous Systems",
+      ],
+      showLinks: true,
     },
   ],
-  blogs :[
+  blogs: [
     {
-      "slug": "advanced-rag-systems",
-      "title": "Building Advanced RAG Systems for Enterprise Applications",
-      "date": "2025-04-18",
-      "excerpt": "A deep dive into Retrieval Augmented Generation techniques and how to scale them for enterprise use cases with vector databases and efficient query systems.",
-      "content": "# Building Advanced RAG Systems for Enterprise Applications\n\nRetrieval Augmented Generation (RAG) has emerged as one of the most powerful techniques for enhancing large language models with external knowledge. In this article, we'll explore how to build and scale RAG systems for enterprise applications.\n\n## What Makes RAG Systems Powerful\n\nRAG systems combine the generative capabilities of LLMs with the ability to retrieve relevant information from external sources. This combination allows models to:\n\n- Access up-to-date information beyond their training cutoff\n- Reference domain-specific knowledge without fine-tuning\n- Cite sources for their responses, improving trustworthiness\n- Reduce hallucination by grounding responses in factual information\n\n## Core Components of Advanced RAG Systems\n\n### 1. Vector Databases\n\nVector databases are essential for efficient similarity search in large document collections. Some popular options include:\n\n- Pinecone: Fully managed vector database with easy scaling\n- Qdrant: Open-source vector search with filterable metadata\n- Milvus: Distributed vector database for large-scale deployments\n- FAISS: Facebook AI's efficient similarity search library\n\n### 2. Embedding Models\n\nThe choice of embedding model significantly impacts RAG performance. Current recommended models include:\n\n- OpenAI's text-embedding-3-small and text-embedding-3-large\n- Voyage AI embeddings\n- BGE embeddings (especially for multilingual use cases)\n\n### 3. Chunking Strategies\n\nEffective document chunking balances context preservation with retrieval precision:\n\n- Semantic chunking based on document structure\n- Overlapping windows to preserve context\n- Hierarchical chunking for multilevel retrieval\n\n## Scaling RAG for Enterprise\n\nEnterprise RAG systems face unique challenges:\n\n1. **Data volume**: Handling millions of documents efficiently\n2. **Real-time updates**: Keeping knowledge bases current\n3. **Security**: Managing access controls and data privacy\n4. **Cost optimization**: Balancing performance with operational costs\n\n## Advanced RAG Techniques\n\n### Query Rewriting\n\nTransforming the initial query to improve retrieval relevance:\n\n```python\ndef rewrite_query(query, context=None):\n    prompt = f\"\"\"Given the user query: '{query}'\n    Rewrite this query to be more effective for retrieving relevant documents.\n    Make it more specific and include key terms that would appear in relevant documents.\"\"\"\n    \n    response = llm.generate(prompt)\n    return response\n```\n\n### Multiple Query Generation\n\nGenerating multiple query variants to increase retrieval coverage:\n\n```python\ndef generate_multiple_queries(query, num_queries=3):\n    prompt = f\"\"\"Based on the user question: '{query}'\n    Generate {num_queries} different search queries that would help retrieve relevant information.\n    Each query should focus on different aspects of the question.\"\"\"\n    \n    response = llm.generate(prompt)\n    queries = parse_queries(response)  # Parse the generated queries\n    return queries\n```\n\n## Conclusion\n\nBuilding advanced RAG systems for enterprise requires careful consideration of infrastructure, data processing, and retrieval strategies. By implementing the techniques outlined in this article, you can create robust, scalable knowledge systems that significantly enhance the capabilities of your language models.",
-      "tags": ["RAG", "LLMs", "Vector Databases"],
-      "readingTime": "8 min read",
-      "published": true
+      slug: "advanced-rag-systems",
+      title: "Building Advanced RAG Systems for Enterprise Applications",
+      date: "2025-04-18",
+      excerpt:
+        "A deep dive into Retrieval Augmented Generation techniques and how to scale them for enterprise use cases with vector databases and efficient query systems.",
+      content:
+        '# Building Advanced RAG Systems for Enterprise Applications\n\nRetrieval Augmented Generation (RAG) has emerged as one of the most powerful techniques for enhancing large language models with external knowledge. In this article, we\'ll explore how to build and scale RAG systems for enterprise applications.\n\n## What Makes RAG Systems Powerful\n\nRAG systems combine the generative capabilities of LLMs with the ability to retrieve relevant information from external sources. This combination allows models to:\n\n- Access up-to-date information beyond their training cutoff\n- Reference domain-specific knowledge without fine-tuning\n- Cite sources for their responses, improving trustworthiness\n- Reduce hallucination by grounding responses in factual information\n\n## Core Components of Advanced RAG Systems\n\n### 1. Vector Databases\n\nVector databases are essential for efficient similarity search in large document collections. Some popular options include:\n\n- Pinecone: Fully managed vector database with easy scaling\n- Qdrant: Open-source vector search with filterable metadata\n- Milvus: Distributed vector database for large-scale deployments\n- FAISS: Facebook AI\'s efficient similarity search library\n\n### 2. Embedding Models\n\nThe choice of embedding model significantly impacts RAG performance. Current recommended models include:\n\n- OpenAI\'s text-embedding-3-small and text-embedding-3-large\n- Voyage AI embeddings\n- BGE embeddings (especially for multilingual use cases)\n\n### 3. Chunking Strategies\n\nEffective document chunking balances context preservation with retrieval precision:\n\n- Semantic chunking based on document structure\n- Overlapping windows to preserve context\n- Hierarchical chunking for multilevel retrieval\n\n## Scaling RAG for Enterprise\n\nEnterprise RAG systems face unique challenges:\n\n1. **Data volume**: Handling millions of documents efficiently\n2. **Real-time updates**: Keeping knowledge bases current\n3. **Security**: Managing access controls and data privacy\n4. **Cost optimization**: Balancing performance with operational costs\n\n## Advanced RAG Techniques\n\n### Query Rewriting\n\nTransforming the initial query to improve retrieval relevance:\n\n```python\ndef rewrite_query(query, context=None):\n    prompt = f"""Given the user query: \'{query}\'\n    Rewrite this query to be more effective for retrieving relevant documents.\n    Make it more specific and include key terms that would appear in relevant documents."""\n    \n    response = llm.generate(prompt)\n    return response\n```\n\n### Multiple Query Generation\n\nGenerating multiple query variants to increase retrieval coverage:\n\n```python\ndef generate_multiple_queries(query, num_queries=3):\n    prompt = f"""Based on the user question: \'{query}\'\n    Generate {num_queries} different search queries that would help retrieve relevant information.\n    Each query should focus on different aspects of the question."""\n    \n    response = llm.generate(prompt)\n    queries = parse_queries(response)  # Parse the generated queries\n    return queries\n```\n\n## Conclusion\n\nBuilding advanced RAG systems for enterprise requires careful consideration of infrastructure, data processing, and retrieval strategies. By implementing the techniques outlined in this article, you can create robust, scalable knowledge systems that significantly enhance the capabilities of your language models.',
+      tags: ["RAG", "LLMs", "Vector Databases"],
+      readingTime: "8 min read",
+      published: true,
     },
     {
-      "slug": "fine-tuning-llms",
-      "title": "Fine-tuning Large Language Models for Domain Specific Tasks",
-      "date": "2025-03-25",
-      "excerpt": "A comprehensive guide to fine-tuning LLMs using PEFT methods like LoRA and QLoRA to achieve better performance on specialized tasks.",
-      "content": "# Fine-tuning Large Language Models for Domain Specific Tasks\n\nLarge Language Models (LLMs) have demonstrated remarkable capabilities across various tasks. However, for domain-specific applications, fine-tuning these models becomes essential to achieve optimal performance. This guide explores parameter-efficient fine-tuning methods that make LLM customization more accessible and cost-effective.\n\n## Why Fine-tune LLMs?\n\nWhile prompt engineering can achieve good results, fine-tuning offers several advantages:\n\n- **Improved performance** on domain-specific tasks\n- **Reduced prompt lengths** as domain knowledge is encoded in the model weights\n- **Consistent outputs** with reduced hallucinations\n- **Lower inference costs** due to shorter prompts and potentially smaller models\n\n## Parameter-Efficient Fine-Tuning Methods\n\n### LoRA (Low-Rank Adaptation)\n\nLoRA is a technique that freezes the original model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture. This approach has several benefits:\n\n- Significantly fewer trainable parameters (typically <1% of the original model)\n- Minimal memory overhead during training\n- Ability to switch between different fine-tuned versions with minimal computational cost\n\nImplementing LoRA with PEFT library is straightforward:\n\n```python\nfrom peft import get_peft_model, LoraConfig, TaskType\n\nconfig = LoraConfig(\n    r=16,  # rank of the update matrices\n    lora_alpha=32,  # scaling factor\n    target_modules=[\"q_proj\", \"v_proj\"],  # which modules to apply LoRA to\n    lora_dropout=0.05,\n    bias=\"none\",\n    task_type=TaskType.CAUSAL_LM\n)\n\npeft_model = get_peft_model(base_model, config)\n```\n\n### QLoRA (Quantized LoRA)\n\nQLoRA takes LoRA a step further by quantizing the base model to 4 or 8 bits, enabling fine-tuning of larger models on consumer hardware:\n\n```python\nmodel = AutoModelForCausalLM.from_pretrained(\n    model_id,\n    quantization_config=BitsAndBytesConfig(\n        load_in_4bit=True,\n        bnb_4bit_use_double_quant=True,\n        bnb_4bit_quant_type=\"nf4\",\n        bnb_4bit_compute_dtype=torch.bfloat16\n    )\n)\n```\n\n## Fine-tuning Dataset Preparation\n\nThe quality of your fine-tuning dataset is crucial for success. Consider these strategies:\n\n### Data Collection\n\n1. **Domain-specific corpus**: Gather text relevant to your domain\n2. **Task examples**: Create examples of the specific tasks you want the model to perform\n3. **Synthetic data**: Use existing LLMs to generate training examples\n\n### Data Formatting\n\nFormat your data according to the model's expected input structure. For instruction fine-tuning, a common format is:\n\n```json\n{\n  \"instruction\": \"Classify the sentiment of this product review.\",\n  \"input\": \"I've been using this product for a week and I'm very impressed with its performance.\",\n  \"output\": \"Positive\"\n}\n```\n\n## Evaluation Strategies\n\nEvaluate your fine-tuned model using:\n\n1. **Task-specific metrics**: Accuracy, F1, BLEU, ROUGE, etc.\n2. **Human evaluation**: Subjective assessment of outputs\n3. **A/B testing**: Compare performance against the base model\n\n## Conclusion\n\nParameter-efficient fine-tuning methods like LoRA and QLoRA have democratized LLM customization, making it possible to adapt powerful models to specific domains with reasonable computational resources. By carefully preparing your dataset and selecting appropriate fine-tuning techniques, you can achieve significant improvements in model performance for your specific use cases.",
-      "tags": ["Fine-tuning", "LoRA", "PEFT"],
-      "readingTime": "12 min read",
-      "published": true
+      slug: "fine-tuning-llms",
+      title: "Fine-tuning Large Language Models for Domain Specific Tasks",
+      date: "2025-03-25",
+      excerpt:
+        "A comprehensive guide to fine-tuning LLMs using PEFT methods like LoRA and QLoRA to achieve better performance on specialized tasks.",
+      content:
+        '# Fine-tuning Large Language Models for Domain Specific Tasks\n\nLarge Language Models (LLMs) have demonstrated remarkable capabilities across various tasks. However, for domain-specific applications, fine-tuning these models becomes essential to achieve optimal performance. This guide explores parameter-efficient fine-tuning methods that make LLM customization more accessible and cost-effective.\n\n## Why Fine-tune LLMs?\n\nWhile prompt engineering can achieve good results, fine-tuning offers several advantages:\n\n- **Improved performance** on domain-specific tasks\n- **Reduced prompt lengths** as domain knowledge is encoded in the model weights\n- **Consistent outputs** with reduced hallucinations\n- **Lower inference costs** due to shorter prompts and potentially smaller models\n\n## Parameter-Efficient Fine-Tuning Methods\n\n### LoRA (Low-Rank Adaptation)\n\nLoRA is a technique that freezes the original model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture. This approach has several benefits:\n\n- Significantly fewer trainable parameters (typically <1% of the original model)\n- Minimal memory overhead during training\n- Ability to switch between different fine-tuned versions with minimal computational cost\n\nImplementing LoRA with PEFT library is straightforward:\n\n```python\nfrom peft import get_peft_model, LoraConfig, TaskType\n\nconfig = LoraConfig(\n    r=16,  # rank of the update matrices\n    lora_alpha=32,  # scaling factor\n    target_modules=["q_proj", "v_proj"],  # which modules to apply LoRA to\n    lora_dropout=0.05,\n    bias="none",\n    task_type=TaskType.CAUSAL_LM\n)\n\npeft_model = get_peft_model(base_model, config)\n```\n\n### QLoRA (Quantized LoRA)\n\nQLoRA takes LoRA a step further by quantizing the base model to 4 or 8 bits, enabling fine-tuning of larger models on consumer hardware:\n\n```python\nmodel = AutoModelForCausalLM.from_pretrained(\n    model_id,\n    quantization_config=BitsAndBytesConfig(\n        load_in_4bit=True,\n        bnb_4bit_use_double_quant=True,\n        bnb_4bit_quant_type="nf4",\n        bnb_4bit_compute_dtype=torch.bfloat16\n    )\n)\n```\n\n## Fine-tuning Dataset Preparation\n\nThe quality of your fine-tuning dataset is crucial for success. Consider these strategies:\n\n### Data Collection\n\n1. **Domain-specific corpus**: Gather text relevant to your domain\n2. **Task examples**: Create examples of the specific tasks you want the model to perform\n3. **Synthetic data**: Use existing LLMs to generate training examples\n\n### Data Formatting\n\nFormat your data according to the model\'s expected input structure. For instruction fine-tuning, a common format is:\n\n```json\n{\n  "instruction": "Classify the sentiment of this product review.",\n  "input": "I\'ve been using this product for a week and I\'m very impressed with its performance.",\n  "output": "Positive"\n}\n```\n\n## Evaluation Strategies\n\nEvaluate your fine-tuned model using:\n\n1. **Task-specific metrics**: Accuracy, F1, BLEU, ROUGE, etc.\n2. **Human evaluation**: Subjective assessment of outputs\n3. **A/B testing**: Compare performance against the base model\n\n## Conclusion\n\nParameter-efficient fine-tuning methods like LoRA and QLoRA have democratized LLM customization, making it possible to adapt powerful models to specific domains with reasonable computational resources. By carefully preparing your dataset and selecting appropriate fine-tuning techniques, you can achieve significant improvements in model performance for your specific use cases.',
+      tags: ["Fine-tuning", "LoRA", "PEFT"],
+      readingTime: "12 min read",
+      published: true,
     },
     {
-      "slug": "multimodal-llms-vision",
-      "title": "Exploring Vision-Language Models for Document Understanding",
-      "date": "2025-02-15",
-      "excerpt": "How new multimodal models like GPT-4V and Claude 3 are transforming document processing and visual understanding tasks.",
-      "externalUrl": "https://medium.com/@adithyaskolavi/exploring-vision-language-models-for-document-understanding-8f3e9c721b4d",
-      "tags": ["Multimodal AI", "Vision-Language Models", "Document AI"],
-      "readingTime": "10 min read",
-      "published": true
+      slug: "multimodal-llms-vision",
+      title: "Exploring Vision-Language Models for Document Understanding",
+      date: "2025-02-15",
+      excerpt:
+        "How new multimodal models like GPT-4V and Claude 3 are transforming document processing and visual understanding tasks.",
+      externalUrl:
+        "https://medium.com/@adithyaskolavi/exploring-vision-language-models-for-document-understanding-8f3e9c721b4d",
+      tags: ["Multimodal AI", "Vision-Language Models", "Document AI"],
+      readingTime: "10 min read",
+      published: true,
     },
     {
-      "slug": "kannada-llm",
-      "title": "Building Ambari-7b: India's First Kannada-English Bilingual LLM",
-      "date": "2025-01-10",
-      "excerpt": "The technical journey of creating a performant bilingual LLM for low-resource languages with limited training data.",
-      "externalUrl": "https://medium.com/@adithyaskolavi/building-ambari-7b-indias-first-kannada-english-bilingual-llm-c743f5b8e212",
-      "tags": ["Low-Resource Languages", "LLM Training", "Bilingual Models"],
-      "readingTime": "15 min read",
-      "published": true
-    }
-  ]
+      slug: "kannada-llm",
+      title: "Building Ambari-7b: India's First Kannada-English Bilingual LLM",
+      date: "2025-01-10",
+      excerpt:
+        "The technical journey of creating a performant bilingual LLM for low-resource languages with limited training data.",
+      externalUrl:
+        "https://medium.com/@adithyaskolavi/building-ambari-7b-indias-first-kannada-english-bilingual-llm-c743f5b8e212",
+      tags: ["Low-Resource Languages", "LLM Training", "Bilingual Models"],
+      readingTime: "15 min read",
+      published: true,
+    },
+  ],
 } as const;

@@ -106,11 +106,13 @@ export const FeaturedRepo: React.FC<FeaturedRepoProps> = ({ repo, index }) => {
 interface FeaturedReposProps {
   repositories: readonly Repository[] | Repository[];
   title?: string;
+  loading?: boolean;
 }
 
 export const FeaturedRepos: React.FC<FeaturedReposProps> = ({
   repositories,
   title = "Featured Repositories",
+  loading = false,
 }) => {
   const [showAll, setShowAll] = useState(false);
   const sortedRepos = [...repositories].sort(
@@ -135,31 +137,70 @@ export const FeaturedRepos: React.FC<FeaturedReposProps> = ({
     return count.toString();
   };
 
+  // Render skeleton loaders when loading
+  const renderSkeletons = () => {
+    return Array(2)
+      .fill(0)
+      .map((_, index) => (
+        <motion.div
+          key={`skeleton-${index}`}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: index * 0.1 }}
+          className="animate-pulse"
+        >
+          <Card className="group h-full overflow-hidden border border-muted p-3 transition-all duration-300">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <div className="h-5 w-40 rounded-md bg-muted"></div>
+                <div className="flex items-center space-x-3">
+                  <div className="h-4 w-16 rounded-md bg-muted"></div>
+                </div>
+              </div>
+              <div className="h-4 w-full rounded-md bg-muted"></div>
+              <div className="h-4 w-3/4 rounded-md bg-muted"></div>
+              <div className="flex flex-wrap gap-1">
+                <div className="h-5 w-16 rounded-full bg-muted"></div>
+                <div className="h-5 w-20 rounded-full bg-muted"></div>
+                <div className="h-5 w-14 rounded-full bg-muted"></div>
+              </div>
+            </div>
+          </Card>
+        </motion.div>
+      ));
+  };
+
   return (
     <section className="mb-8">
       <div className="mb-4 flex items-center justify-between">
         <h2 className="text-xl font-bold">{title}</h2>
-        <div className="flex items-center gap-1 rounded-full bg-secondary/80 px-3 py-1 text-sm">
-          <StarIcon className="h-4 w-4 fill-yellow-500 text-yellow-500" />
-          <span className="font-mono">
-            {formatStarCount(totalStars)} total stars
-          </span>
-        </div>
+        {!loading && repositories.length > 0 && (
+          <div className="flex items-center gap-1 rounded-full bg-secondary/80 px-3 py-1 text-sm">
+            <StarIcon className="h-4 w-4 fill-yellow-500 text-yellow-500" />
+            <span className="font-mono">
+              {formatStarCount(totalStars)} total stars
+            </span>
+          </div>
+        )}
       </div>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <AnimatePresence>
-          {visibleRepos.map((repo, index) => (
-            <FeaturedRepo
-              key={repo.id}
-              repo={{ ...repo, featured: true }}
-              index={index}
-            />
-          ))}
+          {loading ? (
+            renderSkeletons()
+          ) : (
+            visibleRepos.map((repo, index) => (
+              <FeaturedRepo
+                key={repo.id}
+                repo={{ ...repo, featured: true }}
+                index={index}
+              />
+            ))
+          )}
         </AnimatePresence>
       </div>
 
       {/* Show more/less button */}
-      {hasMoreRepos && (
+      {!loading && hasMoreRepos && (
         <div className="mt-4 flex justify-center">
           <Button
             variant="ghost"

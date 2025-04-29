@@ -237,11 +237,11 @@ export function BookmarkCard({ link }: BookmarkCardProps) {
           >
             <div className="flex flex-col gap-2">
               <p>{significanceDescription}</p>
-              <a 
-                href={link.url} 
-                target="_blank" 
+              <a
+                href={link.url}
+                target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary hover:underline text-xs flex items-center gap-1.5"
+                className="flex items-center gap-1.5 text-xs text-primary hover:underline"
               >
                 <LinkIcon size={12} />
                 Open link

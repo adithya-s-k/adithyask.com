@@ -380,12 +380,11 @@ export default function Page() {
               </Section>
 
               {/* Featured Repositories */}
-              {!loading && repoData.length > 0 && (
-                <FeaturedRepos
-                  repositories={repoData}
-                  title="Featured Open Source Work"
-                />
-              )}
+              <FeaturedRepos
+                repositories={repoData}
+                title="Featured Open Source Work"
+                loading={loading}
+              />
 
               {/* Published Work Section */}
               {RESUME_DATA.publications &&
