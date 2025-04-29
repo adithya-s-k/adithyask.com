@@ -102,16 +102,16 @@ Feel free to reach out if you'd like to discuss ideas, potential collaborations,
     },
   ],
   work: [
-    {
-      company: "Apple",
-      link: "https://www.apple.com/",
-      badges: ["On Site"],
-      title: "ML Intern",
-      start: "January 2025",
-      end: "present",
-      description:
-        "Part of the Unified Intelligence team, working on Knowledge Graphs and AI systems.",
-    },
+    // {
+    //   company: "Apple",
+    //   link: "https://www.apple.com/",
+    //   badges: ["On Site"],
+    //   title: "ML Intern",
+    //   start: "January 2025",
+    //   end: "present",
+    //   description:
+    //     "Part of the Unified Intelligence team, working on Knowledge Graphs and AI systems.",
+    // },
     {
       company: "CognitiveLab",
       link: "https://www.cognitivelab.in",
