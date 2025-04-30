@@ -435,53 +435,186 @@ Feel free to reach out if you'd like to discuss ideas, potential collaborations,
       showLinks: true,
     },
   ],
+  achievements: [
+    {
+      title: "Omniparse Hits 6500 Stars on GitHub",
+      date: "April 2025",
+      description:
+        "Omniparse, our open-source document parsing library, has reached 6500 stars on GitHub, making it one of the most popular libraries for document processing.",
+      fullDescription:
+        "The open-source document parsing project Marker API has reached 500 stars on GitHub, becoming one of the most popular document processing tools for AI applications. The project has been adopted by several companies for their RAG pipelines and document processing needs. This milestone represents the growing community interest in high-quality PDF-to-markdown conversion tools that integrate seamlessly with modern AI workflows.",
+      tags: ["Open Source", "GitHub", "Milestone"],
+      link: {
+        label: "View Repository",
+        href: "https://github.com/adithya-s-k/omniparse",
+      },
+      socialEmbed: {
+        type: "twitter",
+        embedId: "1808230459358285834",
+      },
+    },
+    // {
+    //   title: "Featured Speaker at LLaMA Developer Conference",
+    //   date: "March 2025",
+    //   description:
+    //     "Presented our work on multilingual adaptations of LLaMA models at Meta's official LLaMA Developer Conference in San Francisco.",
+    //   tags: ["Speaking", "LLaMA", "Conference"],
+    //   link: {
+    //     label: "Conference Website",
+    //     href: "https://www.llama.com/conference",
+    //   },
+    // },
+    // {
+    //   title: "Ambari-7b Reaches 10,000 Downloads",
+    //   date: "February 2025",
+    //   description:
+    //     "Our Kannada-English bilingual LLM has been downloaded over 10,000 times on Hugging Face, marking a significant milestone for Indic language AI adoption.",
+    //   fullDescription:
+    //     "Our Kannada-English bilingual LLM has been downloaded over 10,000 times on Hugging Face, marking a significant milestone for Indic language AI adoption. The model has been cited in several research papers and is being used in production by companies and researchers working with Indic languages. This achievement highlights the growing interest in language technology for under-resourced languages and the impact of our work on democratizing AI across languages.",
+    //   tags: ["Ambari", "Hugging Face", "Milestone"],
+    //   socialEmbed: {
+    //     type: "linkedin",
+    //     embedId: "activity:123456789",
+    //   },
+    // },
+    {
+      title: "Awarded LLaMA Impact Grant by Meta AI",
+      date: "April 2025",
+      description:
+        "Cognitivelab was seleted as one of the recipients of Meta's LLaMA Impact Grant for our work on extending large language models to under-resourced Indic languages.",
+      tags: ["Award", "Grant", "Meta AI"],
+      link: {
+        label: "Announcement",
+        href: "https://about.fb.com/news/2025/04/llama-impact-grant-recipients/?utm_source=AIatMeta&utm_medium=organic_social&utm_content=image&utm_campaign=llamacon",
+      },
+    },
+    // {
+    //   title: "Cognitune Platform Exits Beta",
+    //   date: "December 2024",
+    //   description:
+    //     "Successfully launched the production version of Cognitune, our enterprise LLMOps platform, now serving over 20 organizations across India and Southeast Asia.",
+    //   tags: ["Product Launch", "LLMOps", "Enterprise AI"],
+    // },
+  ],
   blogs: [
-    {
-      slug: "advanced-rag-systems",
-      title: "Building Advanced RAG Systems for Enterprise Applications",
-      date: "2025-04-18",
-      excerpt:
-        "A deep dive into Retrieval Augmented Generation techniques and how to scale them for enterprise use cases with vector databases and efficient query systems.",
-      content:
-        '# Building Advanced RAG Systems for Enterprise Applications\n\nRetrieval Augmented Generation (RAG) has emerged as one of the most powerful techniques for enhancing large language models with external knowledge. In this article, we\'ll explore how to build and scale RAG systems for enterprise applications.\n\n## What Makes RAG Systems Powerful\n\nRAG systems combine the generative capabilities of LLMs with the ability to retrieve relevant information from external sources. This combination allows models to:\n\n- Access up-to-date information beyond their training cutoff\n- Reference domain-specific knowledge without fine-tuning\n- Cite sources for their responses, improving trustworthiness\n- Reduce hallucination by grounding responses in factual information\n\n## Core Components of Advanced RAG Systems\n\n### 1. Vector Databases\n\nVector databases are essential for efficient similarity search in large document collections. Some popular options include:\n\n- Pinecone: Fully managed vector database with easy scaling\n- Qdrant: Open-source vector search with filterable metadata\n- Milvus: Distributed vector database for large-scale deployments\n- FAISS: Facebook AI\'s efficient similarity search library\n\n### 2. Embedding Models\n\nThe choice of embedding model significantly impacts RAG performance. Current recommended models include:\n\n- OpenAI\'s text-embedding-3-small and text-embedding-3-large\n- Voyage AI embeddings\n- BGE embeddings (especially for multilingual use cases)\n\n### 3. Chunking Strategies\n\nEffective document chunking balances context preservation with retrieval precision:\n\n- Semantic chunking based on document structure\n- Overlapping windows to preserve context\n- Hierarchical chunking for multilevel retrieval\n\n## Scaling RAG for Enterprise\n\nEnterprise RAG systems face unique challenges:\n\n1. **Data volume**: Handling millions of documents efficiently\n2. **Real-time updates**: Keeping knowledge bases current\n3. **Security**: Managing access controls and data privacy\n4. **Cost optimization**: Balancing performance with operational costs\n\n## Advanced RAG Techniques\n\n### Query Rewriting\n\nTransforming the initial query to improve retrieval relevance:\n\n```python\ndef rewrite_query(query, context=None):\n    prompt = f"""Given the user query: \'{query}\'\n    Rewrite this query to be more effective for retrieving relevant documents.\n    Make it more specific and include key terms that would appear in relevant documents."""\n    \n    response = llm.generate(prompt)\n    return response\n```\n\n### Multiple Query Generation\n\nGenerating multiple query variants to increase retrieval coverage:\n\n```python\ndef generate_multiple_queries(query, num_queries=3):\n    prompt = f"""Based on the user question: \'{query}\'\n    Generate {num_queries} different search queries that would help retrieve relevant information.\n    Each query should focus on different aspects of the question."""\n    \n    response = llm.generate(prompt)\n    queries = parse_queries(response)  # Parse the generated queries\n    return queries\n```\n\n## Conclusion\n\nBuilding advanced RAG systems for enterprise requires careful consideration of infrastructure, data processing, and retrieval strategies. By implementing the techniques outlined in this article, you can create robust, scalable knowledge systems that significantly enhance the capabilities of your language models.',
-      tags: ["RAG", "LLMs", "Vector Databases"],
-      readingTime: "8 min read",
-      published: true,
-    },
-    {
-      slug: "fine-tuning-llms",
-      title: "Fine-tuning Large Language Models for Domain Specific Tasks",
-      date: "2025-03-25",
-      excerpt:
-        "A comprehensive guide to fine-tuning LLMs using PEFT methods like LoRA and QLoRA to achieve better performance on specialized tasks.",
-      content:
-        '# Fine-tuning Large Language Models for Domain Specific Tasks\n\nLarge Language Models (LLMs) have demonstrated remarkable capabilities across various tasks. However, for domain-specific applications, fine-tuning these models becomes essential to achieve optimal performance. This guide explores parameter-efficient fine-tuning methods that make LLM customization more accessible and cost-effective.\n\n## Why Fine-tune LLMs?\n\nWhile prompt engineering can achieve good results, fine-tuning offers several advantages:\n\n- **Improved performance** on domain-specific tasks\n- **Reduced prompt lengths** as domain knowledge is encoded in the model weights\n- **Consistent outputs** with reduced hallucinations\n- **Lower inference costs** due to shorter prompts and potentially smaller models\n\n## Parameter-Efficient Fine-Tuning Methods\n\n### LoRA (Low-Rank Adaptation)\n\nLoRA is a technique that freezes the original model weights and injects trainable rank decomposition matrices into each layer of the Transformer architecture. This approach has several benefits:\n\n- Significantly fewer trainable parameters (typically <1% of the original model)\n- Minimal memory overhead during training\n- Ability to switch between different fine-tuned versions with minimal computational cost\n\nImplementing LoRA with PEFT library is straightforward:\n\n```python\nfrom peft import get_peft_model, LoraConfig, TaskType\n\nconfig = LoraConfig(\n    r=16,  # rank of the update matrices\n    lora_alpha=32,  # scaling factor\n    target_modules=["q_proj", "v_proj"],  # which modules to apply LoRA to\n    lora_dropout=0.05,\n    bias="none",\n    task_type=TaskType.CAUSAL_LM\n)\n\npeft_model = get_peft_model(base_model, config)\n```\n\n### QLoRA (Quantized LoRA)\n\nQLoRA takes LoRA a step further by quantizing the base model to 4 or 8 bits, enabling fine-tuning of larger models on consumer hardware:\n\n```python\nmodel = AutoModelForCausalLM.from_pretrained(\n    model_id,\n    quantization_config=BitsAndBytesConfig(\n        load_in_4bit=True,\n        bnb_4bit_use_double_quant=True,\n        bnb_4bit_quant_type="nf4",\n        bnb_4bit_compute_dtype=torch.bfloat16\n    )\n)\n```\n\n## Fine-tuning Dataset Preparation\n\nThe quality of your fine-tuning dataset is crucial for success. Consider these strategies:\n\n### Data Collection\n\n1. **Domain-specific corpus**: Gather text relevant to your domain\n2. **Task examples**: Create examples of the specific tasks you want the model to perform\n3. **Synthetic data**: Use existing LLMs to generate training examples\n\n### Data Formatting\n\nFormat your data according to the model\'s expected input structure. For instruction fine-tuning, a common format is:\n\n```json\n{\n  "instruction": "Classify the sentiment of this product review.",\n  "input": "I\'ve been using this product for a week and I\'m very impressed with its performance.",\n  "output": "Positive"\n}\n```\n\n## Evaluation Strategies\n\nEvaluate your fine-tuned model using:\n\n1. **Task-specific metrics**: Accuracy, F1, BLEU, ROUGE, etc.\n2. **Human evaluation**: Subjective assessment of outputs\n3. **A/B testing**: Compare performance against the base model\n\n## Conclusion\n\nParameter-efficient fine-tuning methods like LoRA and QLoRA have democratized LLM customization, making it possible to adapt powerful models to specific domains with reasonable computational resources. By carefully preparing your dataset and selecting appropriate fine-tuning techniques, you can achieve significant improvements in model performance for your specific use cases.',
-      tags: ["Fine-tuning", "LoRA", "PEFT"],
-      readingTime: "12 min read",
-      published: true,
-    },
-    {
-      slug: "multimodal-llms-vision",
-      title: "Exploring Vision-Language Models for Document Understanding",
-      date: "2025-02-15",
-      excerpt:
-        "How new multimodal models like GPT-4V and Claude 3 are transforming document processing and visual understanding tasks.",
-      externalUrl:
-        "https://medium.com/@adithyaskolavi/exploring-vision-language-models-for-document-understanding-8f3e9c721b4d",
-      tags: ["Multimodal AI", "Vision-Language Models", "Document AI"],
-      readingTime: "10 min read",
-      published: true,
-    },
     {
       slug: "kannada-llm",
       title: "Building Ambari-7b: India's First Kannada-English Bilingual LLM",
       date: "2025-01-10",
       excerpt:
         "The technical journey of creating a performant bilingual LLM for low-resource languages with limited training data.",
-      externalUrl:
-        "https://medium.com/@adithyaskolavi/building-ambari-7b-indias-first-kannada-english-bilingual-llm-c743f5b8e212",
+      externalUrl: "https://www.cognitivelab.in/blog/introducing-ambari",
       tags: ["Low-Resource Languages", "LLM Training", "Bilingual Models"],
       readingTime: "15 min read",
+      published: true,
+    },
+    {
+      slug: "llama-weight-matrix-changes",
+      title:
+        "From 7B to 8B Parameters: Understanding Weight Matrix Changes in LLama Transformer Models",
+      date: "2024-04-19",
+      excerpt:
+        "Deep dive into the underlying architecture of LLama3 and the structural changes between 7B and 8B parameter models.",
+      externalUrl:
+        "https://adithyask.medium.com/from-7b-to-8b-parameters-understanding-weight-matrix-changes-in-llama-transformer-models-31ea7ed5fd88",
+      tags: ["LLMs", "Model Architecture", "Transformers", "LLama"],
+      readingTime: "10 min read",
+      published: true,
+    },
+    {
+      slug: "axolotl-guide",
+      title: "Axolotl is all you need",
+      date: "2024-04-15",
+      excerpt:
+        "A low-code guide to fine-tuning LLMs efficiently using the Axolotl library.",
+      externalUrl:
+        "https://adithyask.medium.com/axolotl-is-all-you-need-331d5de1b7c0",
+      tags: ["Fine-tuning", "Axolotl", "LLMs"],
+      readingTime: "7 min read",
+      published: true,
+    },
+    {
+      slug: "gemma-fine-tuning",
+      title: "A Beginner's Guide to Fine-Tuning Gemma",
+      date: "2024-02-21",
+      excerpt:
+        "A comprehensive guide to fine-tuning Google's Gemma model with practical examples and best practices.",
+      externalUrl:
+        "https://adithyask.medium.com/a-beginners-guide-to-fine-tuning-gemma-0444d46d821c",
+      tags: ["Gemma", "Fine-tuning", "Google Models"],
+      readingTime: "15 min read",
+      published: true,
+    },
+    {
+      slug: "mixtral-fine-tuning",
+      title: "A Beginner's Guide to Fine-Tuning Mixtral Instruct Model",
+      date: "2024-01-08",
+      excerpt:
+        "Unleashing the power of Mixtral: A comprehensive guide to fine-tuning this powerful mixture-of-experts model.",
+      externalUrl:
+        "https://adithyask.medium.com/a-beginners-guide-to-fine-tuning-mixtral-instruct-model-7f6a30aacf61",
+      tags: ["Mixtral", "MoE", "Fine-tuning", "LLMs"],
+      readingTime: "14 min read",
+      published: true,
+    },
+    {
+      slug: "run-huggingface-locally",
+      title: "Run any Huggingface model locally",
+      date: "2024-01-01",
+      excerpt:
+        "A practical guide and colab notebook to quantize LLMs in GGUF format to run them efficiently on your local machine.",
+      externalUrl:
+        "https://adithyask.medium.com/run-any-huggingface-model-locally-6bf817fdaff3",
+      tags: ["GGUF", "Quantization", "Local Deployment", "Hugging Face"],
+      readingTime: "8 min read",
+      published: true,
+    },
+    {
+      slug: "llm-awq-quantization",
+      title: "Squeeze Every Drop of Performance from Your LLM with AWQ",
+      date: "2023-10-21",
+      excerpt:
+        "A guide to quantizing LLMs using Activation-Aware Quantization (AWQ) on a Google Colab notebook for optimal performance.",
+      externalUrl:
+        "https://adithyask.medium.com/squeeze-every-drop-of-performance-from-your-llm-with-awq-activation-aware-quantization-53973365eaaa",
+      tags: ["AWQ", "Quantization", "Model Optimization", "Colab"],
+      readingTime: "9 min read",
+      published: true,
+    },
+    {
+      slug: "deploy-mistral-aws",
+      title: "Deploy Mistral/Llama 7b on AWS in 10 mins",
+      date: "2023-10-08",
+      excerpt:
+        "A step-by-step guide to deploying Mistral or Llama models on AWS in just three simple stages.",
+      externalUrl:
+        "https://adithyask.medium.com/deploy-mistral-llama-7b-on-aws-in-10-mins-cc80e88d13f2",
+      tags: ["AWS", "Deployment", "Mistral", "Llama", "Cloud"],
+      readingTime: "10 min read",
+      published: true,
+    },
+    {
+      slug: "mistral-fine-tuning",
+      title: "A Beginner's Guide to Fine-Tuning Mistral 7B Instruct Model",
+      date: "2023-10-06",
+      excerpt:
+        "Fine-tuning the Mistral 7B model for code generation using a single Google Colab notebook.",
+      externalUrl:
+        "https://adithyask.medium.com/a-beginners-guide-to-fine-tuning-mistral-7b-instruct-model-0f39647b20fe",
+      tags: ["Mistral", "Fine-tuning", "Code Generation", "Colab"],
+      readingTime: "16 min read",
+      published: true,
+    },
+    {
+      slug: "companionllama",
+      title: "CompanionLLama: Your AI Sentient Companion",
+      date: "2023-09-15",
+      excerpt:
+        "A journey into fine-tuning LLama2 to create an AI companion with personality and conversational abilities.",
+      externalUrl:
+        "https://adithyask.medium.com/companionllama-your-ai-sentient-companion-a-journey-into-fine-tuning-llama2-1ae843050359",
+      tags: ["LLama2", "AI Companion", "Fine-tuning", "Personalization"],
+      readingTime: "11 min read",
       published: true,
     },
   ],

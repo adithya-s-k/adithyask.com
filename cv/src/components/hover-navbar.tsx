@@ -83,7 +83,7 @@ export function HoverNavbar({ links = [] }: NavbarProps) {
   };
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 flex justify-center px-4 pb-2 md:pb-4">
+    <div className="fixed bottom-0 left-0 right-0 z-50 flex justify-center px-4 pb-2 md:pb-4" style={{ paddingBottom: "calc(0.5rem + env(safe-area-inset-bottom))" }}>
       <motion.div
         initial={{ y: 100 }}
         animate={{ y: 0 }}

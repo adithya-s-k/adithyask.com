@@ -22,6 +22,7 @@ import {
 } from "@/components/opensource-card";
 import { FeaturedRepos } from "@/components/featured-repo";
 import { PublishedWorkSection } from "@/components/published-work";
+import { AchievementsNewsSection } from "@/components/achievements-news";
 import { HoverNavbar } from "@/components/hover-navbar";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
@@ -392,6 +393,16 @@ export default function Page() {
                   <div className="scroll-mt-16" id="publications">
                     <PublishedWorkSection
                       publications={RESUME_DATA.publications}
+                    />
+                  </div>
+                )}
+
+              {/* Achievements & News Section */}
+              {RESUME_DATA.achievements &&
+                RESUME_DATA.achievements.length > 0 && (
+                  <div className="scroll-mt-16" id="achievements-news">
+                    <AchievementsNewsSection
+                      achievements={RESUME_DATA.achievements}
                     />
                   </div>
                 )}

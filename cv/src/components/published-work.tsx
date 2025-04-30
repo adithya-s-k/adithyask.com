@@ -80,8 +80,8 @@ const PublishedWorkCard: React.FC<PublishedWorkCardProps> = ({
       whileHover={{ y: -5, transition: { duration: 0.2 } }}
     >
       <Card className="relative border border-muted transition-all duration-300 hover:border-primary/30 hover:shadow-lg">
-        {/* Conference Badge at top right */}
-        <div className="absolute right-3 top-3">
+        {/* Conference Badge - repositioned for better mobile display */}
+        <div className="absolute right-2 top-2 sm:right-3 sm:top-3">
           <Badge
             variant="outline"
             className="bg-primary/5 text-xs font-semibold"
@@ -90,13 +90,13 @@ const PublishedWorkCard: React.FC<PublishedWorkCardProps> = ({
           </Badge>
         </div>
 
-        <CardHeader className="p-4 pb-2 pr-24">
+        <CardHeader className="p-3 pb-2 pr-16 sm:p-4 sm:pb-2 sm:pr-24">
           <CardTitle className="text-base font-semibold leading-tight">
             {publication.title}
           </CardTitle>
-          <div className="mt-1 flex items-center gap-1 text-xs text-muted-foreground">
+          <div className="mt-1 flex flex-wrap items-center gap-1 text-xs text-muted-foreground">
             {trackInfo && <span>{trackInfo}</span>}
-            <span className="mx-1 inline-block">•</span>
+            {trackInfo && <span className="mx-1 inline-block">•</span>}
             <span>{publication.date}</span>
             {publication.status && (
               <>
@@ -114,13 +114,13 @@ const PublishedWorkCard: React.FC<PublishedWorkCardProps> = ({
           </div>
         </CardHeader>
 
-        <CardContent className="p-4 pt-0">
+        <CardContent className="p-3 pt-0 sm:p-4 sm:pt-0">
           <CardDescription className="line-clamp-2 text-xs leading-normal">
             {publication.description}
           </CardDescription>
 
-          <div className="mt-2 flex items-center justify-between">
-            {/* Tags on the left side */}
+          <div className="mt-2 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            {/* Tags - full width on mobile, left side on desktop */}
             <div className="flex flex-wrap gap-1">
               {publication.tags.slice(0, 3).map((tag) => (
                 <Badge
@@ -133,8 +133,8 @@ const PublishedWorkCard: React.FC<PublishedWorkCardProps> = ({
               ))}
             </div>
 
-            {/* Action buttons on right */}
-            <div className="flex gap-1.5">
+            {/* Action buttons - centered on mobile, right side on desktop */}
+            <div className="flex gap-1.5 self-start sm:self-center">
               <TooltipProvider>
                 {/* Citation button */}
                 <Tooltip>
@@ -260,11 +260,11 @@ export const PublishedWorkSection: React.FC<PublishedWorkSectionProps> = ({
 
       {/* Show more/less button */}
       {hasMorePublications && (
-        <div className="mt-2 flex justify-center">
+        <div className="mt-4 flex justify-center">
           <Button
             variant="ghost"
             size="sm"
-            className="flex items-center gap-1 text-xs font-medium text-muted-foreground hover:text-foreground"
+            className="flex w-full items-center justify-center gap-1 text-xs font-medium text-muted-foreground hover:text-foreground sm:w-auto"
             onClick={() => setShowAll(!showAll)}
           >
             {showAll ? (
