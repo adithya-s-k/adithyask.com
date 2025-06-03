@@ -12,8 +12,7 @@ export const RESUME_DATA = {
   personalWebsiteUrl: "https://adithyask.com",
   resumeUrl: "/Adithya_s_kolavi_Research_v1.pdf",
   extendedBio: `
-# Adithya S Kolavi - AI Researcher & Developer
-
+  
 ## My Journey in AI
 
 My fascination with AI began during my early undergraduate years when I first explored the intersection of computer vision and natural language processing. What started as curiosity quickly evolved into a passion for building practical AI solutions that solve real-world problems.
@@ -102,16 +101,15 @@ Feel free to reach out if you'd like to discuss ideas, potential collaborations,
     },
   ],
   work: [
-    // {
-    //   company: "Apple",
-    //   link: "https://www.apple.com/",
-    //   badges: ["On Site"],
-    //   title: "ML Intern",
-    //   start: "January 2025",
-    //   end: "present",
-    //   description:
-    //     "Part of the Unified Intelligence team, working on Knowledge Graphs and AI systems.",
-    // },
+    {
+      company: "Apple",
+      link: "https://www.apple.com/",
+      badges: ["On Site"],
+      title: "ML Intern",
+      start: "January 2025",
+      end: "present",
+      description: "Part of the Unified Intelligence team",
+    },
     {
       company: "CognitiveLab",
       link: "https://www.cognitivelab.in",
