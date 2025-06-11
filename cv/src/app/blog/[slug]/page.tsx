@@ -12,6 +12,24 @@ import { ExternalLink } from "lucide-react";
 import "../markdown.css";
 import { Metadata } from "next"; // Import Metadata
 import { RESUME_DATA } from "@/data/resume-data"; // Import resume data for base URL
+import { YouTubeEmbed } from "@/components/youtube-embed";
+
+// Utility function to extract YouTube video ID from various YouTube URL formats
+function extractYouTubeVideoId(url: string): string | null {
+  const patterns = [
+    /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/,
+    /youtube\.com\/watch\?.*v=([^&\n?#]+)/,
+  ];
+
+  for (const pattern of patterns) {
+    const match = url.match(pattern);
+    if (match) {
+      return match[1];
+    }
+  }
+
+  return null;
+}
 
 // Generate static params for all blog posts
 export async function generateStaticParams() {
@@ -199,14 +217,29 @@ export default async function BlogPostPage({
                 {children}
               </p>
             ),
-            a: ({ children, ...props }) => (
-              <a
-                {...props}
-                className="text-primary transition-colors hover:underline"
-              >
-                {children}
-              </a>
-            ),
+            a: ({ children, href, ...props }) => {
+              // Check if the link is a YouTube URL
+              if (href) {
+                const videoId = extractYouTubeVideoId(href);
+                if (videoId) {
+                  return (
+                    <YouTubeEmbed 
+                      videoId={videoId} 
+                      title={typeof children === 'string' ? children : 'YouTube video'}
+                    />
+                  );
+                }
+              }
+              return (
+                <a
+                  {...props}
+                  href={href}
+                  className="text-primary transition-colors hover:underline"
+                >
+                  {children}
+                </a>
+              );
+            },
             ul: ({ children, ...props }) => (
               <ul
                 {...props}
