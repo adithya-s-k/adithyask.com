@@ -102,12 +102,21 @@ Feel free to reach out if you'd like to discuss ideas, potential collaborations,
   ],
   work: [
     {
+      company: "Microsoft Research",
+      link: "https://www.microsoft.com/en-us/research/lab/microsoft-research-india/",
+      badges: ["On Site"],
+      title: "Research Fellow",
+      start: "July 2025",
+      end: "Present",
+      description: "Working on Real time AI systems",
+    },
+    {
       company: "Apple",
       link: "https://www.apple.com/",
       badges: ["On Site"],
       title: "ML Intern",
       start: "January 2025",
-      end: "present",
+      end: "June 2025",
       description: "Part of the Unified Intelligence team",
     },
     {
@@ -116,7 +125,7 @@ Feel free to reach out if you'd like to discuss ideas, potential collaborations,
       badges: ["On Site"],
       title: "AI Researcher",
       start: "January 2023",
-      end: "present",
+      end: "Present",
       description:
         "Pioneered one of India's first Kannada bilingual Large Language Model - Ambari-7b. Developed Cognitune, an enterprise-grade LLMops platform, reducing time to production by 60%.",
     },
@@ -236,6 +245,8 @@ Feel free to reach out if you'd like to discuss ideas, potential collaborations,
   open_source: [
     "https://github.com/adithya-s-k/omniparse",
     "https://github.com/adithya-s-k/RAG-SaaS",
+    "https://github.com/adithya-s-k/Gitvizz",
+    "https://github.com/adithya-s-k/Omnidocs",
     "https://github.com/adithya-s-k/VARAG",
     "https://github.com/adithya-s-k/AI-Engineering.academy",
     "https://github.com/adithya-s-k/marker-api",
@@ -317,6 +328,26 @@ Feel free to reach out if you'd like to discuss ideas, potential collaborations,
   publications: [
     {
       title:
+        "Nayana: A Foundation for Document-Centric Vision-Language Models via Multi-Task, Multimodal, and Multilingual Data Syn-thesis",
+      description:
+        "A comprehensive approach to generating synthetic datasets for training vision-language models on document understanding tasks across multiple languages.",
+      publisher:
+        "ICCV 2025 |Workshop on Computer Vision for Developing Countries (CV4DC)",
+      date: "2025",
+      status: "Accepted",
+      websiteUrl: "https://cv4dc.github.io/2025/call-for-papers/",
+      resourceUrl: "https://openreview.net/pdf?id=Ji46STdhQQ",
+      citation: "_",
+      tags: [
+        "Dataset Generation",
+        "Multimodal AI",
+        "Document Understanding",
+        "Synthetic Data",
+      ],
+      showLinks: true,
+    },
+    {
+      title:
         "ViViD - Vision Language model for Unified Visual Understanding of Documents",
       description:
         "A vision-language model specifically optimized for document understanding tasks, capable of processing diverse document formats with high accuracy.",
@@ -370,26 +401,6 @@ Feel free to reach out if you'd like to discuss ideas, potential collaborations,
         "Multilingual",
         "Multimodal",
         "Multitask Learning",
-      ],
-      showLinks: false,
-    },
-    {
-      title:
-        "Nayana: Synthesizing Multi-task, Multi-modal, and Multi-lingual Document Understanding Datasets for Vision-Language Models",
-      description:
-        "A comprehensive approach to generating synthetic datasets for training vision-language models on document understanding tasks across multiple languages.",
-      publisher: "KDD 2025 | Datasets and Benchmarks Track",
-      date: "2025",
-      status: "Under Review",
-      websiteUrl:
-        "https://kdd2025.kdd.org/call-for-datasets-and-benchmarks-track-papers/",
-      resourceUrl: "https://example.com/nayana-datasets-preprint.pdf",
-      citation: "_",
-      tags: [
-        "Dataset Generation",
-        "Multimodal AI",
-        "Document Understanding",
-        "Synthetic Data",
       ],
       showLinks: false,
     },

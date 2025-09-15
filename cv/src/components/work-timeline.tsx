@@ -12,6 +12,7 @@ import {
   ArrowRightIcon,
   ArrowUpRightIcon,
   InfoIcon,
+  Mic,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -30,6 +31,7 @@ interface WorkExperience {
 
 // Map company names to their logo files
 const companyLogos: Record<string, string> = {
+  "Microsoft Research": "/microsoft-logo.png",
   Apple: "/apple-logo.png",
   CognitiveLab: "/cognitivelab-logo.png",
   TurboML: "/tml-logo.png",

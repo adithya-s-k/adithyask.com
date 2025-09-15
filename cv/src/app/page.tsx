@@ -269,146 +269,142 @@ export default function Page() {
 
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:p-12">
-      {/* Add the name animation component */}
-      <NameAnimation />
-
-      {/* Only show content after animation completes */}
-      <AnimatePresence>
-        {animationComplete && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-          >
-            <HoverNavbar links={commandLinks} />
-            <motion.section
-              id="top"
-              className="mx-auto w-full max-w-4xl space-y-8 bg-white print:space-y-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <div className="flex items-center justify-between">
-                <div className="flex-1 space-y-1.5">
-                  <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
-                  <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
-                    {RESUME_DATA.about}
-                  </p>
-                  <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
-                    {RESUME_DATA.contact.email ? (
-                      <Button
-                        className="size-8"
-                        variant="outline"
-                        size="icon"
-                        asChild
-                      >
-                        <a href={`mailto:${RESUME_DATA.contact.email}`}>
-                          <MailIcon className="size-4" />
-                        </a>
-                      </Button>
-                    ) : null}
-                    {RESUME_DATA.contact.social.map((social) => (
-                      <Button
-                        key={social.name}
-                        className="size-8"
-                        variant="outline"
-                        size="icon"
-                        asChild
-                      >
-                        <a
-                          href={social.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <social.icon className="size-4" />
-                        </a>
-                      </Button>
-                    ))}
-                    <Button
-                      variant="outline"
-                      className="flex h-8 items-center gap-2"
-                      asChild
+      {/* Content is always rendered and visible to crawlers/SEO */}
+      <motion.div
+        initial={{ opacity: 1 }} // Start visible for SSR/crawlers
+        animate={{ opacity: animationComplete ? 1 : 0.1 }} // Slightly visible during animation
+        transition={{ duration: 0.8 }}
+        style={{
+          // Ensure content is always accessible to screen readers and crawlers
+          position: "relative",
+          zIndex: animationComplete ? 10 : 1, // Lower z-index during animation
+        }}
+      >
+        <HoverNavbar links={commandLinks} />
+        <motion.section
+          id="top"
+          className="mx-auto w-full max-w-4xl space-y-8 bg-white print:space-y-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="flex items-center justify-between">
+            <div className="flex-1 space-y-1.5">
+              <h1 className="text-2xl font-bold">{RESUME_DATA.name}</h1>
+              <p className="max-w-md text-pretty font-mono text-sm text-muted-foreground">
+                {RESUME_DATA.about}
+              </p>
+              <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
+                {RESUME_DATA.contact.email ? (
+                  <Button
+                    className="size-8"
+                    variant="outline"
+                    size="icon"
+                    asChild
+                  >
+                    <a href={`mailto:${RESUME_DATA.contact.email}`}>
+                      <MailIcon className="size-4" />
+                    </a>
+                  </Button>
+                ) : null}
+                {RESUME_DATA.contact.social.map((social) => (
+                  <Button
+                    key={social.name}
+                    className="size-8"
+                    variant="outline"
+                    size="icon"
+                    asChild
+                  >
+                    <a
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <a
-                        href={RESUME_DATA.resumeUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        download
-                      >
-                        <FileDown className="size-4" />
-                        <span>CV</span>
-                      </a>
-                    </Button>
-                  </div>
-                  <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
-                    {RESUME_DATA.contact.email ? (
-                      <a href={`mailto:${RESUME_DATA.contact.email}`}>
-                        <span className="underline">
-                          {RESUME_DATA.contact.email}
-                        </span>
-                      </a>
-                    ) : null}
-                  </div>
-                </div>
-
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 300 }}
+                      <social.icon className="size-4" />
+                    </a>
+                  </Button>
+                ))}
+                <Button
+                  variant="outline"
+                  className="flex h-8 items-center gap-2"
+                  asChild
                 >
-                  <Avatar className="size-28">
-                    <AvatarImage
-                      alt={RESUME_DATA.name}
-                      src={RESUME_DATA.avatarUrl}
-                    />
-                    <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
-                  </Avatar>
-                </motion.div>
+                  <a
+                    href={RESUME_DATA.resumeUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    download
+                  >
+                    <FileDown className="size-4" />
+                    <span>CV</span>
+                  </a>
+                </Button>
               </div>
+              <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
+                {RESUME_DATA.contact.email ? (
+                  <a href={`mailto:${RESUME_DATA.contact.email}`}>
+                    <span className="underline">
+                      {RESUME_DATA.contact.email}
+                    </span>
+                  </a>
+                ) : null}
+              </div>
+            </div>
 
-              <Section id="about">
-                <div className="flex items-center justify-between">
-                  <h2 className="text-xl font-bold">About</h2>
-                </div>
-                <p className="text-pretty font-mono text-sm text-muted-foreground">
-                  {RESUME_DATA.summary}
-                </p>
-                <AboutMeMorph />
-              </Section>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <Avatar className="size-28">
+                <AvatarImage
+                  alt={RESUME_DATA.name}
+                  src={RESUME_DATA.avatarUrl}
+                />
+                <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
+              </Avatar>
+            </motion.div>
+          </div>
 
-              <Section id="work" className="scroll-mt-16">
-                <h2 className="text-xl font-bold">Work Experience</h2>
-                <WorkTimeline experiences={RESUME_DATA.work} />
-              </Section>
+          <Section id="about">
+            <div className="flex items-center justify-between">
+              <h2 className="text-xl font-bold">About</h2>
+            </div>
+            <p className="text-pretty font-mono text-sm text-muted-foreground">
+              {RESUME_DATA.summary}
+            </p>
+            <AboutMeMorph />
+          </Section>
 
-              {/* Featured Repositories */}
-              <FeaturedRepos
-                repositories={repoData}
-                title="Featured Open Source Work"
-                loading={loading}
+          <Section id="work" className="scroll-mt-16">
+            <h2 className="text-xl font-bold">Work Experience</h2>
+            <WorkTimeline experiences={RESUME_DATA.work} />
+          </Section>
+
+          {/* Featured Repositories */}
+          <FeaturedRepos
+            repositories={repoData}
+            title="Featured Open Source Work"
+            loading={loading}
+          />
+
+          {/* Published Work Section */}
+          {RESUME_DATA.publications && RESUME_DATA.publications.length > 0 && (
+            <div className="scroll-mt-16" id="publications">
+              <PublishedWorkSection publications={RESUME_DATA.publications} />
+            </div>
+          )}
+
+          {/* Achievements & News Section */}
+          {RESUME_DATA.achievements && RESUME_DATA.achievements.length > 0 && (
+            <div className="scroll-mt-16" id="achievements-news">
+              <AchievementsNewsSection
+                achievements={RESUME_DATA.achievements}
               />
+            </div>
+          )}
 
-              {/* Published Work Section */}
-              {RESUME_DATA.publications &&
-                RESUME_DATA.publications.length > 0 && (
-                  <div className="scroll-mt-16" id="publications">
-                    <PublishedWorkSection
-                      publications={RESUME_DATA.publications}
-                    />
-                  </div>
-                )}
-
-              {/* Achievements & News Section */}
-              {RESUME_DATA.achievements &&
-                RESUME_DATA.achievements.length > 0 && (
-                  <div className="scroll-mt-16" id="achievements-news">
-                    <AchievementsNewsSection
-                      achievements={RESUME_DATA.achievements}
-                    />
-                  </div>
-                )}
-
-              {/* Open Source Section */}
-              {/* <Section id="open-source" className="scroll-mt-16 print-force-new-page">
+          {/* Open Source Section */}
+          {/* <Section id="open-source" className="scroll-mt-16 print-force-new-page">
                 <h2 className="text-xl font-bold">Open Source Contributions</h2>
                 {!loading && repoData.length > 0 ? (
                   <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
@@ -428,125 +424,118 @@ export default function Page() {
                 )}
               </Section> */}
 
-              {/* Remove the conditional rendering that might be causing the section to not show */}
-              {/* {!loading && <OpenSourceSection repositories={repoData} />} */}
-              {/* Featured Blog Posts Section */}
-              <Section id="blog" className="scroll-mt-16">
-                <div className="mb-6 flex items-center justify-between">
-                  <div>
-                    <h2 className="text-xl font-bold">Latest Blog Posts</h2>
-                    <p className="mt-1 text-sm text-muted-foreground">
-                      Recent articles and insights
-                    </p>
-                  </div>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    asChild
-                    className="text-sm font-medium"
-                  >
-                    <Link
-                      href="/blog"
-                      className="inline-flex items-center gap-1"
-                    >
-                      View all posts
-                      <ArrowRight className="h-3 w-3" />
-                    </Link>
-                  </Button>
-                </div>
-                <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
-                  {RESUME_DATA.blogs.slice(0, 2).map((post) => (
-                    <motion.div
-                      key={post.slug}
-                      whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                    >
-                      <BlogCard post={post} />
-                    </motion.div>
-                  ))}
-                </div>
-              </Section>
-
-              <Section id="skills" className="scroll-mt-16">
-                <h2 className="text-xl font-bold">Skills</h2>
-                <div className="mt-5">
-                  <InteractiveSkills skills={Array.from(RESUME_DATA.skills)} />
-                </div>
-              </Section>
-
-              <Section
-                id="projects"
-                className="print-force-new-page scroll-mt-16"
+          {/* Remove the conditional rendering that might be causing the section to not show */}
+          {/* {!loading && <OpenSourceSection repositories={repoData} />} */}
+          {/* Featured Blog Posts Section */}
+          <Section id="blog" className="scroll-mt-16">
+            <div className="mb-6 flex items-center justify-between">
+              <div>
+                <h2 className="text-xl font-bold">Latest Blog Posts</h2>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Recent articles and insights
+                </p>
+              </div>
+              <Button
+                variant="ghost"
+                size="sm"
+                asChild
+                className="text-sm font-medium"
               >
-                <h2 className="text-xl font-bold">Research Projects</h2>
-                <div className="-mx-3 mt-4 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
-                  {RESUME_DATA.researchProjects.map((project, index) => (
-                    <motion.div
-                      key={project.title}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                    >
-                      <ProjectCard
-                        title={project.title}
-                        description={project.description}
-                        tags={project.techStack}
-                        link={"link" in project ? project.link.href : undefined}
-                      />
-                    </motion.div>
-                  ))}
-                </div>
-              </Section>
+                <Link href="/blog" className="inline-flex items-center gap-1">
+                  View all posts
+                  <ArrowRight className="h-3 w-3" />
+                </Link>
+              </Button>
+            </div>
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
+              {RESUME_DATA.blogs.slice(0, 2).map((post) => (
+                <motion.div
+                  key={post.slug}
+                  whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                >
+                  <BlogCard post={post} />
+                </motion.div>
+              ))}
+            </div>
+          </Section>
 
-              <Section className="print-force-new-page scroll-mt-16">
-                <h2 className="text-xl font-bold">Other Projects</h2>
-                <div className="-mx-3 mt-4 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
-                  {RESUME_DATA.projects.map((project, index) => (
-                    <motion.div
-                      key={project.title}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                    >
-                      <ProjectCard
-                        title={project.title}
-                        description={project.description}
-                        tags={project.techStack}
-                        link={"link" in project ? project.link.href : undefined}
-                      />
-                    </motion.div>
-                  ))}
-                </div>
-              </Section>
+          <Section id="skills" className="scroll-mt-16">
+            <h2 className="text-xl font-bold">Skills</h2>
+            <div className="mt-5">
+              <InteractiveSkills skills={Array.from(RESUME_DATA.skills)} />
+            </div>
+          </Section>
 
-              <Section id="education" className="scroll-mt-16">
-                <h2 className="text-xl font-bold">Education</h2>
-                <div className="mt-4 space-y-4">
-                  {RESUME_DATA.education.map((education) => (
-                    <Card
-                      key={education.school}
-                      className="overflow-hidden border border-muted p-4 transition-all hover:shadow-sm"
-                    >
-                      <CardHeader>
-                        <div className="flex items-center justify-between gap-x-2 text-base">
-                          <h3 className="font-semibold leading-none">
-                            {education.school}
-                          </h3>
-                          <div className="text-sm tabular-nums text-gray-500">
-                            {education.start} - {education.end}
-                          </div>
-                        </div>
-                      </CardHeader>
-                      <CardContent className="mt-2">
-                        {education.degree}
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </Section>
-            </motion.section>
-          </motion.div>
-        )}
-      </AnimatePresence>
+          <Section id="projects" className="print-force-new-page scroll-mt-16">
+            <h2 className="text-xl font-bold">Research Projects</h2>
+            <div className="-mx-3 mt-4 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
+              {RESUME_DATA.researchProjects.map((project, index) => (
+                <motion.div
+                  key={project.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <ProjectCard
+                    title={project.title}
+                    description={project.description}
+                    tags={project.techStack}
+                    link={"link" in project ? project.link.href : undefined}
+                  />
+                </motion.div>
+              ))}
+            </div>
+          </Section>
+
+          <Section className="print-force-new-page scroll-mt-16">
+            <h2 className="text-xl font-bold">Other Projects</h2>
+            <div className="-mx-3 mt-4 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
+              {RESUME_DATA.projects.map((project, index) => (
+                <motion.div
+                  key={project.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <ProjectCard
+                    title={project.title}
+                    description={project.description}
+                    tags={project.techStack}
+                    link={"link" in project ? project.link.href : undefined}
+                  />
+                </motion.div>
+              ))}
+            </div>
+          </Section>
+
+          <Section id="education" className="scroll-mt-16">
+            <h2 className="text-xl font-bold">Education</h2>
+            <div className="mt-4 space-y-4">
+              {RESUME_DATA.education.map((education) => (
+                <Card
+                  key={education.school}
+                  className="overflow-hidden border border-muted p-4 transition-all hover:shadow-sm"
+                >
+                  <CardHeader>
+                    <div className="flex items-center justify-between gap-x-2 text-base">
+                      <h3 className="font-semibold leading-none">
+                        {education.school}
+                      </h3>
+                      <div className="text-sm tabular-nums text-gray-500">
+                        {education.start} - {education.end}
+                      </div>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="mt-2">{education.degree}</CardContent>
+                </Card>
+              ))}
+            </div>
+          </Section>
+        </motion.section>
+      </motion.div>
+
+      {/* Add the name animation component as overlay - renders on top */}
+      <NameAnimation />
     </main>
   );
 }
