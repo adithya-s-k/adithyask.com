@@ -16,6 +16,8 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "./ui/button";
+import { Section } from "./ui/section";
+import { SectionHeading } from "./ui/section-heading";
 import { cn } from "@/lib/utils";
 
 interface Repository {
@@ -171,31 +173,31 @@ export const FeaturedRepos: React.FC<FeaturedReposProps> = ({
   };
 
   return (
-    <section className="mb-8">
-      <div className="mb-4 flex items-center justify-between">
-        <h2 className="text-xl font-bold">{title}</h2>
-        {!loading && repositories.length > 0 && (
-          <div className="flex items-center gap-1 rounded-full bg-secondary/80 px-3 py-1 text-sm">
-            <StarIcon className="h-4 w-4 fill-yellow-500 text-yellow-500" />
-            <span className="font-mono">
-              {formatStarCount(totalStars)} total stars
-            </span>
-          </div>
-        )}
-      </div>
+    <Section id="open-source" className="scroll-mt-16">
+      <SectionHeading
+        title={title}
+        action={
+          !loading && repositories.length > 0 ? (
+            <div className="flex shrink-0 items-center gap-1 rounded-full bg-secondary/80 px-3 py-1 text-xs sm:text-sm">
+              <StarIcon className="h-4 w-4 fill-yellow-500 text-yellow-500" />
+              <span className="font-mono">
+                {formatStarCount(totalStars)} stars
+              </span>
+            </div>
+          ) : null
+        }
+      />
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
         <AnimatePresence>
-          {loading ? (
-            renderSkeletons()
-          ) : (
-            visibleRepos.map((repo, index) => (
-              <FeaturedRepo
-                key={repo.id}
-                repo={{ ...repo, featured: true }}
-                index={index}
-              />
-            ))
-          )}
+          {loading
+            ? renderSkeletons()
+            : visibleRepos.map((repo, index) => (
+                <FeaturedRepo
+                  key={repo.id}
+                  repo={{ ...repo, featured: true }}
+                  index={index}
+                />
+              ))}
         </AnimatePresence>
       </div>
 
@@ -220,6 +222,6 @@ export const FeaturedRepos: React.FC<FeaturedReposProps> = ({
           </Button>
         </div>
       )}
-    </section>
+    </Section>
   );
 };

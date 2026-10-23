@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import { Button } from "./ui/button";
 import { Section } from "./ui/section";
+import { SectionHeading } from "./ui/section-heading";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Tooltip,
@@ -80,20 +81,18 @@ const PublishedWorkCard: React.FC<PublishedWorkCardProps> = ({
       whileHover={{ y: -5, transition: { duration: 0.2 } }}
     >
       <Card className="relative border border-muted transition-all duration-300 hover:border-primary/30 hover:shadow-lg">
-        {/* Conference Badge - repositioned for better mobile display */}
-        <div className="absolute right-2 top-2 sm:right-3 sm:top-3">
-          <Badge
-            variant="outline"
-            className="bg-primary/5 text-xs font-semibold"
-          >
-            {conferenceName}
-          </Badge>
-        </div>
-
-        <CardHeader className="p-3 pb-2 pr-16 sm:p-4 sm:pb-2 sm:pr-24">
-          <CardTitle className="text-base font-semibold leading-tight">
-            {publication.title}
-          </CardTitle>
+        <CardHeader className="p-4 pb-2">
+          <div className="flex items-start justify-between gap-3">
+            <CardTitle className="min-w-0 text-base font-semibold leading-snug">
+              {publication.title}
+            </CardTitle>
+            <Badge
+              variant="outline"
+              className="shrink-0 whitespace-nowrap bg-primary/5 text-xs font-semibold"
+            >
+              {conferenceName}
+            </Badge>
+          </div>
           <div className="mt-1 flex flex-wrap items-center gap-1 text-xs text-muted-foreground">
             {trackInfo && <span>{trackInfo}</span>}
             {trackInfo && <span className="mx-1 inline-block">•</span>}
@@ -114,7 +113,7 @@ const PublishedWorkCard: React.FC<PublishedWorkCardProps> = ({
           </div>
         </CardHeader>
 
-        <CardContent className="p-3 pt-0 sm:p-4 sm:pt-0">
+        <CardContent className="p-4 pt-0">
           <CardDescription className="line-clamp-2 text-xs leading-normal">
             {publication.description}
           </CardDescription>
@@ -239,13 +238,11 @@ export const PublishedWorkSection: React.FC<PublishedWorkSectionProps> = ({
   const hasMorePublications = publications.length > 3;
 
   return (
-    <Section className="mb-6" id="publications">
-      <div className="mb-4">
-        <h2 className="text-lg font-bold">Academic Publications</h2>
-        <p className="mt-1 text-xs text-muted-foreground">
-          Research papers and academic contributions
-        </p>
-      </div>
+    <Section className="scroll-mt-16" id="publications">
+      <SectionHeading
+        title="Publications"
+        subtitle="Papers at ICCV, NAACL, AAAI, NeurIPS, CVPR, and CHI venues"
+      />
       <div className="flex flex-col gap-3">
         <AnimatePresence>
           {visiblePublications.map((pub, index) => (

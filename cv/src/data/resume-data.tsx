@@ -1,75 +1,51 @@
-import { GitHubIcon, LinkedInIcon, XIcon } from "@/components/icons";
+import {
+  GitHubIcon,
+  GoogleScholarIcon,
+  LinkedInIcon,
+  XIcon,
+} from "@/components/icons";
 
 export const RESUME_DATA = {
   name: "Adithya S Kolavi",
   initials: "SK",
   location: "Bengaluru, India",
-  about: "AI Researcher, Building Generative AI solutions at Scale",
+  about:
+    "Research Engineer at Hugging Face · Scaling RL Environments in the Open",
   summary:
-    "Building AI that actually works! Currently deep into Vision-Language Models and Agentic Systems, with hands-on experience taking AI projects from wild ideas to real products. Love tinkering with model fine-tuning and cloud deployments. Big open-source enthusiast - you'll find me contributing to projects that make AI more accessible to everyone.",
+    "I'm a Research Engineer at Hugging Face, working on scaling reinforcement learning environments in the open: the infrastructure, environments, and training recipes that let open models learn across coding, computer use, simulation, multilingual, and scientific domains. Before this, I founded CognitiveLab, the open-source lab behind Ambari-7B and Nayana (backed by Meta's LLaMA Impact Grant), and built agentic memory and real-time agents at Microsoft Research and knowledge-graph retrieval at Apple. My work has appeared at ICCV, NAACL, AAAI, NeurIPS, and CHI venues, and my open-source projects have 15k+ GitHub stars.",
   // avatarUrl: "https://adithyask.com/adithyask.jpg",
   avatarUrl: "/adithyask.jpeg",
   personalWebsiteUrl: "https://adithyask.com",
-  resumeUrl: "/Adithya_s_kolavi_Research_v1.pdf",
+  resumeUrl: "/Adithya_s_kolavi_Research_HF.pdf",
   extendedBio: `
-  
-## My Journey in AI
+## Now: Scaling RL Environments in the Open
 
-My fascination with AI began during my early undergraduate years when I first explored the intersection of computer vision and natural language processing. What started as curiosity quickly evolved into a passion for building practical AI solutions that solve real-world problems.
+Models increasingly learn by acting in environments, not only from static data. At Hugging Face, I build the open infrastructure for that shift, so environments can be generated, trained on, and evaluated at scale:
 
-### The Vision-Language Connection
+- **[FineEnvs](https://github.com/adithya-s-k/FineEnvs)**: an open ecosystem of cross-domain RL environments, post-trained models, and reproducible training recipes spanning coding, computer use, simulation, multilingual, biology, and more.
+- **[Multi-harness RL](https://huggingface.co/spaces/FineEnvs/multi-harness-rl)**: training built around OpenEnv, so the same environment runs across TRL, Harbor, and OpenReward.
+- **[Repo2RLEnv](https://github.com/huggingface/Repo2RLEnv)**: turning repositories into verifiable coding tasks and RL environments for synthetic data at scale.
+- **[The Ultimate Guide to RL Environments](https://huggingface.co/spaces/AdithyaSK/rl-environments-guide)**: a survey and reproduction of modern environment frameworks, read by 25k+ people.
 
-I've always been intrigued by how machines can understand and interpret visual and textual information simultaneously. This interest led me to specialize in Vision-Language Models (VLMs), exploring how these multimodal systems can transform industries from healthcare documentation to creative content generation.
+## How I Got Here
 
-My work at the Indian Institute of Science provided me with a strong research foundation, allowing me to experiment with cutting-edge approaches to multimodal learning and representation. The experience of working in a top-tier research environment shaped my understanding of what makes AI systems robust and useful in practical settings.
+**Open source first.** I started by building in public: tools for document parsing like OmniParse, LLM fine-tuning guides, and learning resources like AI Engineering Academy. That habit of shipping openly has shaped everything since.
 
-### Language Technology for Everyone
+**Multilingual and multimodal AI.** I founded [CognitiveLab](https://www.cognitivelab.in) to build AI for languages the field tends to overlook. We released Ambari-7B, India's first Kannada-English bilingual LLM, and Indic Eval, the first open benchmark suite for Indic LLMs. Our Nayana initiative, backed by Meta's LLaMA Impact Grant, produced a vision-language model across 22 languages, 2TB+ of synthetic document data, and NetraEmbed for cross-lingual document retrieval.
 
-One of my proudest achievements has been contributing to the development of language technologies for under-resourced languages. With Ambari-7b, we created one of India's first bilingual LLMs with strong performance in Kannada, demonstrating that language technology shouldn't be limited to just globally dominant languages.
+**Research at scale.** At Apple, I built LLM-powered knowledge-graph generation and agentic retrieval over enterprise data. At Microsoft Research, I worked on enterprise agentic memory that was transferred to M365 Copilot, and a real-time voice agent for video that won the Microsoft Global Hackathon. Both led to patents.
 
-This project taught me the importance of data curation, tokenization strategies specific to morphologically rich languages, and efficient fine-tuning techniques when working with limited computational resources.
+Each step pointed the same way: the hardest problems are now in how models learn from interaction, and that work should happen in the open.
 
-### From Research to Production
+## What I Care About
 
-My philosophy is that AI research should translate into real-world impact. At CognitiveLab, I've had the opportunity to bridge this gap by developing Cognitune, a platform that makes LLM deployment and fine-tuning accessible to organizations without specialized ML infrastructure.
-
-Working with enterprise clients has given me valuable insights into the challenges of deploying AI in production environments - from monitoring and evaluation to addressing specific business requirements and scale concerns.
-
-## Technical Approach
-
-I believe in pragmatic AI development:
-
-1. **Understanding the fundamentals**: Strong theoretical knowledge helps make better architectural decisions
-2. **Data-centric mindset**: Great models start with great data
-3. **Efficient implementation**: Optimizing for both performance and computational efficiency
-4. **Continuous evaluation**: Rigorous testing against diverse metrics and real-world scenarios
-
-## Open Source Contributions
-
-Open source is central to my work philosophy. By contributing to and maintaining several open-source projects, I aim to make AI more accessible and democratize access to cutting-edge technologies. Projects like Marker API and VARAG represent my commitment to sharing knowledge and tools with the broader developer community.
-
-## What I'm Learning Now
-
-I'm currently exploring:
-
-- Multi-agent systems for collaborative problem-solving
-- Retrieval-augmented generation techniques for document understanding
-- Efficient fine-tuning approaches for resource-constrained environments
-- Evaluation frameworks for multilingual models
-
-## Beyond Technology
-
-Outside of my technical work, I enjoy participating in hackathons, mentoring students interested in AI, and discussing the societal implications of advancing AI technologies. I believe in responsible AI development that considers ethical implications and accessibility.
+- **Openness**: environments, data, and recipes anyone can reproduce and build on
+- **Breadth**: environments across domains and languages, not just English and code
+- **Rigor**: evaluation that reflects real-world use, not only benchmarks
 
 ## Let's Connect
 
-I'm always interested in collaboration opportunities, especially in the areas of:
-- Vision-Language Models for practical applications
-- Low-resource language technology
-- Efficient deployment of AI systems
-- Open-source AI tools and frameworks
-
-Feel free to reach out if you'd like to discuss ideas, potential collaborations, or just chat about the future of AI!
+I'm always happy to talk about RL environments, post-training, multilingual and multimodal models, or open-source AI. Reach out by email or on X.
 `,
   contact: {
     email: "adithyaskolavi@gmail.com",
@@ -90,6 +66,11 @@ Feel free to reach out if you'd like to discuss ideas, potential collaborations,
         url: "https://twitter.com/adithya_s_k",
         icon: XIcon,
       },
+      {
+        name: "Google Scholar",
+        url: "https://scholar.google.com/citations?user=RHftLbEAAAAJ&hl=en",
+        icon: GoogleScholarIcon,
+      },
     ],
   },
   education: [
@@ -102,13 +83,34 @@ Feel free to reach out if you'd like to discuss ideas, potential collaborations,
   ],
   work: [
     {
+      company: "Hugging Face",
+      link: "https://huggingface.co/",
+      badges: ["Hybrid"],
+      title: "Research Engineer",
+      start: "April 2026",
+      end: "Present",
+      description:
+        "Building infrastructure to scale RL environments across data generation, training, and evaluation, including FineEnvs, an open ecosystem of cross-domain RL environments and training recipes. Built multi-harness RL training around OpenEnv (TRL, Harbor, OpenReward), created Repo2RLEnv for synthetic coding data generation, and authored the Ultimate Guide to RL Environments (25k+ reads).",
+    },
+    {
       company: "Microsoft Research",
       link: "https://www.microsoft.com/en-us/research/lab/microsoft-research-india/",
       badges: ["On Site"],
       title: "Research Fellow",
-      start: "July 2025",
+      start: "August 2025",
+      end: "March 2026",
+      description:
+        "Built a real-time voice agent for talking directly with video content, which was patented and won the Microsoft Global Hackathon among 10k+ participants. Developed enterprise-scale agentic memory across the Microsoft stack with 40% lower inference latency and 90%+ retrieval accuracy, resulting in a second patent and technology transfer to M365 Copilot.",
+    },
+    {
+      company: "CognitiveLab",
+      link: "https://www.cognitivelab.in",
+      badges: ["On Site"],
+      title: "Founder, Lead AI Researcher",
+      start: "May 2023",
       end: "Present",
-      description: "Working on Real time AI systems",
+      description:
+        "Leading an open-source AI research lab that received Meta's LLaMA Impact Grant for Nayana, a multimodal vision-language model covering 22 languages, backed by 2TB+ of synthetic multilingual document data. Pioneered Ambari-7B, India's first Kannada-English bilingual LLM, and Indic Eval, the first open-source benchmark suite for Indic LLMs. Open-source projects with 15k+ GitHub stars.",
     },
     {
       company: "Apple",
@@ -116,18 +118,9 @@ Feel free to reach out if you'd like to discuss ideas, potential collaborations,
       badges: ["On Site"],
       title: "ML Intern",
       start: "January 2025",
-      end: "June 2025",
-      description: "Part of the Unified Intelligence team",
-    },
-    {
-      company: "CognitiveLab",
-      link: "https://www.cognitivelab.in",
-      badges: ["On Site"],
-      title: "AI Researcher",
-      start: "January 2023",
-      end: "Present",
+      end: "July 2025",
       description:
-        "Pioneered one of India's first Kannada bilingual Large Language Model - Ambari-7b. Developed Cognitune, an enterprise-grade LLMops platform, reducing time to production by 60%.",
+        "Built an internal LLM-powered knowledge graph generation and retrieval platform with 100k+ entities. Designed an agentic retrieval pipeline that reduced hallucinations by 45%, and used LLMs for relation extraction and schema induction to achieve a 3x increase in graph completeness.",
     },
     {
       company: "TurboML",
@@ -137,7 +130,7 @@ Feel free to reach out if you'd like to discuss ideas, potential collaborations,
       start: "June 2024",
       end: "November 2024",
       description:
-        "Contributed to the development of LLMOps platform, focusing on AI system observability and evaluation. Implemented advanced tracing, monitoring, and analytics solutions to gain insights into large-scale AI systems, which enhanced model transparency and performance.",
+        "Architected an LLMOps observability platform for real-time monitoring and evaluation of LLMs. Built a distributed tracing system for AI workflows that cut debugging time by 60%, and automated evaluation frameworks that reduced manual evaluation effort by 75%.",
     },
     {
       company: "NeoHumans",
@@ -183,15 +176,50 @@ Feel free to reach out if you'd like to discuss ideas, potential collaborations,
     },
   ],
   skills: [
-    "AI/ML/DL: PyTorch, Transformers, PEFT, Bitsandbytes, Diffusers, Hugging Face Ecosystem",
-    "Python Libs: NLTK, Scapy, FastAPI, Flask, Django, OpenCV, BeautifulSoup, Selenium, Pandas, Poetry, Langchain",
+    "AI/ML/DL: PyTorch, Transformers, PEFT, Bitsandbytes, Ray, OpenEnv, Harbor, TRL, SkyRL",
+    "Python Libs: FastAPI, Flask, OpenCV, BeautifulSoup, Selenium, Pandas, Poetry, Langchain, LlamaIndex",
     "Web: React.js, Next.js, Express, Node.js, Vue.js, Bootstrap, Tailwind",
-    "Cloud: Azure, Azure Machine Learning, AWS, AWS SageMaker, Docker, Kubernetes, Cloudflare, E2E Cloud",
+    "Cloud: Azure, Azure Machine Learning, AWS, AWS SageMaker, Docker, Kubernetes (AKS), Modal",
     "Big Data: Databricks, Azure Data Factory, Apache Spark, Hadoop, Kafka",
-    "Databases: MongoDB, PostgreSQL, Firebase, Redis, MySQL, Supabase, Pinecone, FAISS, Qdrant, ChromaDb",
+    "Databases: MongoDB, PostgreSQL, Firebase, Redis, MySQL, Supabase, Pinecone, FAISS, Qdrant, ChromaDb, LanceDB",
     "Languages: HTML, CSS, JavaScript, TypeScript, Python, C/C++, SQL",
   ],
   researchProjects: [
+    {
+      title: "FineEnvs",
+      techStack: ["OpenEnv", "TRL", "Harbor", "OpenReward", "RL"],
+      description:
+        "An open ecosystem of cross-domain RL environments, post-trained models, training recipes, and reproducible artifacts spanning coding, computer use, simulation, multilingual, biology, and more.",
+      link: {
+        label: "github.com",
+        href: "https://github.com/adithya-s-k/FineEnvs",
+      },
+    },
+    {
+      title: "Repo2RLEnv",
+      techStack: [
+        "Python",
+        "Synthetic Data",
+        "RL Environments",
+        "Coding Agents",
+      ],
+      description:
+        "Open-source library for synthetic coding data generation, unifying multiple repository-to-task approaches into one pipeline for reproducible RL environments and coding tasks at scale.",
+      link: {
+        label: "github.com",
+        href: "https://github.com/huggingface/Repo2RLEnv",
+      },
+    },
+    {
+      title: "NetraEmbed",
+      techStack: ["Transformers", "ColPali", "Vision-Language Models", "MTEB"],
+      description:
+        "State-of-the-art multilingual multimodal document retrieval with dense (NetraEmbed) and multi-vector (ColNetraEmbed) variants, reaching 0.716 NDCG@5 (+152% over baselines) across 22 languages. Ships with the NayanaIR benchmark (28k+ document images, 5.4k+ queries).",
+      link: {
+        label: "huggingface.co",
+        href: "https://huggingface.co/Cognitive-Lab/NetraEmbed",
+      },
+    },
     {
       title: "Indic Eval/Leaderboard",
       techStack: ["spaCy", "NLTK", "Transformers", "SkyPilot", "Azure"],
@@ -243,6 +271,9 @@ Feel free to reach out if you'd like to discuss ideas, potential collaborations,
     },
   ],
   open_source: [
+    "https://github.com/adithya-s-k/manim_skill",
+    "https://github.com/huggingface/Repo2RLEnv",
+    "https://github.com/adithya-s-k/FineEnvs",
     "https://github.com/adithya-s-k/omniparse",
     "https://github.com/adithya-s-k/RAG-SaaS",
     "https://github.com/adithya-s-k/Gitvizz",
@@ -255,6 +286,16 @@ Feel free to reach out if you'd like to discuss ideas, potential collaborations,
     "https://github.com/adithya-s-k/Indic-llm",
   ],
   projects: [
+    {
+      title: "Manim Skill",
+      techStack: ["Python", "Manim", "Agent Skills", "Claude Code"],
+      description:
+        "Agent skills that teach coding agents to create 3Blue1Brown-style math and ML animations with Manim. 1.2k+ GitHub stars.",
+      link: {
+        label: "github.com",
+        href: "https://github.com/adithya-s-k/manim_skill",
+      },
+    },
     {
       title: "Cognitune",
       techStack: ["Python", "FastAPI", "Transformers", "Containerization"],
@@ -328,7 +369,57 @@ Feel free to reach out if you'd like to discuss ideas, potential collaborations,
   publications: [
     {
       title:
-        "Nayana: A Foundation for Document-Centric Vision-Language Models via Multi-Task, Multimodal, and Multilingual Data Syn-thesis",
+        "M3DR: Towards Universal Multilingual Multimodal Document Retrieval",
+      description:
+        "A multilingual multimodal document retrieval framework using contrastive training for robust cross-lingual and cross-modal alignment, introducing the NetraEmbed models and the NayanaIR benchmark.",
+      publisher:
+        "AAAI 2026 | Workshop on New Frontiers in Information Retrieval",
+      date: "2026",
+      status: "Accepted",
+      websiteUrl: "https://huggingface.co/papers/2512.03514",
+      resourceUrl: "https://arxiv.org/abs/2512.03514",
+      citation:
+        "Kolavi, A. S., & Jain, V. (2025). M3DR: Towards Universal Multilingual Multimodal Document Retrieval. arXiv preprint arXiv:2512.03514.",
+      tags: [
+        "Document Retrieval",
+        "Multilingual",
+        "Multimodal AI",
+        "Embeddings",
+      ],
+      showLinks: true,
+    },
+    {
+      title:
+        "INLAY: Preemptive, In-Context Intelligence for Casual Web Browsing",
+      description:
+        "A browsing assistant that preemptively surfaces relevant, in-context intelligence while people casually browse the web, without them having to ask.",
+      publisher: "CHI 2026 | Extended Abstracts",
+      date: "2026",
+      status: "Published",
+      websiteUrl: "https://doi.org/10.1145/3772363.3799065",
+      resourceUrl: "https://dl.acm.org/doi/10.1145/3772363.3799065",
+      citation:
+        "Suvarnapathaki, P. K., Kolavi, A. S., Vijay, H., Das, M., Manchepalli, A., & Padmanabhan, V. N. (2026). INLAY: Preemptive, In-Context Intelligence for Casual Web Browsing. In Extended Abstracts of the 2026 CHI Conference on Human Factors in Computing Systems (CHI EA '26).",
+      tags: ["HCI", "Web Agents", "Proactive AI", "LLM Applications"],
+      showLinks: true,
+    },
+    {
+      title:
+        "TRACE: Transparent Reasoning and Attribution Chains for Extended Multimodal Contexts",
+      description:
+        "A framework for transparent, attributable reasoning over long multimodal contexts, linking each reasoning step back to its supporting evidence.",
+      publisher: "NeurIPS 2025 | Workshop on Efficient Reasoning",
+      date: "2025",
+      status: "Accepted",
+      websiteUrl: "https://neurips.cc/",
+      citation:
+        "Kolavi, A. S. (2025). TRACE: Transparent Reasoning and Attribution Chains for Extended Multimodal Contexts. NeurIPS 2025 Workshop on Efficient Reasoning.",
+      tags: ["Reasoning", "Attribution", "Multimodal AI", "Long Context"],
+      showLinks: false,
+    },
+    {
+      title:
+        "Nayana: A Foundation for Document-Centric Vision-Language Models via Multi-Task, Multimodal, and Multilingual Data Synthesis",
       description:
         "A comprehensive approach to generating synthetic datasets for training vision-language models on document understanding tasks across multiple languages.",
       publisher:
@@ -337,7 +428,8 @@ Feel free to reach out if you'd like to discuss ideas, potential collaborations,
       status: "Accepted",
       websiteUrl: "https://cv4dc.github.io/2025/call-for-papers/",
       resourceUrl: "https://openreview.net/pdf?id=Ji46STdhQQ",
-      citation: "_",
+      citation:
+        "Kolavi, A. S., & Jain, V. (2025). Nayana: A Foundation for Document-Centric Vision-Language Models via Multi-Task, Multimodal, and Multilingual Data Synthesis. Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV) Workshops.",
       tags: [
         "Dataset Generation",
         "Multimodal AI",
@@ -357,7 +449,6 @@ Feel free to reach out if you'd like to discuss ideas, potential collaborations,
       status: "Accepted",
       websiteUrl: "https://sites.google.com/view/eval-fomo-2-cvpr/home",
       resourceUrl: "https://example.com/vivid-paper.pdf",
-      citation: "_",
       tags: [
         "Vision-Language Models",
         "Document Understanding",
@@ -376,7 +467,8 @@ Feel free to reach out if you'd like to discuss ideas, potential collaborations,
       status: "Accepted",
       websiteUrl: "https://lm4uc.github.io/",
       resourceUrl: "https://openreview.net/pdf?id=uaQR3BgHrV",
-      citation: "_",
+      citation:
+        "Kolavi, A. S., Samarth, P., & Jain, V. (2025). Nayana OCR: A Scalable Framework for Document OCR in Low-Resource Languages. Proceedings of the 1st Workshop on Language Models for Underserved Communities (LM4UC).",
       tags: [
         "OCR",
         "Low-Resource Languages",
@@ -395,7 +487,6 @@ Feel free to reach out if you'd like to discuss ideas, potential collaborations,
       status: "Accepted",
       websiteUrl: "https://www.llama.com/",
       resourceUrl: "https://example.com/nayana-foundation-model-poster.pdf",
-      citation: "_",
       tags: [
         "Foundation Models",
         "Multilingual",
@@ -415,7 +506,8 @@ Feel free to reach out if you'd like to discuss ideas, potential collaborations,
       websiteUrl: "https://multiagents.org/workshop",
       resourceUrl:
         "https://multiagents.org/2025_artifacts/a_multi_agent_approach_for_iterative_refinement_in_visual_content_generation.pdf",
-      citation: "_",
+      citation:
+        "Achala Nayak, R. S., Kolavi, A. S., Dias, N. T., & Somayaji P, S. (2025). A Multi-Agent Approach for Iterative Refinement in Visual Content Generation. AAAI 2025 Workshop on Advancing LLM-Based Multi-Agent Collaboration.",
       tags: [
         "Multi-Agent Systems",
         "Generative AI",
@@ -430,11 +522,12 @@ Feel free to reach out if you'd like to discuss ideas, potential collaborations,
       description:
         "A novel framework for autonomous web navigation and task planning using large language models to perform complex multi-step operations.",
       publisher: "AAAI 2025 | Large Language Models for Planning (LM4Plan)",
-      date: "2024",
+      date: "2025",
       status: "Accepted",
       websiteUrl: "https://llmforplanning.github.io/",
       resourceUrl: "https://openreview.net/pdf?id=OkvQyqv9H5",
-      citation: "_",
+      citation:
+        "Kolavi, A. S. (2025). CAPTAIN: Continuous Automated Planning Through Autonomous Internet Navigation. AAAI 2025 Workshop on Large Language Models for Planning (LM4Plan).",
       tags: [
         "Automated Planning",
         "Web Navigation",
@@ -446,12 +539,195 @@ Feel free to reach out if you'd like to discuss ideas, potential collaborations,
   ],
   achievements: [
     {
-      title: "Omniparse Hits 6500 Stars on GitHub",
+      title: "FineEnvs Reaches 7 RL Environment Recipes and 500+ GitHub Stars",
+      date: "October 2026",
+      description:
+        "FineEnvs now has seven end-to-end RL environment recipes spanning coding, data science, games, simulation, and multilingual OCR and ASR, each with open environments and training code.",
+      tags: ["FineEnvs", "Open Source", "Milestone"],
+      link: {
+        label: "GitHub",
+        href: "https://github.com/adithya-s-k/FineEnvs",
+      },
+    },
+    {
+      title: "Launched Multilingual RL Environments for OCR and ASR",
+      date: "October 2026",
+      description:
+        "Released OpenEnv environments for document OCR, layout, and VQA across 22 languages and speech recognition across 102 FLEURS languages, turning existing SFT datasets into RL environments with ~1M OCR and ~500K ASR examples.",
+      tags: ["FineEnvs", "Multilingual", "OCR", "ASR"],
+      link: {
+        label: "View on X",
+        href: "https://x.com/adithya_s_k/status/2110364361231651321",
+      },
+    },
+    {
+      title: "OpenAI Math Environments Trend on the Hub",
+      date: "October 2026",
+      description:
+        "The OpenAI Math RL environment dataset trended on Hugging Face for about a week, with 11K+ downloads, as the first step toward reproducible math RL recipes for small models.",
+      tags: ["FineEnvs", "Math", "Trending"],
+      link: {
+        label: "Dataset",
+        href: "https://huggingface.co/datasets/FineEnvs/openai-math",
+      },
+    },
+    {
+      title: "Introduced Simulation RL Environments",
+      date: "October 2026",
+      description:
+        "Shared PortSimEnv, an early simulation environment where agents plan docking for real Port of Barcelona vessel calls, with every model rollout viewable in 3D.",
+      tags: ["FineEnvs", "Simulation", "Agents"],
+      link: {
+        label: "View on X",
+        href: "https://x.com/adithya_s_k/status/2107091181113151790",
+      },
+    },
+    {
+      title: "The Ultimate Guide to Multi-Harness RL Trends on X",
+      date: "October 2026",
+      description:
+        "Our guide to training open models with RL inside real agent harnesses (Claude Code, Codex, OpenCode, and Mini-SWE-Agent) trended on X for three days, reached #3 on Hugging Face Spaces, and drew ~500K impressions.",
+      tags: ["Multi-Harness RL", "OpenEnv", "TRL", "Trending"],
+      link: {
+        label: "Read the Guide",
+        href: "https://huggingface.co/spaces/FineEnvs/multi-harness-rl",
+      },
+    },
+    {
+      title: "Launched Tasksmith for Repo2RLEnv",
+      date: "September 2026",
+      description:
+        "Tasksmith is Repo2RLEnv's flagship generator: an agent turns a merged pull request into a Harbor environment with a private verifier, then checks and repairs its own work. Launched alongside 50 environments built from Hugging Face repositories.",
+      tags: ["Repo2RLEnv", "Coding Agents", "Launch"],
+      link: {
+        label: "View on X",
+        href: "https://x.com/adithya_s_k/status/2105269356250927111",
+      },
+    },
+    {
+      title: "MiMo RL Environment Explorer Trends on the Hub",
+      date: "September 2026",
+      description:
+        "Built an explorer for Xiaomi's open-sourced MiMo-V2.6 RL environments that lets anyone browse tasks and run rollouts with a model of their choice, entirely on Hugging Face infrastructure.",
+      tags: ["FineEnvs", "Spaces", "Trending"],
+      link: {
+        label: "Open the Explorer",
+        href: "https://huggingface.co/spaces/FineEnvs/MiMo-RL-Envs-Explorer",
+      },
+    },
+    {
+      title: "Launched SmolDataEnvs",
+      date: "September 2026",
+      description:
+        "5K data-science RL tasks built for hill-climbing models under 9B, curated from the Jupyter Agent dataset and shipped with a single-GPU training recipe. Trended on Hugging Face datasets.",
+      tags: ["FineEnvs", "Data Science", "Small Models"],
+      link: {
+        label: "Collection",
+        href: "https://huggingface.co/collections/FineEnvs/smoldataenvs-6ab4f2f6e09b7cb872ebc867",
+      },
+    },
+    {
+      title: "GeoGuessr RL Environment Reaches 500K+ Impressions",
+      date: "September 2026",
+      description:
+        "Showed how to turn a game into an RL environment end to end, from idea to a trained 4B model with the dead ends left in. The launch drew 500K+ impressions across socials.",
+      tags: ["FineEnvs", "RL Environments", "GRPO"],
+      link: {
+        label: "Read the Article",
+        href: "https://huggingface.co/spaces/FineEnvs/geoguesser-article",
+      },
+    },
+    {
+      title: "Spoke on Scaling RL for LLMs at AMD AI Dev Day",
+      date: "August 2026",
+      description:
+        "A 20-minute talk on RL environments and RL training for LLMs.",
+      tags: ["Talk", "RL Environments"],
+      link: {
+        label: "Slides",
+        href: "https://huggingface.co/spaces/AdithyaSK/scaling-rl-for-llms-amd-ai-dev-day",
+      },
+    },
+    {
+      title: "Gave the RL Environments 101 Talk",
+      date: "July 2026",
+      description:
+        "From 'what is an environment?' to training your own, with a hands-on GRPO example using TRL and OpenEnv to improve a model on LaTeX OCR.",
+      tags: ["Talk", "OpenEnv", "TRL"],
+      link: {
+        label: "Slides",
+        href: "https://huggingface.co/spaces/AdithyaSK/rl-environments-101-slides",
+      },
+    },
+    {
+      title: "Launched Repo2RLEnv",
+      date: "May 2026",
+      description:
+        "Turn any repository into runnable, verifiable coding environments built from real PRs and commits, for coding-agent evaluation or RL training. Crossed 200 GitHub stars in its first week and now has 700+.",
+      tags: ["Repo2RLEnv", "Open Source", "Launch"],
+      link: {
+        label: "View on X",
+        href: "https://x.com/adithya_s_k/status/2059991239890776269",
+      },
+    },
+    {
+      title: "The Ultimate Guide to RL Environments Reaches 25k+ Reads",
+      date: "April 2026",
+      description:
+        "A comprehensive survey and reproduction of modern reinforcement learning environment frameworks, reaching 25k+ reads and 150k+ impressions.",
+      tags: ["Writing", "RL Environments", "Milestone"],
+      link: {
+        label: "Read the Guide",
+        href: "https://huggingface.co/spaces/AdithyaSK/rl-environments-guide",
+      },
+    },
+    {
+      title: "Joined Hugging Face as a Research Engineer",
+      date: "April 2026",
+      description:
+        "Joined Hugging Face to build infrastructure for scaling RL environments across data generation, training, and evaluation.",
+      tags: ["Career", "Hugging Face"],
+      link: {
+        label: "Hugging Face",
+        href: "https://huggingface.co/AdithyaSK",
+      },
+    },
+    {
+      title: "INLAY Published at CHI 2026",
+      date: "April 2026",
+      description:
+        "Our work with Microsoft Research on preemptive, in-context intelligence for casual web browsing appeared in the CHI 2026 Extended Abstracts.",
+      tags: ["Publication", "HCI", "Microsoft Research"],
+      link: {
+        label: "Paper",
+        href: "https://doi.org/10.1145/3772363.3799065",
+      },
+    },
+    {
+      title: "Won the Microsoft Global Hackathon",
+      date: "2025",
+      description:
+        "Our real-time voice agent for talking directly with video content won the Microsoft Global Hackathon among 10k+ participants, and the work was patented.",
+      tags: ["Award", "Hackathon", "Microsoft"],
+    },
+    {
+      title: "Awarded LLaMA Impact Grant by Meta AI",
       date: "April 2025",
       description:
-        "Omniparse, our open-source document parsing library, has reached 6500 stars on GitHub, making it one of the most popular libraries for document processing.",
+        "CognitiveLab was selected as one of the recipients of Meta's LLaMA Impact Grant for Nayana, our work on extending vision-language models to 22 Indic languages.",
+      tags: ["Award", "Grant", "Meta AI"],
+      link: {
+        label: "Announcement",
+        href: "https://about.fb.com/news/2025/04/llama-impact-grant-recipients/",
+      },
+    },
+    {
+      title: "OmniParse Hits 6,500 GitHub Stars",
+      date: "April 2025",
+      description:
+        "OmniParse, our open-source platform for ingesting and parsing documents, media, and web pages into structured data for GenAI applications, reached 6,500 GitHub stars.",
       fullDescription:
-        "The open-source document parsing project Marker API has reached 500 stars on GitHub, becoming one of the most popular document processing tools for AI applications. The project has been adopted by several companies for their RAG pipelines and document processing needs. This milestone represents the growing community interest in high-quality PDF-to-markdown conversion tools that integrate seamlessly with modern AI workflows.",
+        "OmniParse, our open-source platform for ingesting and parsing documents, media, and web pages into structured data for GenAI applications, reached 6,500 GitHub stars. It brings OCR, captioning, and transcription models behind one API, is optimized for T4 GPU deployment, and is used in RAG pipelines by teams around the world. It has since grown to nearly 8,000 stars.",
       tags: ["Open Source", "GitHub", "Milestone"],
       link: {
         label: "View Repository",
@@ -462,50 +738,90 @@ Feel free to reach out if you'd like to discuss ideas, potential collaborations,
         embedId: "1808230459358285834",
       },
     },
-    // {
-    //   title: "Featured Speaker at LLaMA Developer Conference",
-    //   date: "March 2025",
-    //   description:
-    //     "Presented our work on multilingual adaptations of LLaMA models at Meta's official LLaMA Developer Conference in San Francisco.",
-    //   tags: ["Speaking", "LLaMA", "Conference"],
-    //   link: {
-    //     label: "Conference Website",
-    //     href: "https://www.llama.com/conference",
-    //   },
-    // },
-    // {
-    //   title: "Ambari-7b Reaches 10,000 Downloads",
-    //   date: "February 2025",
-    //   description:
-    //     "Our Kannada-English bilingual LLM has been downloaded over 10,000 times on Hugging Face, marking a significant milestone for Indic language AI adoption.",
-    //   fullDescription:
-    //     "Our Kannada-English bilingual LLM has been downloaded over 10,000 times on Hugging Face, marking a significant milestone for Indic language AI adoption. The model has been cited in several research papers and is being used in production by companies and researchers working with Indic languages. This achievement highlights the growing interest in language technology for under-resourced languages and the impact of our work on democratizing AI across languages.",
-    //   tags: ["Ambari", "Hugging Face", "Milestone"],
-    //   socialEmbed: {
-    //     type: "linkedin",
-    //     embedId: "activity:123456789",
-    //   },
-    // },
-    {
-      title: "Awarded LLaMA Impact Grant by Meta AI",
-      date: "April 2025",
-      description:
-        "Cognitivelab was seleted as one of the recipients of Meta's LLaMA Impact Grant for our work on extending large language models to under-resourced Indic languages.",
-      tags: ["Award", "Grant", "Meta AI"],
-      link: {
-        label: "Announcement",
-        href: "https://about.fb.com/news/2025/04/llama-impact-grant-recipients/?utm_source=AIatMeta&utm_medium=organic_social&utm_content=image&utm_campaign=llamacon",
-      },
-    },
-    // {
-    //   title: "Cognitune Platform Exits Beta",
-    //   date: "December 2024",
-    //   description:
-    //     "Successfully launched the production version of Cognitune, our enterprise LLMOps platform, now serving over 20 organizations across India and Southeast Asia.",
-    //   tags: ["Product Launch", "LLMOps", "Enterprise AI"],
-    // },
   ],
   blogs: [
+    {
+      slug: "simulation-rl-environments",
+      title: "Simulation RL Environments: Real-World Simulations for AI Agents",
+      date: "2026-10-06",
+      excerpt:
+        "Real-world simulation RL environments for AI agents, from port dock planning to interactive 3D evaluation of every model rollout.",
+      externalUrl:
+        "https://huggingface.co/spaces/FineEnvs/simulation-rl-environments",
+      tags: ["FineEnvs", "RL Environments", "Simulation", "Agents"],
+      readingTime: "Article",
+      published: true,
+    },
+    {
+      slug: "game-to-rl-environment",
+      title: "How to Turn a Game into an RL Environment",
+      date: "2026-09-09",
+      excerpt:
+        "From an idea to a trained 4B model, with the dead ends left in: building a GeoGuesser RL environment end to end.",
+      externalUrl: "https://huggingface.co/spaces/FineEnvs/geoguesser-article",
+      tags: ["FineEnvs", "RL Environments", "GRPO", "OpenEnv"],
+      readingTime: "Article",
+      published: true,
+    },
+    {
+      slug: "ultimate-guide-multi-harness-rl",
+      title: "The Ultimate Guide to Multi-Harness RL",
+      date: "2026-08-31",
+      excerpt:
+        "Train open models with RL inside real agent harnesses, running the same environments across TRL, Harbor, and OpenReward.",
+      externalUrl: "https://huggingface.co/spaces/FineEnvs/multi-harness-rl",
+      tags: ["FineEnvs", "Multi-Harness RL", "OpenEnv", "Harbor", "TRL"],
+      readingTime: "Long-form guide",
+      published: true,
+    },
+    {
+      slug: "talk-scaling-rl-amd-ai-dev-day",
+      title: "Talk: Scaling RL for LLMs (AMD AI Dev Day)",
+      date: "2026-08-06",
+      excerpt:
+        "RL environments and RL training for LLMs, presented at AMD AI Dev Day.",
+      externalUrl:
+        "https://huggingface.co/spaces/AdithyaSK/scaling-rl-for-llms-amd-ai-dev-day",
+      tags: ["Talk", "Slides", "RL Environments", "RL Training"],
+      readingTime: "20 min talk",
+      published: true,
+    },
+    {
+      slug: "talk-multi-harness-training",
+      title: "Talk: Multi-Harness Training",
+      date: "2026-07-28",
+      excerpt: "OpenEnv x Harbor: trainable tokens from any coding agent.",
+      externalUrl:
+        "https://huggingface.co/spaces/AdithyaSK/multi-harness-training-slides",
+      tags: ["Talk", "Slides", "Multi-Harness RL", "OpenEnv"],
+      readingTime: "Slides",
+      published: true,
+    },
+    {
+      slug: "talk-rl-environments-101",
+      title: "Talk: RL Environments 101",
+      date: "2026-07-24",
+      excerpt:
+        "From 'What is an env?' to training your own: the original 30-minute talk on RL environments.",
+      externalUrl:
+        "https://huggingface.co/spaces/AdithyaSK/rl-environments-101-slides",
+      tags: ["Talk", "Slides", "RL Environments"],
+      readingTime: "30 min talk",
+      published: true,
+    },
+    {
+      slug: "ultimate-guide-rl-environments",
+      title:
+        "The Ultimate Guide to RL Environments: Building and Scaling Them in the LLM Era",
+      date: "2026-04-29",
+      excerpt:
+        "A comprehensive survey and reproduction of modern RL environment frameworks, with 25k+ reads and 150k+ impressions.",
+      externalUrl:
+        "https://huggingface.co/spaces/AdithyaSK/rl-environments-guide",
+      tags: ["RL Environments", "OpenEnv", "Survey", "LLM Training"],
+      readingTime: "Long-form guide",
+      published: true,
+    },
     {
       slug: "multi-agent-image-editing",
       title:

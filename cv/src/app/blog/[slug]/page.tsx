@@ -59,10 +59,18 @@ export async function generateMetadata({
   const postUrl = post.externalUrl
     ? post.externalUrl
     : `${siteUrl}/blog/${post.slug}`;
-  const ogImageUrl = post.ogImage || `${siteUrl}/og-image.png`; // Use post-specific OG image or default
+  // Fall back to the site-wide generated image (app/opengraph-image.tsx)
+  const ogImages = [
+    {
+      url: post.ogImage || "/opengraph-image",
+      width: 1200,
+      height: 630,
+      alt: post.title,
+    },
+  ];
 
   return {
-    title: `${post.title} | Adithya S Kolavi Blog`,
+    title: post.title,
     description: post.excerpt || "Read this blog post by Adithya S Kolavi.",
     keywords: post.tags
       ? [...post.tags, "blog", "Adithya S Kolavi"]
@@ -72,14 +80,7 @@ export async function generateMetadata({
       description: post.excerpt || "",
       url: postUrl,
       siteName: "Adithya S Kolavi's Blog",
-      images: [
-        {
-          url: ogImageUrl,
-          width: 1200,
-          height: 630,
-          alt: post.title,
-        },
-      ],
+      images: ogImages,
       locale: "en_US",
       type: "article", // Use 'article' type for blog posts
       publishedTime: post.date, // Add published time
@@ -89,8 +90,8 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: post.title,
       description: post.excerpt || "",
-      // creator: "@your_twitter_handle",
-      images: [ogImageUrl],
+      creator: "@adithya_s_k",
+      images: ogImages.map((image) => image.url),
     },
     alternates: {
       canonical: postUrl,
@@ -223,9 +224,13 @@ export default async function BlogPostPage({
                 const videoId = extractYouTubeVideoId(href);
                 if (videoId) {
                   return (
-                    <YouTubeEmbed 
-                      videoId={videoId} 
-                      title={typeof children === 'string' ? children : 'YouTube video'}
+                    <YouTubeEmbed
+                      videoId={videoId}
+                      title={
+                        typeof children === "string"
+                          ? children
+                          : "YouTube video"
+                      }
                     />
                   );
                 }

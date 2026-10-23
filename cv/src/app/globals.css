@@ -194,3 +194,8 @@
     }
   }
 }
+
+/* Intro overlay is skipped for repeat visits in a session and reduced-motion users */
+[data-intro-seen] .intro-overlay {
+  display: none;
+}
