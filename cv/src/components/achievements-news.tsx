@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import { Button } from "./ui/button";
 import { Section } from "./ui/section";
+import { SectionHeading } from "./ui/section-heading";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Tooltip,
@@ -258,21 +259,21 @@ const AchievementCard: React.FC<AchievementCardProps> = ({
       whileHover={{ y: -2, transition: { duration: 0.2 } }}
     >
       <Card className="border border-muted transition-all duration-300 hover:border-primary/30 hover:shadow-lg">
-        <CardHeader className="p-3 pb-2 sm:p-4 sm:pb-2">
+        <CardHeader className="p-4 pb-2">
           <div className="mb-1 flex items-start justify-between">
             <CardTitle className="text-base font-semibold leading-tight">
               {achievement.title}
             </CardTitle>
             <Badge
               variant="outline"
-              className="ml-2 bg-primary/5 text-xs font-normal"
+              className="ml-3 shrink-0 whitespace-nowrap bg-primary/5 text-xs font-normal"
             >
               {achievement.date}
             </Badge>
           </div>
         </CardHeader>
 
-        <CardContent className="p-3 pt-1 sm:p-4 sm:pt-1">
+        <CardContent className="p-4 pt-1">
           <CardDescription
             className={`text-xs leading-normal ${!expanded && hasFullDescription ? "line-clamp-3" : ""}`}
           >
@@ -364,13 +365,8 @@ export const AchievementsNewsSection: React.FC<
   const hasMoreAchievements = achievements.length > 3;
 
   return (
-    <Section className="mb-6" id="achievements-news">
-      <div className="mb-4">
-        <h2 className="text-lg font-bold">Achievements & News</h2>
-        <p className="mt-1 text-xs text-muted-foreground">
-          Latest updates, recognitions, and highlights
-        </p>
-      </div>
+    <Section className="scroll-mt-16" id="news">
+      <SectionHeading title="News" subtitle="Latest updates and highlights" />
       <div className="flex flex-col gap-3">
         <AnimatePresence>
           {visibleAchievements.map((achievement, index) => (

@@ -31,6 +31,7 @@ interface WorkExperience {
 
 // Map company names to their logo files
 const companyLogos: Record<string, string> = {
+  "Hugging Face": "/huggingface-logo.svg",
   "Microsoft Research": "/microsoft-logo.png",
   Apple: "/apple-logo.png",
   CognitiveLab: "/cognitivelab-logo.png",
@@ -76,6 +77,7 @@ const WorkTimelineItem: React.FC<WorkTimelineItemProps> = ({
               src={logoSrc}
               alt={`${work.company} logo`}
               fill
+              sizes="40px"
               className="object-cover p-1"
             />
           ) : (

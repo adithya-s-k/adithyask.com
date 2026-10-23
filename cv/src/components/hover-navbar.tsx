@@ -2,8 +2,6 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Button } from "./ui/button";
-import Link from "next/link";
 import {
   HomeIcon,
   BookOpenIcon,
@@ -13,7 +11,7 @@ import {
   FileTextIcon,
   CommandIcon,
 } from "lucide-react";
-import { scrollToSection } from "@/lib/utils";
+import { cn, scrollToSection } from "@/lib/utils";
 import {
   CommandDialog,
   CommandEmpty,
@@ -69,6 +67,25 @@ export function HoverNavbar({ links = [] }: NavbarProps) {
     },
   ];
 
+  // Highlight the section currently crossing the middle of the viewport
+  const [activeSection, setActiveSection] = useState("top");
+  React.useEffect(() => {
+    const sections = navItems
+      .map((item) => document.getElementById(item.href.substring(1)))
+      .filter((el): el is HTMLElement => el !== null);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.find((entry) => entry.isIntersecting);
+        if (visible) setActiveSection(visible.target.id);
+      },
+      { rootMargin: "-45% 0px -50% 0px" },
+    );
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+    // navItems is static
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   // Handle navigation and smooth scrolling
   const handleNavigation = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -82,46 +99,58 @@ export function HoverNavbar({ links = [] }: NavbarProps) {
     }
   };
 
+  // Icon-only pills on small screens, icon + label from md up
+  const itemClassName =
+    "flex h-10 min-w-10 shrink-0 items-center justify-center gap-2 rounded-full px-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-gray-100 hover:text-foreground md:px-3.5 [&_svg]:size-[18px] [&_svg]:shrink-0";
+
   return (
     <div
-      className="fixed bottom-0 left-0 right-0 z-50 flex justify-center px-4 pb-2 md:pb-4"
-      style={{ paddingBottom: "calc(0.5rem + env(safe-area-inset-bottom))" }}
+      className="pointer-events-none fixed inset-x-0 bottom-0 z-50 flex justify-center px-3 print:hidden"
+      style={{ paddingBottom: "calc(0.75rem + env(safe-area-inset-bottom))" }}
     >
       <motion.div
         initial={{ y: 100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.3 }}
-        className="rounded-full border border-gray-200 bg-white/70 shadow-lg backdrop-blur-md dark:border-gray-800 dark:bg-slate-900/80"
+        className="pointer-events-auto max-w-full rounded-full border border-gray-200 bg-white/80 shadow-lg backdrop-blur-md"
       >
-        <nav className="flex items-center space-x-1 px-4 py-2 md:space-x-2 md:py-2.5">
-          {navItems.map((item) => (
-            <Button
-              key={item.name}
-              variant="ghost"
-              size="sm"
-              className="flex flex-col items-center gap-1 rounded-full px-2 py-1.5 text-xs font-medium transition-all hover:bg-gray-100 dark:hover:bg-slate-800 md:flex-row md:gap-2 md:px-3 md:py-2 md:text-sm"
-              asChild
-            >
+        <nav
+          aria-label="Section navigation"
+          className="flex items-center gap-0.5 p-1.5 md:gap-1"
+        >
+          {navItems.map((item) => {
+            const isActive = activeSection === item.href.substring(1);
+            return (
               <a
+                key={item.name}
                 href={item.href}
                 onClick={(e) => handleNavigation(e, item.href)}
+                aria-label={item.name}
+                aria-current={isActive ? "location" : undefined}
+                title={item.name}
+                className={cn(
+                  itemClassName,
+                  isActive && "bg-gray-100 text-foreground",
+                )}
               >
                 {item.icon}
-                <span className="hidden xs:inline md:inline">{item.name}</span>
+                <span className="hidden md:inline">{item.name}</span>
               </a>
-            </Button>
-          ))}
+            );
+          })}
 
-          {/* Command menu button */}
-          <Button
+          <span className="mx-0.5 h-5 w-px shrink-0 bg-gray-200" />
+
+          <button
+            type="button"
             onClick={() => setOpen(true)}
-            variant="ghost"
-            size="sm"
-            className="flex flex-col items-center gap-1 rounded-full px-2 py-1.5 text-xs font-medium transition-all hover:bg-gray-100 dark:hover:bg-slate-800 md:flex-row md:gap-2 md:px-3 md:py-2 md:text-sm"
+            aria-label="Open command menu"
+            title="Menu (⌘J)"
+            className={itemClassName}
           >
-            <CommandIcon className="h-5 w-5" />
-            <span className="hidden xs:inline md:inline">Menu</span>
-          </Button>
+            <CommandIcon />
+            <span className="hidden md:inline">Menu</span>
+          </button>
         </nav>
       </motion.div>
 

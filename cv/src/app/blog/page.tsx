@@ -10,31 +10,35 @@ export const dynamic = "force-static";
 export async function generateMetadata(): Promise<Metadata> {
   const siteUrl = RESUME_DATA.personalWebsiteUrl; // Get base URL
   return {
-    title: "Blog | Adithya S Kolavi",
+    title: "Blog",
     description:
-      "Read articles and insights on AI, technology, and research by Adithya S Kolavi.",
-    keywords: ["blog", "AI", "technology", "research", "Adithya S Kolavi"],
+      "Guides, articles, and talks by Adithya S Kolavi on RL environments, post-training, multilingual and multimodal AI, and open-source machine learning.",
+    keywords: [
+      "Adithya S Kolavi",
+      "blog",
+      "RL environments",
+      "reinforcement learning",
+      "post-training",
+      "LLM fine-tuning",
+      "talks",
+    ],
     openGraph: {
       title: "Blog | Adithya S Kolavi",
-      description: "Articles and insights on AI, technology, and research.",
+      description:
+        "Guides, articles, and talks on RL environments, post-training, and open-source AI.",
       url: `${siteUrl}/blog`,
       siteName: "Adithya S Kolavi's Blog",
-      images: [
-        {
-          url: `${siteUrl}/og-image.png`, // Use a default OG image
-          width: 1200,
-          height: 630,
-        },
-      ],
+      images: ["/opengraph-image"],
       locale: "en_US",
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
       title: "Blog | Adithya S Kolavi",
-      description: "Articles and insights on AI, technology, and research.",
-      // creator: "@your_twitter_handle",
-      images: [`${siteUrl}/og-image.png`],
+      description:
+        "Guides, articles, and talks on RL environments, post-training, and open-source AI.",
+      creator: "@adithya_s_k",
+      images: ["/opengraph-image"],
     },
     alternates: {
       canonical: `${siteUrl}/blog`,
