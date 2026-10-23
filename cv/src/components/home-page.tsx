@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { MailIcon, ArrowRight, FileDown } from "lucide-react";
+import { MailIcon, ArrowRight, FileDown, BookOpen } from "lucide-react";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
@@ -215,6 +215,16 @@ export function HomePage({ initialRepos }: { initialRepos: Repository[] }) {
                   <span>CV</span>
                 </a>
               </Button>
+              <Button
+                variant="outline"
+                className="flex h-9 items-center gap-2"
+                asChild
+              >
+                <Link href="/blog">
+                  <BookOpen className="size-4" />
+                  <span>Blog</span>
+                </Link>
+              </Button>
             </nav>
             <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
               {RESUME_DATA.contact.email ? (
@@ -299,21 +309,6 @@ export function HomePage({ initialRepos }: { initialRepos: Repository[] }) {
           <SectionHeading title="Research Projects" />
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
             {RESUME_DATA.researchProjects.map((project) => (
-              <ProjectCard
-                key={project.title}
-                title={project.title}
-                description={project.description}
-                tags={project.techStack}
-                link={"link" in project ? project.link.href : undefined}
-              />
-            ))}
-          </div>
-        </Section>
-
-        <Section className="print-force-new-page scroll-mt-16">
-          <SectionHeading title="Other Projects" />
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
-            {RESUME_DATA.projects.map((project) => (
               <ProjectCard
                 key={project.title}
                 title={project.title}
