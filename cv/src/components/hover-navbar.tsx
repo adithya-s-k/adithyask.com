@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import {
   HomeIcon,
   BookOpenIcon,
@@ -54,7 +55,7 @@ export function HoverNavbar({ links = [] }: NavbarProps) {
       icon: <BriefcaseIcon className="h-5 w-5" />,
       href: "#work",
     },
-    { name: "Blog", icon: <BookOpenIcon className="h-5 w-5" />, href: "#blog" },
+    { name: "Blog", icon: <BookOpenIcon className="h-5 w-5" />, href: "/blog" },
     {
       name: "Projects",
       icon: <CodeIcon className="h-5 w-5" />,
@@ -68,6 +69,7 @@ export function HoverNavbar({ links = [] }: NavbarProps) {
   ];
 
   // Highlight the section currently crossing the middle of the viewport
+  const router = useRouter();
   const [activeSection, setActiveSection] = useState("top");
   React.useEffect(() => {
     const sections = navItems
@@ -95,7 +97,7 @@ export function HoverNavbar({ links = [] }: NavbarProps) {
     if (href.startsWith("#")) {
       scrollToSection(href.substring(1));
     } else {
-      window.location.href = href;
+      router.push(href);
     }
   };
 
@@ -196,7 +198,7 @@ export function HoverNavbar({ links = [] }: NavbarProps) {
                   if (item.href.startsWith("#")) {
                     scrollToSection(item.href.substring(1));
                   } else {
-                    window.location.href = item.href;
+                    router.push(item.href);
                   }
                 }}
               >
