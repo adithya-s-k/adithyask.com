@@ -539,14 +539,135 @@ I'm always happy to talk about RL environments, post-training, multilingual and 
   ],
   achievements: [
     {
-      title: "Joined Hugging Face as a Research Engineer",
-      date: "April 2026",
+      title: "FineEnvs Reaches 7 RL Environment Recipes and 500+ GitHub Stars",
+      date: "October 2026",
       description:
-        "Joined Hugging Face to build infrastructure for scaling RL environments across data generation, training, and evaluation, including FineEnvs, Repo2RLEnv, and multi-harness RL training around OpenEnv.",
-      tags: ["Career", "Hugging Face", "RL Environments"],
+        "FineEnvs now has seven end-to-end RL environment recipes spanning coding, data science, games, simulation, and multilingual OCR and ASR, each with open environments and training code.",
+      tags: ["FineEnvs", "Open Source", "Milestone"],
       link: {
-        label: "FineEnvs",
+        label: "GitHub",
         href: "https://github.com/adithya-s-k/FineEnvs",
+      },
+    },
+    {
+      title: "Launched Multilingual RL Environments for OCR and ASR",
+      date: "October 2026",
+      description:
+        "Released OpenEnv environments for document OCR, layout, and VQA across 22 languages and speech recognition across 102 FLEURS languages, turning existing SFT datasets into RL environments with ~1M OCR and ~500K ASR examples.",
+      tags: ["FineEnvs", "Multilingual", "OCR", "ASR"],
+      link: {
+        label: "View on X",
+        href: "https://x.com/adithya_s_k/status/2110364361231651321",
+      },
+    },
+    {
+      title: "OpenAI Math Environments Trend on the Hub",
+      date: "October 2026",
+      description:
+        "The OpenAI Math RL environment dataset trended on Hugging Face for about a week, with 11K+ downloads, as the first step toward reproducible math RL recipes for small models.",
+      tags: ["FineEnvs", "Math", "Trending"],
+      link: {
+        label: "Dataset",
+        href: "https://huggingface.co/datasets/FineEnvs/openai-math",
+      },
+    },
+    {
+      title: "Introduced Simulation RL Environments",
+      date: "October 2026",
+      description:
+        "Shared PortSimEnv, an early simulation environment where agents plan docking for real Port of Barcelona vessel calls, with every model rollout viewable in 3D.",
+      tags: ["FineEnvs", "Simulation", "Agents"],
+      link: {
+        label: "View on X",
+        href: "https://x.com/adithya_s_k/status/2107091181113151790",
+      },
+    },
+    {
+      title: "The Ultimate Guide to Multi-Harness RL Trends on X",
+      date: "October 2026",
+      description:
+        "Our guide to training open models with RL inside real agent harnesses (Claude Code, Codex, OpenCode, and Mini-SWE-Agent) trended on X for three days, reached #3 on Hugging Face Spaces, and drew ~500K impressions.",
+      tags: ["Multi-Harness RL", "OpenEnv", "TRL", "Trending"],
+      link: {
+        label: "Read the Guide",
+        href: "https://huggingface.co/spaces/FineEnvs/multi-harness-rl",
+      },
+    },
+    {
+      title: "Launched Tasksmith for Repo2RLEnv",
+      date: "September 2026",
+      description:
+        "Tasksmith is Repo2RLEnv's flagship generator: an agent turns a merged pull request into a Harbor environment with a private verifier, then checks and repairs its own work. Launched alongside 50 environments built from Hugging Face repositories.",
+      tags: ["Repo2RLEnv", "Coding Agents", "Launch"],
+      link: {
+        label: "View on X",
+        href: "https://x.com/adithya_s_k/status/2105269356250927111",
+      },
+    },
+    {
+      title: "MiMo RL Environment Explorer Trends on the Hub",
+      date: "September 2026",
+      description:
+        "Built an explorer for Xiaomi's open-sourced MiMo-V2.6 RL environments that lets anyone browse tasks and run rollouts with a model of their choice, entirely on Hugging Face infrastructure.",
+      tags: ["FineEnvs", "Spaces", "Trending"],
+      link: {
+        label: "Open the Explorer",
+        href: "https://huggingface.co/spaces/FineEnvs/MiMo-RL-Envs-Explorer",
+      },
+    },
+    {
+      title: "Launched SmolDataEnvs",
+      date: "September 2026",
+      description:
+        "5K data-science RL tasks built for hill-climbing models under 9B, curated from the Jupyter Agent dataset and shipped with a single-GPU training recipe. Trended on Hugging Face datasets.",
+      tags: ["FineEnvs", "Data Science", "Small Models"],
+      link: {
+        label: "Collection",
+        href: "https://huggingface.co/collections/FineEnvs/smoldataenvs-6ab4f2f6e09b7cb872ebc867",
+      },
+    },
+    {
+      title: "GeoGuessr RL Environment Reaches 500K+ Impressions",
+      date: "September 2026",
+      description:
+        "Showed how to turn a game into an RL environment end to end, from idea to a trained 4B model with the dead ends left in. The launch drew 500K+ impressions across socials.",
+      tags: ["FineEnvs", "RL Environments", "GRPO"],
+      link: {
+        label: "Read the Article",
+        href: "https://huggingface.co/spaces/FineEnvs/geoguesser-article",
+      },
+    },
+    {
+      title: "Spoke on Scaling RL for LLMs at AMD AI Dev Day",
+      date: "August 2026",
+      description:
+        "A 20-minute talk on RL environments and RL training for LLMs.",
+      tags: ["Talk", "RL Environments"],
+      link: {
+        label: "Slides",
+        href: "https://huggingface.co/spaces/AdithyaSK/scaling-rl-for-llms-amd-ai-dev-day",
+      },
+    },
+    {
+      title: "Gave the RL Environments 101 Talk",
+      date: "July 2026",
+      description:
+        "From 'what is an environment?' to training your own, with a hands-on GRPO example using TRL and OpenEnv to improve a model on LaTeX OCR.",
+      tags: ["Talk", "OpenEnv", "TRL"],
+      link: {
+        label: "Slides",
+        href: "https://huggingface.co/spaces/AdithyaSK/rl-environments-101-slides",
+      },
+    },
+    {
+      title: "Launched Repo2RLEnv",
+      date: "May 2026",
+      description:
+        "Turn any repository into runnable, verifiable coding environments built from real PRs and commits, for coding-agent evaluation or RL training. Crossed 200 GitHub stars in its first week and now has 700+.",
+      tags: ["Repo2RLEnv", "Open Source", "Launch"],
+      link: {
+        label: "View on X",
+        href: "https://x.com/adithya_s_k/status/2059991239890776269",
       },
     },
     {
@@ -561,6 +682,28 @@ I'm always happy to talk about RL environments, post-training, multilingual and 
       },
     },
     {
+      title: "Joined Hugging Face as a Research Engineer",
+      date: "April 2026",
+      description:
+        "Joined Hugging Face to build infrastructure for scaling RL environments across data generation, training, and evaluation.",
+      tags: ["Career", "Hugging Face"],
+      link: {
+        label: "Hugging Face",
+        href: "https://huggingface.co/AdithyaSK",
+      },
+    },
+    {
+      title: "INLAY Published at CHI 2026",
+      date: "April 2026",
+      description:
+        "Our work with Microsoft Research on preemptive, in-context intelligence for casual web browsing appeared in the CHI 2026 Extended Abstracts.",
+      tags: ["Publication", "HCI", "Microsoft Research"],
+      link: {
+        label: "Paper",
+        href: "https://doi.org/10.1145/3772363.3799065",
+      },
+    },
+    {
       title: "Won the Microsoft Global Hackathon",
       date: "2025",
       description:
@@ -568,12 +711,23 @@ I'm always happy to talk about RL environments, post-training, multilingual and 
       tags: ["Award", "Hackathon", "Microsoft"],
     },
     {
-      title: "Omniparse Hits 6500 Stars on GitHub",
+      title: "Awarded LLaMA Impact Grant by Meta AI",
       date: "April 2025",
       description:
-        "Omniparse, our open-source document parsing library, has reached 6500 stars on GitHub, making it one of the most popular libraries for document processing.",
+        "CognitiveLab was selected as one of the recipients of Meta's LLaMA Impact Grant for Nayana, our work on extending vision-language models to 22 Indic languages.",
+      tags: ["Award", "Grant", "Meta AI"],
+      link: {
+        label: "Announcement",
+        href: "https://about.fb.com/news/2025/04/llama-impact-grant-recipients/",
+      },
+    },
+    {
+      title: "OmniParse Hits 6,500 GitHub Stars",
+      date: "April 2025",
+      description:
+        "OmniParse, our open-source platform for ingesting and parsing documents, media, and web pages into structured data for GenAI applications, reached 6,500 GitHub stars.",
       fullDescription:
-        "The open-source document parsing project Marker API has reached 500 stars on GitHub, becoming one of the most popular document processing tools for AI applications. The project has been adopted by several companies for their RAG pipelines and document processing needs. This milestone represents the growing community interest in high-quality PDF-to-markdown conversion tools that integrate seamlessly with modern AI workflows.",
+        "OmniParse, our open-source platform for ingesting and parsing documents, media, and web pages into structured data for GenAI applications, reached 6,500 GitHub stars. It brings OCR, captioning, and transcription models behind one API, is optimized for T4 GPU deployment, and is used in RAG pipelines by teams around the world. It has since grown to nearly 8,000 stars.",
       tags: ["Open Source", "GitHub", "Milestone"],
       link: {
         label: "View Repository",
@@ -584,48 +738,6 @@ I'm always happy to talk about RL environments, post-training, multilingual and 
         embedId: "1808230459358285834",
       },
     },
-    // {
-    //   title: "Featured Speaker at LLaMA Developer Conference",
-    //   date: "March 2025",
-    //   description:
-    //     "Presented our work on multilingual adaptations of LLaMA models at Meta's official LLaMA Developer Conference in San Francisco.",
-    //   tags: ["Speaking", "LLaMA", "Conference"],
-    //   link: {
-    //     label: "Conference Website",
-    //     href: "https://www.llama.com/conference",
-    //   },
-    // },
-    // {
-    //   title: "Ambari-7b Reaches 10,000 Downloads",
-    //   date: "February 2025",
-    //   description:
-    //     "Our Kannada-English bilingual LLM has been downloaded over 10,000 times on Hugging Face, marking a significant milestone for Indic language AI adoption.",
-    //   fullDescription:
-    //     "Our Kannada-English bilingual LLM has been downloaded over 10,000 times on Hugging Face, marking a significant milestone for Indic language AI adoption. The model has been cited in several research papers and is being used in production by companies and researchers working with Indic languages. This achievement highlights the growing interest in language technology for under-resourced languages and the impact of our work on democratizing AI across languages.",
-    //   tags: ["Ambari", "Hugging Face", "Milestone"],
-    //   socialEmbed: {
-    //     type: "linkedin",
-    //     embedId: "activity:123456789",
-    //   },
-    // },
-    {
-      title: "Awarded LLaMA Impact Grant by Meta AI",
-      date: "April 2025",
-      description:
-        "Cognitivelab was seleted as one of the recipients of Meta's LLaMA Impact Grant for our work on extending large language models to under-resourced Indic languages.",
-      tags: ["Award", "Grant", "Meta AI"],
-      link: {
-        label: "Announcement",
-        href: "https://about.fb.com/news/2025/04/llama-impact-grant-recipients/?utm_source=AIatMeta&utm_medium=organic_social&utm_content=image&utm_campaign=llamacon",
-      },
-    },
-    // {
-    //   title: "Cognitune Platform Exits Beta",
-    //   date: "December 2024",
-    //   description:
-    //     "Successfully launched the production version of Cognitune, our enterprise LLMOps platform, now serving over 20 organizations across India and Southeast Asia.",
-    //   tags: ["Product Launch", "LLMOps", "Enterprise AI"],
-    // },
   ],
   blogs: [
     {
